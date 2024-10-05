@@ -1,0 +1,10 @@
+D:\github\StationeryManagementSystem\StationeryManagementSystem\obj\Debug\StationeryManagementSystem.csproj.AssemblyReference.cache
+D:\github\StationeryManagementSystem\StationeryManagementSystem\obj\Debug\StationeryManagementSystem.Properties.Resources.resources
+D:\github\StationeryManagementSystem\StationeryManagementSystem\obj\Debug\StationeryManagementSystem.csproj.GenerateResource.cache
+D:\github\StationeryManagementSystem\StationeryManagementSystem\obj\Debug\StationeryManagementSystem.csproj.CoreCompileInputs.cache
+D:\github\StationeryManagementSystem\StationeryManagementSystem\obj\Debug\StationeryManagementSystem.FormMain.resources
+D:\github\StationeryManagementSystem\StationeryManagementSystem\bin\Debug\StationeryManagementSystem.exe.config
+D:\github\StationeryManagementSystem\StationeryManagementSystem\bin\Debug\StationeryManagementSystem.exe
+D:\github\StationeryManagementSystem\StationeryManagementSystem\bin\Debug\StationeryManagementSystem.pdb
+D:\github\StationeryManagementSystem\StationeryManagementSystem\obj\Debug\StationeryManagementSystem.exe
+D:\github\StationeryManagementSystem\StationeryManagementSystem\obj\Debug\StationeryManagementSystem.pdb
