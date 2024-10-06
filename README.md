@@ -11,7 +11,7 @@
 
 
 **3. Lê Đình Trí**  
-**ID:  22110442**: ![GitHub](https://img.icons8.com/ios-filled/20/000000/github.png) [GitHub](https://github.com/tuoitho/) ![Facebook](https://img.icons8.com/ios-filled/20/000000/facebook--v1.png) [Facebook](https://www.facebook.com/tuoithodakhoc/) ![Email](https://img.icons8.com/ios-filled/20/000000/email.png) dinhtri42@gmail.com ![Phone](https://img.icons8.com/ios-filled/20/000000/phone.png)
+**ID:  22110442**: ![GitHub](https://img.icons8.com/ios-filled/20/000000/github.png) [GitHub](https://github.com/tuoitho/) ![Facebook](https://img.icons8.com/ios-filled/20/000000/facebook--v1.png) [Facebook](https://www.facebook.com/tuoithodakhoc/) ![Email](https://img.icons8.com/ios-filled/20/000000/email.png) dinhtri42@gmail.com ![Phone](https://img.icons8.com/ios-filled/20/000000/phone.png) 0362092749
 
 
 **4. Nguyeng dgdgdg eddg**  
