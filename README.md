@@ -1,4 +1,4 @@
- # 📦 StationeryManagementSystem - Hệ thống quản lý văn phòng phảm
+ # 📦 StationeryManagementSystem - Hệ thống quản lý văn phòng phẩm
 ### 🧑‍💼 Students
 
 
