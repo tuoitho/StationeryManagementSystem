@@ -1,4 +1,5 @@
 ﻿
+using StationeryManagementSystem;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -89,6 +90,20 @@ namespace StationeryManagementSystem
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    //change pic
+                    //neu la roundedButton_qltk thì
+                    if (currentButton.Name == "roundedButton_qltk")
+                    {
+                        currentButton.Image = Image.FromFile("..\\..\\Resources\\usertrang.png"); // Thay đổi đường dẫn hình ảnh theo ý bạn
+                    }
+                    if (currentButton.Name == "roundedButton_qlnv")
+                    {
+                        currentButton.Image = Image.FromFile("..\\..\\Resources\\employeetrang.png");
+                    }
+                    if (currentButton.Name == "roundedButton_qlsp")
+                    {
+                        currentButton.Image = Image.FromFile("..\\..\\Resources\\sanpham_trang.png");
+                    }
                     //panelTitleBar.BackColor = color;
                     panel_logo.BackColor = Color.Transparent;
                 }
@@ -100,9 +115,27 @@ namespace StationeryManagementSystem
             {
                 if (previousBtn.GetType() == typeof(RoundedButton))
                 {
-                    previousBtn.BackColor = Color.White;
-                    previousBtn.ForeColor = Color.Black;
-                    previousBtn.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    RoundedButton roundedButton = (RoundedButton)previousBtn; // Ép kiểu về RoundedButton
+
+                    roundedButton.BackColor = Color.White;
+                    roundedButton.ForeColor = Color.Black;
+                    roundedButton.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+                    // Kiểm tra nếu là button "roundedButton_qltk" thì trả về ảnh ban đầu
+                    if (roundedButton.Name == "roundedButton_qltk")
+                    {
+                        roundedButton.Image = Image.FromFile("..\\..\\Resources\\userden.png"); // Đường dẫn tới ảnh mặc định
+                    }
+                    if (roundedButton.Name == "roundedButton_qlnv")
+                    {
+                        roundedButton.Image = Image.FromFile("..\\..\\Resources\\employeeden.png");
+                    }
+                    //roundedButton_qlsp
+                    if (roundedButton.Name == "roundedButton_qlsp")
+                    {
+                        roundedButton.Image = Image.FromFile("..\\..\\Resources\\sanpham_den.png");
+                    }
+
                 }
             }
 
@@ -126,8 +159,8 @@ namespace StationeryManagementSystem
             {
                 panel_menu.Size = panel_menu.MaximumSize;
                 isCollapsed = false;
-                roundedButton2.Text = "   sfsfsfsfsfsfs";
-                roundedButton3.Text = "    ttttttttttttttttt";
+                roundedButton_qltk.Text = "   Quản Lý Tài Khoản";
+                roundedButton_qlnv.Text = "   Quản Lý Nhân viên";
                 //btn_dangxuat.Text = "Đăng xuất";
                 //button_account.Text = "  Quản lý tài khoản";
                 //button_khachhang.Text = "  Khách hàng";
@@ -146,19 +179,7 @@ namespace StationeryManagementSystem
 
         }
 
-        //private void button_bill_Click(object sender, EventArgs e)
-        //{
-        //    FormHoaDon formHoaDon = new FormHoaDon();
-        //    OpenChildForm(formHoaDon, sender);
-        //    lblTiltle.Text = "Hóa đơn";
-        //}
 
-        //private void button_phong_Click(object sender, EventArgs e)
-        //{
-        //    FormPhong formPhong = new FormPhong();
-        //    OpenChildForm(formPhong, sender);
-        //    lblTiltle.Text = "Phòng";
-        //}
 
         private void FormMain_Load(object sender, EventArgs e)
         {
@@ -180,78 +201,26 @@ namespace StationeryManagementSystem
 
         }
 
-        private void roundedButton2_Click(object sender, EventArgs e)
+        private void roundedButton_qltk_Click(object sender, EventArgs e)
         {
-            FormPhieuDangKy formPhieuDangKy = new FormPhieuDangKy();
-            OpenChildForm(formPhieuDangKy, sender);
-            lblTiltle.Text = "Phiếu đăng ký";
+            FormTaiKhoan formtk = new FormTaiKhoan();
+            OpenChildForm(formtk, sender);
+            lblTiltle.Text = "Quản Lý Tài Khoản";
         }
 
-        //private void button_dangkythuetra_Click(object sender, EventArgs e)
-        //{
-        //    FormPhieuDangKy formPhieuDangKy = new FormPhieuDangKy();
-        //    OpenChildForm(formPhieuDangKy, sender);
-        //    lblTiltle.Text = "Phiếu đăng ký";
-        //}
+        private void roundedButton_qlnv_Click(object sender, EventArgs e)
+        {
+            FormNhanVien formNhanVien = new FormNhanVien();
+            OpenChildForm(formNhanVien, sender);
+            lblTiltle.Text = "Quản Lý Nhân viên";
+        }
 
-        //private void button_account_Click(object sender, EventArgs e)
-        //{
-        //    FormAccount formAccount = new FormAccount();
-        //    OpenChildForm(formAccount, sender);
-        //    lblTiltle.Text = "Tài khoản";
-        //}
+        private void roundedButton_qlsp_Click(object sender, EventArgs e)
+        {
+            FormSanPham formSanPham = new FormSanPham();
+            OpenChildForm(formSanPham, sender);
+            lblTiltle.Text = "Quản Lý Sản Phẩm";
 
-        //private void button_khachhang_Click(object sender, EventArgs e)
-        //{
-        //    FormKhachHang formKhachHang = new FormKhachHang();
-        //    OpenChildForm(formKhachHang, sender);
-        //    lblTiltle.Text = "Khách hàng";
-        //}
-
-        //private void button_lich_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void button_qlthanhtoan_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void button_dichvu_Click(object sender, EventArgs e)
-        //{
-        //    FormQuanLyDichVu formDichVu = new FormQuanLyDichVu();
-        //    OpenChildForm(formDichVu, sender);
-
-        //}
-
-        //private void roundedButton2_Click(object sender, EventArgs e)
-        //{
-        //    FormCaLamViec formCaLamViec = new FormCaLamViec();
-        //    OpenChildForm(formCaLamViec, sender);
-        //    lblTiltle.Text = "Ca làm việc";
-        //}
-
-        //private void roundedButton3_Click(object sender, EventArgs e)
-        //{
-        //    FormBaoCaoDoanhthu formBaoCaoDoanhthu = new FormBaoCaoDoanhthu();
-        //    OpenChildForm(formBaoCaoDoanhthu, sender);
-        //    lblTiltle.Text = "Báo cáo doanh thu";
-        //}
-
-
-
-        //private void btn_dangxuat_Click(object sender, EventArgs e)
-        //{
-        //    //logout
-        //    Application.Restart();
-        //}
-
-        //private void roundedButton2_Click_1(object sender, EventArgs e)
-        //{
-        //    FormKhaiBaoThucPham formKhaiBaoThucPham = new FormKhaiBaoThucPham();
-        //    OpenChildForm(formKhaiBaoThucPham, sender);
-        //    lblTiltle.Text = "Khai báo thực phẩm";
-        //}
+        }
     }
 }

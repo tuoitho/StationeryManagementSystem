@@ -303,6 +303,16 @@ namespace StationeryManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap employeeden1 {
+            get {
+                object obj = ResourceManager.GetObject("employeeden1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap employeetrang {
             get {
                 object obj = ResourceManager.GetObject("employeetrang", resourceCulture);
