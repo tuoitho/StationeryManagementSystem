@@ -1,13 +1,8 @@
-﻿
-using StationeryManagementSystem;
+﻿using StationeryManagementSystem;
+using StationeryManagementSystem.GUI;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Security.AccessControl;
 using System.Windows.Forms;
 
 namespace StationeryManagementSystem
@@ -20,44 +15,28 @@ namespace StationeryManagementSystem
         public FormMain()
         {
             InitializeComponent();
-            //if (Info.role == "employee")
-            //{
-
-            //    if (Info.chucvu == 1)
-            //    {
-            //        button_account.Visible = false;
-            //        roundedButton_khaibaotp.Visible = false;
-            //    }
-            //    else
-            //    if (Info.chucvu == 2)
-            //    {
-            //        button_nv.Visible = false;
-            //        button_account.Visible = false;
-            //        roundedButton_khaibaotp.Visible = false;
-            //        button_dichvu.Visible = false;
-            //        roundedButton_bc_thu_chi.Visible = false;
-
-            //    }
-            //    else if (Info.chucvu == 3)
-            //    {
-            //        button_nv.Visible = false;
-            //        button_account.Visible = false;
-            //        button_bill.Visible = false;
-            //        button_phong.Visible = false;
-            //        button_dichvu.Visible = false;
-            //        roundedButton_bc_thu_chi.Visible = false;
-            //        button_khachhang.Visible = false;
-            //        button_dangkythuetra.Visible = false;
-            //    }
-            //}
+            InitializeButtonImages();
         }
 
-        private void button_nv_Click(object sender, EventArgs e)
+        private void InitializeButtonImages()
         {
-            //FormNhanVien formNhanVien = new FormNhanVien();
-            //OpenChildForm(formNhanVien, sender);
-            //lblTiltle.Text = "Nhân viên";
+            try
+            {
+                roundedButton_qltk.Image = Image.FromFile("..\\..\\Resources\\userden.png");
+                roundedButton_qlnv.Image = Image.FromFile("..\\..\\Resources\\employeeden.png");
+                roundedButton_qlsp.Image = Image.FromFile("..\\..\\Resources\\sanpham_den.png");
+                roundedButton_hdn.Image = Image.FromFile("..\\..\\Resources\\hoadonnhap.png");
+                roundedButton_hdb.Image = Image.FromFile("..\\..\\Resources\\hoadonban.png");
+                roundedButton_qldt.Image = Image.FromFile("..\\..\\Resources\\doanhthu.png");
+                roundedButton_lv.Image = Image.FromFile("..\\..\\Resources\\lichlv.png");
+                roundedButton_ncc.Image = Image.FromFile("..\\..\\Resources\\cungcap.png");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading images: " + ex.Message);
+            }
         }
+
         private void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
@@ -67,80 +46,74 @@ namespace StationeryManagementSystem
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Size = new Size(800, 600);
             childForm.Dock = DockStyle.Fill;
             this.panel_childForm.Controls.Add(childForm);
             this.panel_childForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
             lblTiltle.Text = childForm.Text;
-
+           
         }
+
         private void ActivateButton(object btnSender)
         {
-
             Color color = Color.FromArgb(0, 108, 225);
             if (btnSender != null)
             {
-
-                if (currentButton != (RoundedButton)btnSender)
+                RoundedButton roundedButton = btnSender as RoundedButton;
+                if (roundedButton != null && currentButton != roundedButton)
                 {
-
-                    currentButton = (RoundedButton)btnSender;
                     DisableButton();
+                    currentButton = roundedButton;
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
-                    currentButton.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    //change pic
-                    //neu la roundedButton_qltk thì
-                    if (currentButton.Name == "roundedButton_qltk")
-                    {
-                        currentButton.Image = Image.FromFile("..\\..\\Resources\\usertrang.png"); // Thay đổi đường dẫn hình ảnh theo ý bạn
-                    }
-                    if (currentButton.Name == "roundedButton_qlnv")
-                    {
-                        currentButton.Image = Image.FromFile("..\\..\\Resources\\employeetrang.png");
-                    }
-                    if (currentButton.Name == "roundedButton_qlsp")
-                    {
-                        currentButton.Image = Image.FromFile("..\\..\\Resources\\sanpham_trang.png");
-                    }
-                    //panelTitleBar.BackColor = color;
+                    currentButton.Font = new Font("Verdana", 10.2F, FontStyle.Regular);
+
+                    SetButtonImage(roundedButton, true); 
                     panel_logo.BackColor = Color.Transparent;
                 }
             }
         }
+
         private void DisableButton()
         {
             foreach (Control previousBtn in panel_menu.Controls)
             {
-                if (previousBtn.GetType() == typeof(RoundedButton))
+                if (previousBtn is RoundedButton roundedButton)
                 {
-                    RoundedButton roundedButton = (RoundedButton)previousBtn; // Ép kiểu về RoundedButton
-
                     roundedButton.BackColor = Color.White;
                     roundedButton.ForeColor = Color.Black;
-                    roundedButton.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
-                    // Kiểm tra nếu là button "roundedButton_qltk" thì trả về ảnh ban đầu
-                    if (roundedButton.Name == "roundedButton_qltk")
-                    {
-                        roundedButton.Image = Image.FromFile("..\\..\\Resources\\userden.png"); // Đường dẫn tới ảnh mặc định
-                    }
-                    if (roundedButton.Name == "roundedButton_qlnv")
-                    {
-                        roundedButton.Image = Image.FromFile("..\\..\\Resources\\employeeden.png");
-                    }
-                    //roundedButton_qlsp
-                    if (roundedButton.Name == "roundedButton_qlsp")
-                    {
-                        roundedButton.Image = Image.FromFile("..\\..\\Resources\\sanpham_den.png");
-                    }
-
+                    roundedButton.Font = new Font("Verdana", 10.2F, FontStyle.Regular);
+                    SetButtonImage(roundedButton, false); 
                 }
             }
-
         }
+
+        private void SetButtonImage(RoundedButton button, bool isActive)
+        {
+            string imagePath = "..\\..\\Resources\\";
+            if (button.Name == "roundedButton_qltk")
+                button.Image = Image.FromFile(imagePath + (isActive ? "usertrang.png" : "userden.png"));
+            else if (button.Name == "roundedButton_qlnv")
+                button.Image = Image.FromFile(imagePath + (isActive ? "employeetrang.png" : "employeeden.png"));
+            else if (button.Name == "roundedButton_qlsp")
+                button.Image = Image.FromFile(imagePath + (isActive ? "sanpham_trang.png" : "sanpham_den.png"));
+            else if (button.Name == "roundedButton_hdn")
+                button.Image = Image.FromFile(imagePath + (isActive ? "hoadonnhap_trang.png" : "hoadonnhap.png"));
+            else if (button.Name == "roundedButton_hdb")
+                button.Image = Image.FromFile(imagePath + (isActive ? "hoadonban_trang.png" : "hoadonban.png"));
+            else if (button.Name == "roundedButton_qldt")
+                button.Image = Image.FromFile(imagePath + (isActive ? "doanhthu_trang.png" : "doanhthu.png"));
+            else if (button.Name == "roundedButton_lv")
+                button.Image = Image.FromFile(imagePath + (isActive ? "lichlv_trang.png" : "lichlv.png"));
+            else if (button.Name == "roundedButton_ncc")
+                button.Image = Image.FromFile(imagePath + (isActive ? "cungcap_trang.png" : "cungcap.png"));
+        }
+
+
         bool isCollapsed = false;
+
         private void roundedButton1_Click(object sender, EventArgs e)
         {
             if (!isCollapsed)
@@ -148,7 +121,7 @@ namespace StationeryManagementSystem
                 panel_menu.Size = panel_menu.MinimumSize;
                 foreach (Control bt in panel_menu.Controls)
                 {
-                    if (bt.GetType() == typeof(RoundedButton))
+                    if (bt is RoundedButton)
                     {
                         bt.Text = "";
                     }
@@ -159,68 +132,73 @@ namespace StationeryManagementSystem
             {
                 panel_menu.Size = panel_menu.MaximumSize;
                 isCollapsed = false;
-                roundedButton_qltk.Text = "   Quản Lý Tài Khoản";
-                roundedButton_qlnv.Text = "   Quản Lý Nhân viên";
-                //btn_dangxuat.Text = "Đăng xuất";
-                //button_account.Text = "  Quản lý tài khoản";
-                //button_khachhang.Text = "  Khách hàng";
-                //button_nv.Text = "  Nhân viên";
-                ////button_trangchu.Text = "  Trang chủ";
-                //button_phong.Text = "  Phòng";
-                //button_dichvu.Text = "  Dịch vụ";
-                //btn_dangxuat.Text = "  Đăng xuất";
-                //button_bill.Text = "  Hoá đơn";
-                //button_dangkythuetra.Text = "  Đăng ký thuê trả";
-                //roundedButton_ca_lich.Text = "  Ca, lich làm việc";
-                //roundedButton_bc_thu_chi.Text = "  Báo cáo thu chi";
-                //roundedButton_khaibaotp.Text = "  Khai báo thực phẩm";
-
+                roundedButton_qltk.Text = "   Quản lý tài khoản";
+                roundedButton_qlnv.Text = "   Quản lý nhân viên";
+                roundedButton_qlsp.Text = "   Quản lý sản phẩm";
+                roundedButton_hdn.Text = "   Quản lý hóa đơn nhập";
+                roundedButton_hdb.Text = "   Quản lý hóa đơn bán";
+                roundedButton_qldt.Text = "   Quản lý doanh thu";
+                roundedButton_lv.Text = "   Quản lý lịch làm việc";
+                roundedButton_ncc.Text = "   Quản lý nhà cung cấp";
             }
-
-        }
-
-
-
-        private void FormMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel_menu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel_logo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void roundedButton_qltk_Click(object sender, EventArgs e)
         {
-            FormTaiKhoan formtk = new FormTaiKhoan();
-            OpenChildForm(formtk, sender);
-            lblTiltle.Text = "Quản Lý Tài Khoản";
+            FormTaiKhoan formTaiKhoan = new FormTaiKhoan();
+            OpenChildForm(formTaiKhoan, sender);
+            lblTiltle.Text = "Quản lý tài khoản";
         }
 
         private void roundedButton_qlnv_Click(object sender, EventArgs e)
         {
             FormNhanVien formNhanVien = new FormNhanVien();
             OpenChildForm(formNhanVien, sender);
-            lblTiltle.Text = "Quản Lý Nhân viên";
+            lblTiltle.Text = "Quản lý nhân viên";
         }
 
         private void roundedButton_qlsp_Click(object sender, EventArgs e)
         {
             FormSanPham formSanPham = new FormSanPham();
             OpenChildForm(formSanPham, sender);
-            lblTiltle.Text = "Quản Lý Sản Phẩm";
-
+            lblTiltle.Text = "Quản lý sản phẩm";
         }
+
+        private void roundedButton_hdn_Click(object sender, EventArgs e)
+        {
+            FormHoaDonNhap formHoaDonNhap  = new FormHoaDonNhap();
+            OpenChildForm(formHoaDonNhap, sender);
+            lblTiltle.Text = "Quản lý hóa đơn nhập";
+        }
+
+        private void roundedButton_hdb_Click(object sender, EventArgs e)
+        {
+            FormHoaDonBan formHoaDonBan = new FormHoaDonBan();
+            OpenChildForm(formHoaDonBan, sender);
+            lblTiltle.Text = "Quản lý hóa đơn bán";
+        }
+
+        private void roundedButton_qldt_Click(object sender, EventArgs e)
+        {
+            FormDoanhThu formDoanhThu = new FormDoanhThu();
+            OpenChildForm(formDoanhThu, sender);
+            lblTiltle.Text = "Quản lý doanh thu";
+        }
+
+        private void roundedButton_lv_Click(object sender, EventArgs e)
+        {
+            FormLichLamViec formLichLamViec = new FormLichLamViec();
+            OpenChildForm(formLichLamViec, sender);
+            lblTiltle.Text = "Quản lý lịch làm việc";
+        }
+
+        private void roundedButton_ncc_Click(object sender, EventArgs e)
+        {
+            FormNhaCungCap formNhaCungCap = new FormNhaCungCap();
+            OpenChildForm(formNhaCungCap, sender);
+            lblTiltle.Text = "Quản lý nhà cung cấp";
+        }
+
+        
     }
 }
