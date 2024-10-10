@@ -60,3 +60,5 @@ C:\Users\nguye\source\DBMS\QLVPP\StationeryManagementSystem\obj\Debug\Stationery
 C:\Users\nguye\source\DBMS\QLVPP\StationeryManagementSystem\bin\Debug\Guna.UI2.dll
 C:\Users\nguye\source\DBMS\QLVPP\StationeryManagementSystem\obj\Debug\StationeryManagementSystem.GUI.FormHoaDonNhap.resources
 C:\Users\nguye\source\DBMS\QLVPP\StationeryManagementSystem\obj\Debug\StationeryManagementSystem.FormNhanVien.resources
+C:\Users\nguye\source\DBMS\QLVPP\StationeryManagementSystem\obj\Debug\StationeryManagementSystem.FormTaiKhoan.resources
+C:\Users\nguye\source\DBMS\QLVPP\StationeryManagementSystem\obj\Debug\StationeryManagementSystem.UCTimKiem.resources

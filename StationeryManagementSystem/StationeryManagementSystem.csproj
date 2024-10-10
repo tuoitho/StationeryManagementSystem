@@ -156,6 +156,12 @@
     <Compile Include="Controls\RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\UCTimKiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCTimKiem.Designer.cs">
+      <DependentUpon>UCTimKiem.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GUI\FormHoaDonNhap.resx">
       <DependentUpon>FormHoaDonNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +174,9 @@
     <EmbeddedResource Include="GUI\FormSanPham.resx">
       <DependentUpon>FormSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormTaiKhoan.resx">
+      <DependentUpon>FormTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -175,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\RoundedButton.resx">
       <DependentUpon>RoundedButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCTimKiem.resx">
+      <DependentUpon>UCTimKiem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
