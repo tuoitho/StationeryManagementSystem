@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ColorTransition1 = new Guna.UI2.WinForms.Guna2ColorTransition(this.components);
             this.gbSP = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.cbMaLoai = new Guna.UI2.WinForms.Guna2ComboBox();
             this.gbTacVu = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
@@ -54,7 +55,6 @@
             this.txtMaSP = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblMaSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbListSP = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.ucTimKiemSP = new StationeryManagementSystem.UCTimKiem();
             this.gvSP = new System.Windows.Forms.DataGridView();
             this.maSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +64,7 @@
             this.giaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbMaLoai = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ucTimKiemSanPham = new StationeryManagementSystem.UCTimKiem();
             this.gbSP.SuspendLayout();
             this.gbTacVu.SuspendLayout();
             this.gbListSP.SuspendLayout();
@@ -105,9 +105,25 @@
             this.gbSP.ForeColor = System.Drawing.Color.White;
             this.gbSP.Location = new System.Drawing.Point(12, 3);
             this.gbSP.Name = "gbSP";
-            this.gbSP.Size = new System.Drawing.Size(371, 685);
+            this.gbSP.Size = new System.Drawing.Size(372, 685);
             this.gbSP.TabIndex = 2;
             this.gbSP.Text = "Sản phẩm";
+            // 
+            // cbMaLoai
+            // 
+            this.cbMaLoai.BackColor = System.Drawing.Color.Transparent;
+            this.cbMaLoai.BorderColor = System.Drawing.Color.Teal;
+            this.cbMaLoai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbMaLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMaLoai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMaLoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMaLoai.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbMaLoai.ForeColor = System.Drawing.Color.Teal;
+            this.cbMaLoai.ItemHeight = 30;
+            this.cbMaLoai.Location = new System.Drawing.Point(138, 158);
+            this.cbMaLoai.Name = "cbMaLoai";
+            this.cbMaLoai.Size = new System.Drawing.Size(220, 36);
+            this.cbMaLoai.TabIndex = 49;
             // 
             // gbTacVu
             // 
@@ -449,7 +465,7 @@
             // 
             this.gbListSP.BorderRadius = 10;
             this.gbListSP.BorderThickness = 2;
-            this.gbListSP.Controls.Add(this.ucTimKiemSP);
+            this.gbListSP.Controls.Add(this.ucTimKiemSanPham);
             this.gbListSP.Controls.Add(this.gvSP);
             this.gbListSP.CustomBorderColor = System.Drawing.Color.Teal;
             this.gbListSP.FillColor = System.Drawing.SystemColors.Control;
@@ -459,31 +475,20 @@
             this.gbListSP.Name = "gbListSP";
             this.gbListSP.Size = new System.Drawing.Size(750, 685);
             this.gbListSP.TabIndex = 49;
-            this.gbListSP.Text = "                                   Danh sách sản phẩm";
-            // 
-            // ucTimKiemSP
-            // 
-            this.ucTimKiemSP.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucTimKiemSP.Location = new System.Drawing.Point(12, 98);
-            this.ucTimKiemSP.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.ucTimKiemSP.Name = "ucTimKiemSP";
-            this.ucTimKiemSP.Size = new System.Drawing.Size(719, 59);
-            this.ucTimKiemSP.TabIndex = 4;
+            this.gbListSP.Text = "                                       Danh sách sản phẩm";
             // 
             // gvSP
             // 
-            this.gvSP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.gvSP.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gvSP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvSP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maSP,
@@ -494,14 +499,14 @@
             this.giaNhap,
             this.giaBan,
             this.maNCC});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvSP.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvSP.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvSP.GridColor = System.Drawing.Color.White;
             this.gvSP.Location = new System.Drawing.Point(3, 187);
             this.gvSP.Name = "gvSP";
@@ -540,10 +545,10 @@
             // 
             // soLuong
             // 
-            this.soLuong.HeaderText = "Số lượng";
+            this.soLuong.HeaderText = "Số lượng trong kho";
             this.soLuong.MinimumWidth = 6;
             this.soLuong.Name = "soLuong";
-            this.soLuong.Width = 150;
+            this.soLuong.Width = 200;
             // 
             // giaNhap
             // 
@@ -566,21 +571,14 @@
             this.maNCC.Name = "maNCC";
             this.maNCC.Width = 170;
             // 
-            // cbMaLoai
+            // ucTimKiemSanPham
             // 
-            this.cbMaLoai.BackColor = System.Drawing.Color.Transparent;
-            this.cbMaLoai.BorderColor = System.Drawing.Color.Teal;
-            this.cbMaLoai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbMaLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMaLoai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbMaLoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbMaLoai.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbMaLoai.ForeColor = System.Drawing.Color.Teal;
-            this.cbMaLoai.ItemHeight = 30;
-            this.cbMaLoai.Location = new System.Drawing.Point(138, 158);
-            this.cbMaLoai.Name = "cbMaLoai";
-            this.cbMaLoai.Size = new System.Drawing.Size(220, 36);
-            this.cbMaLoai.TabIndex = 49;
+            this.ucTimKiemSanPham.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucTimKiemSanPham.Location = new System.Drawing.Point(7, 76);
+            this.ucTimKiemSanPham.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.ucTimKiemSanPham.Name = "ucTimKiemSanPham";
+            this.ucTimKiemSanPham.Size = new System.Drawing.Size(738, 59);
+            this.ucTimKiemSanPham.TabIndex = 4;
             // 
             // FormSanPham
             // 
@@ -628,6 +626,8 @@
         private Guna.UI2.WinForms.Guna2GroupBox gbTacVu;
         private Guna.UI2.WinForms.Guna2GroupBox gbListSP;
         private System.Windows.Forms.DataGridView gvSP;
+        private UCTimKiem UCTimKiemSP;
+        private Guna.UI2.WinForms.Guna2ComboBox cbMaLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn maSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn maLoai;
@@ -636,7 +636,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn giaNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn maNCC;
-        private UCTimKiem ucTimKiemSP;
-        private Guna.UI2.WinForms.Guna2ComboBox cbMaLoai;
+        private UCTimKiem ucTimKiemSanPham;
     }
 }

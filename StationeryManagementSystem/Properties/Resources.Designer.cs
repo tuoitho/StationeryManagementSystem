@@ -65,7 +65,7 @@ namespace StationeryManagementSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap add_document {
             get {
-                object obj = ResourceManager.GetObject("add-document", resourceCulture);
+                object obj = ResourceManager.GetObject("add_document", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -165,7 +165,7 @@ namespace StationeryManagementSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap clock__1_ {
             get {
-                object obj = ResourceManager.GetObject("clock (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("clock__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,6 +213,26 @@ namespace StationeryManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cungcap {
+            get {
+                object obj = ResourceManager.GetObject("cungcap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cungcap_trang {
+            get {
+                object obj = ResourceManager.GetObject("cungcap_trang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap customer {
             get {
                 object obj = ResourceManager.GetObject("customer", resourceCulture);
@@ -226,6 +246,26 @@ namespace StationeryManagementSystem.Properties {
         internal static System.Drawing.Bitmap dangxuat32px {
             get {
                 object obj = ResourceManager.GetObject("dangxuat32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doanhthu {
+            get {
+                object obj = ResourceManager.GetObject("doanhthu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doanhthu_trang {
+            get {
+                object obj = ResourceManager.GetObject("doanhthu_trang", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +323,9 @@ namespace StationeryManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap employeeden1 {
+        internal static System.Drawing.Bitmap employeetrang {
             get {
-                object obj = ResourceManager.GetObject("employeeden1", resourceCulture);
+                object obj = ResourceManager.GetObject("employeetrang", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +333,9 @@ namespace StationeryManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap employeetrang {
+        internal static System.Drawing.Bitmap Eye {
             get {
-                object obj = ResourceManager.GetObject("employeetrang", resourceCulture);
+                object obj = ResourceManager.GetObject("Eye", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -326,6 +366,16 @@ namespace StationeryManagementSystem.Properties {
         internal static System.Drawing.Bitmap filedownload32px {
             get {
                 object obj = ResourceManager.GetObject("filedownload32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Folder {
+            get {
+                object obj = ResourceManager.GetObject("Folder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -375,7 +425,47 @@ namespace StationeryManagementSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap hình_ảnh_2023_11_20_175846690_transformed {
             get {
-                object obj = ResourceManager.GetObject("hình_ảnh_2023-11-20_175846690-transformed", resourceCulture);
+                object obj = ResourceManager.GetObject("hình_ảnh_2023_11_20_175846690_transformed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hoadonban {
+            get {
+                object obj = ResourceManager.GetObject("hoadonban", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hoadonban_trang {
+            get {
+                object obj = ResourceManager.GetObject("hoadonban_trang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hoadonnhap {
+            get {
+                object obj = ResourceManager.GetObject("hoadonnhap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hoadonnhap_trang {
+            get {
+                object obj = ResourceManager.GetObject("hoadonnhap_trang", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -395,7 +485,7 @@ namespace StationeryManagementSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap home_button {
             get {
-                object obj = ResourceManager.GetObject("home-button", resourceCulture);
+                object obj = ResourceManager.GetObject("home_button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -483,6 +573,16 @@ namespace StationeryManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Invisible {
+            get {
+                object obj = ResourceManager.GetObject("Invisible", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap invoice {
             get {
                 object obj = ResourceManager.GetObject("invoice", resourceCulture);
@@ -555,7 +655,27 @@ namespace StationeryManagementSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap left_arrow__1_ {
             get {
-                object obj = ResourceManager.GetObject("left-arrow (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("left_arrow__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lichlv {
+            get {
+                object obj = ResourceManager.GetObject("lichlv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lichlv_trang {
+            get {
+                object obj = ResourceManager.GetObject("lichlv_trang", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -605,7 +725,7 @@ namespace StationeryManagementSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap location__1_ {
             get {
-                object obj = ResourceManager.GetObject("location (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("location__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -635,7 +755,7 @@ namespace StationeryManagementSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap magnifying_glass_16px {
             get {
-                object obj = ResourceManager.GetObject("magnifying-glass-16px", resourceCulture);
+                object obj = ResourceManager.GetObject("magnifying_glass_16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -685,7 +805,7 @@ namespace StationeryManagementSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap online_shop_icon_32px {
             get {
-                object obj = ResourceManager.GetObject("online-shop-icon-32px", resourceCulture);
+                object obj = ResourceManager.GetObject("online_shop_icon_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -695,7 +815,7 @@ namespace StationeryManagementSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap online_shop_icon_64px {
             get {
-                object obj = ResourceManager.GetObject("online-shop-icon-64px", resourceCulture);
+                object obj = ResourceManager.GetObject("online_shop_icon_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -745,7 +865,7 @@ namespace StationeryManagementSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap plus_symbol_button_32px {
             get {
-                object obj = ResourceManager.GetObject("plus-symbol-button-32px", resourceCulture);
+                object obj = ResourceManager.GetObject("plus_symbol_button_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -775,7 +895,7 @@ namespace StationeryManagementSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap ready_stock__1_ {
             get {
-                object obj = ResourceManager.GetObject("ready-stock (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("ready_stock__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -806,6 +926,26 @@ namespace StationeryManagementSystem.Properties {
         internal static System.Drawing.Bitmap room32 {
             get {
                 object obj = ResourceManager.GetObject("room32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sanpham_den {
+            get {
+                object obj = ResourceManager.GetObject("sanpham_den", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sanpham_trang {
+            get {
+                object obj = ResourceManager.GetObject("sanpham_trang", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -873,6 +1013,36 @@ namespace StationeryManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap thanhtoan {
+            get {
+                object obj = ResourceManager.GetObject("thanhtoan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thoat {
+            get {
+                object obj = ResourceManager.GetObject("thoat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thoat_trang {
+            get {
+                object obj = ResourceManager.GetObject("thoat_trang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap thongke32px {
             get {
                 object obj = ResourceManager.GetObject("thongke32px", resourceCulture);
@@ -895,7 +1065,7 @@ namespace StationeryManagementSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap toppng_com_lock_login_key_password_protected_safe_security_icon_login_password_343x370 {
             get {
-                object obj = ResourceManager.GetObject("toppng.com-lock-login-key-password-protected-safe-security-icon-login-password-34" +
+                object obj = ResourceManager.GetObject("toppng_com_lock_login_key_password_protected_safe_security_icon_login_password_34" +
                         "3x370", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
@@ -907,6 +1077,16 @@ namespace StationeryManagementSystem.Properties {
         internal static System.Drawing.Bitmap trash {
             get {
                 object obj = ResourceManager.GetObject("trash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -927,6 +1107,16 @@ namespace StationeryManagementSystem.Properties {
         internal static System.Drawing.Bitmap usertrang {
             get {
                 object obj = ResourceManager.GetObject("usertrang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vpp {
+            get {
+                object obj = ResourceManager.GetObject("vpp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

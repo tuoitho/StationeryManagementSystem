@@ -15,27 +15,8 @@ namespace StationeryManagementSystem
         public FormMain()
         {
             InitializeComponent();
-            InitializeButtonImages();
         }
 
-        private void InitializeButtonImages()
-        {
-            try
-            {
-                roundedButton_qltk.Image = Image.FromFile("..\\..\\Resources\\userden.png");
-                roundedButton_qlnv.Image = Image.FromFile("..\\..\\Resources\\employeeden.png");
-                roundedButton_qlsp.Image = Image.FromFile("..\\..\\Resources\\sanpham_den.png");
-                roundedButton_hdn.Image = Image.FromFile("..\\..\\Resources\\hoadonnhap.png");
-                roundedButton_hdb.Image = Image.FromFile("..\\..\\Resources\\hoadonban.png");
-                roundedButton_qldt.Image = Image.FromFile("..\\..\\Resources\\doanhthu.png");
-                roundedButton_lv.Image = Image.FromFile("..\\..\\Resources\\lichlv.png");
-                roundedButton_ncc.Image = Image.FromFile("..\\..\\Resources\\cungcap.png");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading images: " + ex.Message);
-            }
-        }
 
         private void OpenChildForm(Form childForm, object btnSender)
         {
@@ -109,6 +90,8 @@ namespace StationeryManagementSystem
                 button.Image = Image.FromFile(imagePath + (isActive ? "lichlv_trang.png" : "lichlv.png"));
             else if (button.Name == "roundedButton_ncc")
                 button.Image = Image.FromFile(imagePath + (isActive ? "cungcap_trang.png" : "cungcap.png"));
+            else if (button.Name == "roundedButton_thoat")
+                button.Image = Image.FromFile(imagePath + (isActive ? "thoat_trang.png" : "thoat.png"));
         }
 
 
@@ -140,6 +123,7 @@ namespace StationeryManagementSystem
                 roundedButton_qldt.Text = "   Quản lý doanh thu";
                 roundedButton_lv.Text = "   Quản lý lịch làm việc";
                 roundedButton_ncc.Text = "   Quản lý nhà cung cấp";
+                roundedButton_thoat.Text = "   Thoát";
             }
         }
 
@@ -199,6 +183,10 @@ namespace StationeryManagementSystem
             lblTiltle.Text = "Quản lý nhà cung cấp";
         }
 
-        
+        private void roundedButton_thoat_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            Application.Exit();
+        }
     }
 }

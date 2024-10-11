@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StationeryManagementSystem.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace StationeryManagementSystem
         public FormNhanVien()
         {
             InitializeComponent();
+        }
+
+        private void FormNhanVien_Load(object sender, EventArgs e)
+        {
+            gvNhanVien.DataSource = NhanVienDao.findAll();
         }
     }
 }
