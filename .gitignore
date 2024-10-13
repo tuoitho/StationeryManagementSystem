@@ -1,9 +1,6 @@
-
 .vs
 /.vs
 UpgradeLog.htm
-*.pdb
-*.exe
 /StationeryManagementSystem/bin
 /StationeryManagementSystem/obj
 *.cache
