@@ -153,6 +153,16 @@ namespace StationeryManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chitieu {
+            get {
+                object obj = ResourceManager.GetObject("chitieu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clock {
             get {
                 object obj = ResourceManager.GetObject("clock", resourceCulture);
@@ -573,6 +583,16 @@ namespace StationeryManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap huy {
+            get {
+                object obj = ResourceManager.GetObject("huy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Invisible {
             get {
                 object obj = ResourceManager.GetObject("Invisible", resourceCulture);
@@ -606,6 +626,16 @@ namespace StationeryManagementSystem.Properties {
         internal static System.Drawing.Bitmap keyboard32px_02 {
             get {
                 object obj = ResourceManager.GetObject("keyboard32px_02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap khachhang {
+            get {
+                object obj = ResourceManager.GetObject("khachhang", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -746,6 +776,16 @@ namespace StationeryManagementSystem.Properties {
         internal static System.Drawing.Bitmap logout {
             get {
                 object obj = ResourceManager.GetObject("logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loinhuan {
+            get {
+                object obj = ResourceManager.GetObject("loinhuan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1117,6 +1157,16 @@ namespace StationeryManagementSystem.Properties {
         internal static System.Drawing.Bitmap vpp {
             get {
                 object obj = ResourceManager.GetObject("vpp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xacnhan {
+            get {
+                object obj = ResourceManager.GetObject("xacnhan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

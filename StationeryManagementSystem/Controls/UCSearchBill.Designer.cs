@@ -44,23 +44,23 @@
             this.dpEnd.BorderThickness = 1;
             this.dpEnd.Checked = true;
             this.dpEnd.FillColor = System.Drawing.Color.White;
-            this.dpEnd.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpEnd.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dpEnd.ForeColor = System.Drawing.Color.Teal;
             this.dpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dpEnd.Location = new System.Drawing.Point(457, 12);
+            this.dpEnd.Location = new System.Drawing.Point(428, 12);
             this.dpEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dpEnd.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dpEnd.Name = "dpEnd";
-            this.dpEnd.Size = new System.Drawing.Size(286, 36);
+            this.dpEnd.Size = new System.Drawing.Size(257, 36);
             this.dpEnd.TabIndex = 56;
-            this.dpEnd.Value = new System.DateTime(2024, 10, 10, 20, 44, 24, 93);
+            this.dpEnd.Value = new System.DateTime(2024, 10, 12, 0, 0, 0, 0);
             // 
             // lblDen
             // 
             this.lblDen.BackColor = System.Drawing.SystemColors.Control;
             this.lblDen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDen.ForeColor = System.Drawing.Color.Teal;
-            this.lblDen.Location = new System.Drawing.Point(416, 22);
+            this.lblDen.Location = new System.Drawing.Point(387, 22);
             this.lblDen.Name = "lblDen";
             this.lblDen.Size = new System.Drawing.Size(35, 26);
             this.lblDen.TabIndex = 55;
@@ -74,16 +74,16 @@
             this.dpStart.BorderThickness = 1;
             this.dpStart.Checked = true;
             this.dpStart.FillColor = System.Drawing.Color.White;
-            this.dpStart.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpStart.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dpStart.ForeColor = System.Drawing.Color.Teal;
             this.dpStart.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dpStart.Location = new System.Drawing.Point(124, 12);
             this.dpStart.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dpStart.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dpStart.Name = "dpStart";
-            this.dpStart.Size = new System.Drawing.Size(286, 36);
+            this.dpStart.Size = new System.Drawing.Size(257, 36);
             this.dpStart.TabIndex = 53;
-            this.dpStart.Value = new System.DateTime(2024, 10, 10, 20, 44, 24, 93);
+            this.dpStart.Value = new System.DateTime(2024, 10, 12, 0, 0, 0, 0);
             // 
             // lblTimKiem
             // 
@@ -100,7 +100,7 @@
             // 
             this.pbSearch.BackgroundImage = global::StationeryManagementSystem.Properties.Resources.Search;
             this.pbSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbSearch.Location = new System.Drawing.Point(749, 12);
+            this.pbSearch.Location = new System.Drawing.Point(691, 12);
             this.pbSearch.Name = "pbSearch";
             this.pbSearch.Size = new System.Drawing.Size(50, 36);
             this.pbSearch.TabIndex = 57;
@@ -120,7 +120,8 @@
             this.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "UCSearchBill";
-            this.Size = new System.Drawing.Size(815, 60);
+            this.Size = new System.Drawing.Size(761, 60);
+            this.Load += new System.EventHandler(this.UCSearchBill_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -18,7 +18,17 @@ namespace StationeryManagementSystem
             InitializeComponent();
         }
 
-      
+        private void pbSearch_MouseEnter(object sender, EventArgs e)
+        {
+            pbSearch.Size = new Size(pbSearch.Width + 10, pbSearch.Height + 10);
+            pbSearch.Location = new Point(pbSearch.Location.X - 5, pbSearch.Location.Y - 5);
+        }
+
+        private void pbSearch_MouseLeave(object sender, EventArgs e)
+        {
+            pbSearch.Size = new Size(pbSearch.Width - 10, pbSearch.Height - 10);
+            pbSearch.Location = new Point(pbSearch.Location.X + 5, pbSearch.Location.Y + 5);
+        }
     }
       
 }

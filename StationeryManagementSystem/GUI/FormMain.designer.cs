@@ -34,8 +34,13 @@ namespace StationeryManagementSystem
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel_menu = new System.Windows.Forms.Panel();
-            this.roundedButton13 = new StationeryManagementSystem.RoundedButton();
+            this.panel_logo = new System.Windows.Forms.Panel();
+            this.lblTiltle = new System.Windows.Forms.Label();
+            this.panel_childForm = new System.Windows.Forms.Panel();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.roundedButton2 = new StationeryManagementSystem.RoundedButton();
             this.roundedButton_thoat = new StationeryManagementSystem.RoundedButton();
+            this.roundedButton_qlkh = new StationeryManagementSystem.RoundedButton();
             this.roundedButton_ncc = new StationeryManagementSystem.RoundedButton();
             this.roundedButton_lv = new StationeryManagementSystem.RoundedButton();
             this.roundedButton_qldt = new StationeryManagementSystem.RoundedButton();
@@ -44,11 +49,7 @@ namespace StationeryManagementSystem
             this.roundedButton_qlsp = new StationeryManagementSystem.RoundedButton();
             this.roundedButton_qlnv = new StationeryManagementSystem.RoundedButton();
             this.roundedButton_qltk = new StationeryManagementSystem.RoundedButton();
-            this.panel_logo = new System.Windows.Forms.Panel();
             this.roundedButton6 = new StationeryManagementSystem.RoundedButton();
-            this.lblTiltle = new System.Windows.Forms.Label();
-            this.panel_childForm = new System.Windows.Forms.Panel();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
             this.panel_menu.SuspendLayout();
             this.panel_logo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -57,8 +58,9 @@ namespace StationeryManagementSystem
             // panel_menu
             // 
             this.panel_menu.BackColor = System.Drawing.Color.White;
-            this.panel_menu.Controls.Add(this.roundedButton13);
+            this.panel_menu.Controls.Add(this.roundedButton2);
             this.panel_menu.Controls.Add(this.roundedButton_thoat);
+            this.panel_menu.Controls.Add(this.roundedButton_qlkh);
             this.panel_menu.Controls.Add(this.roundedButton_ncc);
             this.panel_menu.Controls.Add(this.roundedButton_lv);
             this.panel_menu.Controls.Add(this.roundedButton_qldt);
@@ -77,26 +79,77 @@ namespace StationeryManagementSystem
             this.panel_menu.Size = new System.Drawing.Size(320, 1055);
             this.panel_menu.TabIndex = 0;
             // 
-            // roundedButton13
+            // panel_logo
             // 
-            this.roundedButton13.BackColor = System.Drawing.Color.White;
-            this.roundedButton13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.roundedButton13.FlatAppearance.BorderSize = 0;
-            this.roundedButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton13.Font = new System.Drawing.Font("Verdana", 10.2F);
-            this.roundedButton13.ForeColor = System.Drawing.Color.Black;
-            this.roundedButton13.Image = global::StationeryManagementSystem.Properties.Resources.userden;
-            this.roundedButton13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.roundedButton13.Location = new System.Drawing.Point(0, 641);
-            this.roundedButton13.Margin = new System.Windows.Forms.Padding(2);
-            this.roundedButton13.Name = "roundedButton13";
-            this.roundedButton13.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.roundedButton13.Size = new System.Drawing.Size(320, 61);
-            this.roundedButton13.TabIndex = 13;
-            this.roundedButton13.Text = "   roundedButton2";
-            this.roundedButton13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.roundedButton13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.roundedButton13.UseVisualStyleBackColor = true;
+            this.panel_logo.BackColor = System.Drawing.Color.Transparent;
+            this.panel_logo.Controls.Add(this.roundedButton6);
+            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_logo.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_logo.Name = "panel_logo";
+            this.panel_logo.Size = new System.Drawing.Size(320, 92);
+            this.panel_logo.TabIndex = 0;
+            // 
+            // lblTiltle
+            // 
+            this.lblTiltle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTiltle.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTiltle.ForeColor = System.Drawing.Color.White;
+            this.lblTiltle.Location = new System.Drawing.Point(81, 9);
+            this.lblTiltle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTiltle.Name = "lblTiltle";
+            this.lblTiltle.Size = new System.Drawing.Size(1399, 60);
+            this.lblTiltle.TabIndex = 0;
+            this.lblTiltle.Text = "Home";
+            this.lblTiltle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel_childForm
+            // 
+            this.panel_childForm.AutoScroll = true;
+            this.panel_childForm.BackColor = System.Drawing.Color.Transparent;
+            this.panel_childForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_childForm.Font = new System.Drawing.Font("Verdana", 10.2F);
+            this.panel_childForm.Location = new System.Drawing.Point(320, 92);
+            this.panel_childForm.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_childForm.Name = "panel_childForm";
+            this.panel_childForm.Size = new System.Drawing.Size(1401, 963);
+            this.panel_childForm.TabIndex = 2;
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(225)))));
+            this.panelTitleBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelTitleBar.Controls.Add(this.lblTiltle);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.panelTitleBar.Location = new System.Drawing.Point(320, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(1401, 92);
+            this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.TabStop = true;
+            // 
+            // roundedButton2
+            // 
+            this.roundedButton2.BackColor = System.Drawing.Color.White;
+            this.roundedButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.roundedButton2.FlatAppearance.BorderSize = 0;
+            this.roundedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton2.Font = new System.Drawing.Font("Verdana", 10.2F);
+            this.roundedButton2.ForeColor = System.Drawing.Color.Black;
+            this.roundedButton2.Image = global::StationeryManagementSystem.Properties.Resources.userden;
+            this.roundedButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton2.Location = new System.Drawing.Point(0, 702);
+            this.roundedButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.roundedButton2.Name = "roundedButton2";
+            this.roundedButton2.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.roundedButton2.Size = new System.Drawing.Size(320, 61);
+            this.roundedButton2.TabIndex = 13;
+            this.roundedButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.roundedButton2.UseVisualStyleBackColor = true;
             // 
             // roundedButton_thoat
             // 
@@ -108,17 +161,39 @@ namespace StationeryManagementSystem
             this.roundedButton_thoat.ForeColor = System.Drawing.Color.Black;
             this.roundedButton_thoat.Image = global::StationeryManagementSystem.Properties.Resources.thoat;
             this.roundedButton_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.roundedButton_thoat.Location = new System.Drawing.Point(0, 580);
+            this.roundedButton_thoat.Location = new System.Drawing.Point(0, 641);
             this.roundedButton_thoat.Margin = new System.Windows.Forms.Padding(2);
             this.roundedButton_thoat.Name = "roundedButton_thoat";
             this.roundedButton_thoat.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.roundedButton_thoat.Size = new System.Drawing.Size(320, 61);
-            this.roundedButton_thoat.TabIndex = 12;
+            this.roundedButton_thoat.TabIndex = 11;
             this.roundedButton_thoat.Text = "   Thoát";
             this.roundedButton_thoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.roundedButton_thoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.roundedButton_thoat.UseVisualStyleBackColor = true;
-            this.roundedButton_thoat.Click += new System.EventHandler(this.roundedButton_thoat_Click);
+            this.roundedButton_thoat.Click += new System.EventHandler(this.roundedButton_thoat_Click_1);
+            // 
+            // roundedButton_qlkh
+            // 
+            this.roundedButton_qlkh.BackColor = System.Drawing.Color.White;
+            this.roundedButton_qlkh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.roundedButton_qlkh.FlatAppearance.BorderSize = 0;
+            this.roundedButton_qlkh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton_qlkh.Font = new System.Drawing.Font("Verdana", 10.2F);
+            this.roundedButton_qlkh.ForeColor = System.Drawing.Color.Black;
+            this.roundedButton_qlkh.Image = global::StationeryManagementSystem.Properties.Resources.khachhang;
+            this.roundedButton_qlkh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton_qlkh.Location = new System.Drawing.Point(0, 580);
+            this.roundedButton_qlkh.Margin = new System.Windows.Forms.Padding(2);
+            this.roundedButton_qlkh.Name = "roundedButton_qlkh";
+            this.roundedButton_qlkh.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.roundedButton_qlkh.Size = new System.Drawing.Size(320, 61);
+            this.roundedButton_qlkh.TabIndex = 12;
+            this.roundedButton_qlkh.Text = "   Khách hàng";
+            this.roundedButton_qlkh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton_qlkh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.roundedButton_qlkh.UseVisualStyleBackColor = true;
+            this.roundedButton_qlkh.Click += new System.EventHandler(this.roundedButton_qlkh_Click);
             // 
             // roundedButton_ncc
             // 
@@ -180,7 +255,7 @@ namespace StationeryManagementSystem
             this.roundedButton_qldt.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.roundedButton_qldt.Size = new System.Drawing.Size(320, 61);
             this.roundedButton_qldt.TabIndex = 8;
-            this.roundedButton_qldt.Text = "   Quản lý doanh thu";
+            this.roundedButton_qldt.Text = "   Thống kê";
             this.roundedButton_qldt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.roundedButton_qldt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.roundedButton_qldt.UseVisualStyleBackColor = true;
@@ -296,17 +371,6 @@ namespace StationeryManagementSystem
             this.roundedButton_qltk.UseVisualStyleBackColor = true;
             this.roundedButton_qltk.Click += new System.EventHandler(this.roundedButton_qltk_Click);
             // 
-            // panel_logo
-            // 
-            this.panel_logo.BackColor = System.Drawing.Color.Transparent;
-            this.panel_logo.Controls.Add(this.roundedButton6);
-            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_logo.Location = new System.Drawing.Point(0, 0);
-            this.panel_logo.Margin = new System.Windows.Forms.Padding(2);
-            this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(320, 92);
-            this.panel_logo.TabIndex = 0;
-            // 
             // roundedButton6
             // 
             this.roundedButton6.BackColor = System.Drawing.Color.White;
@@ -327,47 +391,6 @@ namespace StationeryManagementSystem
             this.roundedButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.roundedButton6.UseVisualStyleBackColor = true;
             this.roundedButton6.Click += new System.EventHandler(this.roundedButton1_Click);
-            // 
-            // lblTiltle
-            // 
-            this.lblTiltle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTiltle.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTiltle.ForeColor = System.Drawing.Color.White;
-            this.lblTiltle.Location = new System.Drawing.Point(81, 9);
-            this.lblTiltle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTiltle.Name = "lblTiltle";
-            this.lblTiltle.Size = new System.Drawing.Size(1399, 60);
-            this.lblTiltle.TabIndex = 0;
-            this.lblTiltle.Text = "Home";
-            this.lblTiltle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel_childForm
-            // 
-            this.panel_childForm.AutoScroll = true;
-            this.panel_childForm.BackColor = System.Drawing.Color.Transparent;
-            this.panel_childForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_childForm.Font = new System.Drawing.Font("Verdana", 10.2F);
-            this.panel_childForm.Location = new System.Drawing.Point(320, 92);
-            this.panel_childForm.Margin = new System.Windows.Forms.Padding(2);
-            this.panel_childForm.Name = "panel_childForm";
-            this.panel_childForm.Size = new System.Drawing.Size(1401, 963);
-            this.panel_childForm.TabIndex = 2;
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(225)))));
-            this.panelTitleBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panelTitleBar.Controls.Add(this.lblTiltle);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.panelTitleBar.Location = new System.Drawing.Point(320, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1401, 92);
-            this.panelTitleBar.TabIndex = 1;
-            this.panelTitleBar.TabStop = true;
             // 
             // FormMain
             // 
@@ -416,8 +439,9 @@ namespace StationeryManagementSystem
         private RoundedButton roundedButton_lv;
         private RoundedButton roundedButton_qldt;
         private RoundedButton roundedButton_hdb;
-        private RoundedButton roundedButton13;
         private RoundedButton roundedButton_thoat;
+        private RoundedButton roundedButton_qlkh;
         private Panel panelTitleBar;
+        private RoundedButton roundedButton2;
     }
 }

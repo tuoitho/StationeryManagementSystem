@@ -81,6 +81,7 @@
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -92,6 +93,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\UCHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCHoaDon.Designer.cs">
+      <DependentUpon>UCHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormThemSanPhamVaoHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormThemSanPhamVaoHoaDon.Designer.cs">
+      <DependentUpon>FormThemSanPhamVaoHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormChiTietDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormChiTietDoanhThu.Designer.cs">
+      <DependentUpon>FormChiTietDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormChiTietLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormChiTietLuong.Designer.cs">
+      <DependentUpon>FormChiTietLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormChiTietNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormChiTietNhapHang.Designer.cs">
+      <DependentUpon>FormChiTietNhapHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,8 +207,32 @@
     <Compile Include="Controls\UCSearchBill.Designer.cs">
       <DependentUpon>UCSearchBill.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UCThemSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCThemSanPham.Designer.cs">
+      <DependentUpon>UCThemSanPham.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\UCHoaDon.resx">
+      <DependentUpon>UCHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormThemSanPhamVaoHoaDon.resx">
+      <DependentUpon>FormThemSanPhamVaoHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormChiTietDoanhThu.resx">
+      <DependentUpon>FormChiTietDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormChiTietLuong.resx">
+      <DependentUpon>FormChiTietLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormChiTietNhapHang.resx">
+      <DependentUpon>FormChiTietNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormDoanhThu.resx">
+      <DependentUpon>FormDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormHoaDonBan.resx">
       <DependentUpon>FormHoaDonBan.cs</DependentUpon>
@@ -211,6 +266,9 @@
     <EmbeddedResource Include="Controls\UCSearchBill.resx">
       <DependentUpon>UCSearchBill.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCThemSanPham.resx">
+      <DependentUpon>UCThemSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -236,6 +294,7 @@
     <Content Include="Resources\calamviec32.png" />
     <Content Include="Resources\call.png" />
     <Content Include="Resources\checkin.png" />
+    <Content Include="Resources\chitieu.png" />
     <Content Include="Resources\clock %281%29.png" />
     <Content Include="Resources\clock.png" />
     <Content Include="Resources\computer32px.png" />
@@ -258,6 +317,7 @@
     <Content Include="Resources\eye16px.png" />
     <Content Include="Resources\file.png" />
     <Content Include="Resources\filedownload32px.png" />
+    <Content Include="Resources\xacnhan.png" />
     <None Include="Resources\Folder.png" />
     <Content Include="Resources\freelancer.png" />
     <Content Include="Resources\grid.png" />
@@ -277,13 +337,16 @@
     <Content Include="Resources\homeden1.png" />
     <Content Include="Resources\hometrang.png" />
     <Content Include="Resources\hometrang1.png" />
+    <Content Include="Resources\huy.png" />
     <Content Include="Resources\hình_ảnh_2023-11-20_175846690-transformed.png" />
     <Content Include="Resources\Invisible.png" />
     <Content Include="Resources\invoice.png" />
     <Content Include="Resources\keyboard32px.png" />
     <Content Include="Resources\keyboard32px_02.png" />
+    <Content Include="Resources\khachhang.png" />
     <Content Include="Resources\khachhangden.png" />
     <Content Include="Resources\khachhangtrang.png" />
+    <Content Include="Resources\khachhang_trang.png" />
     <Content Include="Resources\laptop16x.png" />
     <Content Include="Resources\laptop32x32.png" />
     <Content Include="Resources\left-arrow %281%29.png" />
@@ -296,6 +359,7 @@
     <Content Include="Resources\location.png" />
     <Content Include="Resources\login.png" />
     <Content Include="Resources\logout.png" />
+    <Content Include="Resources\loinhuan.png" />
     <Content Include="Resources\magnifying-glass-16px.png" />
     <Content Include="Resources\menu.png" />
     <Content Include="Resources\monitor32px.png" />

@@ -90,6 +90,8 @@ namespace StationeryManagementSystem
                 button.Image = Image.FromFile(imagePath + (isActive ? "lichlv_trang.png" : "lichlv.png"));
             else if (button.Name == "roundedButton_ncc")
                 button.Image = Image.FromFile(imagePath + (isActive ? "cungcap_trang.png" : "cungcap.png"));
+            else if (button.Name == "roundedButton_qlkh")
+                button.Image = Image.FromFile(imagePath + (isActive ? "khachhang_trang.png" : "khachhang.png"));
             else if (button.Name == "roundedButton_thoat")
                 button.Image = Image.FromFile(imagePath + (isActive ? "thoat_trang.png" : "thoat.png"));
         }
@@ -120,10 +122,11 @@ namespace StationeryManagementSystem
                 roundedButton_qlsp.Text = "   Quản lý sản phẩm";
                 roundedButton_hdn.Text = "   Quản lý hóa đơn nhập";
                 roundedButton_hdb.Text = "   Quản lý hóa đơn bán";
-                roundedButton_qldt.Text = "   Quản lý doanh thu";
+                roundedButton_qldt.Text = "   Thống kê";
                 roundedButton_lv.Text = "   Quản lý lịch làm việc";
                 roundedButton_ncc.Text = "   Quản lý nhà cung cấp";
-                roundedButton_thoat.Text = "   Thoát";
+                roundedButton_ncc.Text = "   Khách hàng";
+                roundedButton_qlkh.Text = "   Thoát";
             }
         }
 
@@ -166,7 +169,7 @@ namespace StationeryManagementSystem
         {
             FormDoanhThu formDoanhThu = new FormDoanhThu();
             OpenChildForm(formDoanhThu, sender);
-            lblTiltle.Text = "Quản lý doanh thu";
+            lblTiltle.Text = "Thống kê";
         }
 
         private void roundedButton_lv_Click(object sender, EventArgs e)
@@ -183,10 +186,17 @@ namespace StationeryManagementSystem
             lblTiltle.Text = "Quản lý nhà cung cấp";
         }
 
-        private void roundedButton_thoat_Click(object sender, EventArgs e)
+
+        private void roundedButton_thoat_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender);
             Application.Exit();
+        }
+
+        private void roundedButton_qlkh_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            lblTiltle.Text = "Khách hàng";
         }
     }
 }
