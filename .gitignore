@@ -28,3 +28,4 @@ StationeryManagementSystem/obj/Debug/DesignTimeResolveAssemblyReferences.cache
 *.pdb
 *.exe
 /StationeryManagementSystem/bin
+/StationeryManagementSystem/obj
