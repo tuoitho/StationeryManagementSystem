@@ -30,3 +30,4 @@ StationeryManagementSystem/obj/Debug/DesignTimeResolveAssemblyReferences.cache
 /StationeryManagementSystem/bin
 /StationeryManagementSystem/obj
 /StationeryManagementSystem/obj/Debug
+*.cache
