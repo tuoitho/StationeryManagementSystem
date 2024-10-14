@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 70D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 30D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 100D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 70D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 30D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 60D);
             this.pnChiPhi = new Guna.UI2.WinForms.Guna2Panel();
             this.txtChiTieu = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnTieuDeCP = new Guna.UI2.WinForms.Guna2Panel();
+            this.pbChTieu = new System.Windows.Forms.PictureBox();
             this.lblChiTieu = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.chartChiPhi = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblThang = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -47,6 +48,7 @@
             this.pnLoiNhuan = new Guna.UI2.WinForms.Guna2Panel();
             this.txtLoiNhuan = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pbLoiNhuan = new System.Windows.Forms.PictureBox();
             this.lblDoanhThu = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnBieuDoChiPhi = new Guna.UI2.WinForms.Guna2Panel();
             this.lblChiTietLuong = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -66,18 +68,16 @@
             this.lnlLoiNhuan = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtLoiNhua = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblVND4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.pbLoiNhuan = new System.Windows.Forms.PictureBox();
-            this.pbChTieu = new System.Windows.Forms.PictureBox();
             this.pnChiPhi.SuspendLayout();
             this.pnTieuDeCP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChTieu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartChiPhi)).BeginInit();
             this.pnLoiNhuan.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLoiNhuan)).BeginInit();
             this.pnBieuDoChiPhi.SuspendLayout();
             this.pnBieuDoLoiNhuan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDoanhThu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLoiNhuan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbChTieu)).BeginInit();
             this.SuspendLayout();
             // 
             // pnChiPhi
@@ -128,6 +128,16 @@
             this.pnTieuDeCP.Size = new System.Drawing.Size(133, 41);
             this.pnTieuDeCP.TabIndex = 36;
             // 
+            // pbChTieu
+            // 
+            this.pbChTieu.BackgroundImage = global::StationeryManagementSystem.Properties.Resources.chitieu;
+            this.pbChTieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbChTieu.Location = new System.Drawing.Point(3, 7);
+            this.pbChTieu.Name = "pbChTieu";
+            this.pbChTieu.Size = new System.Drawing.Size(36, 26);
+            this.pbChTieu.TabIndex = 37;
+            this.pbChTieu.TabStop = false;
+            // 
             // lblChiTieu
             // 
             this.lblChiTieu.BackColor = System.Drawing.Color.Transparent;
@@ -143,27 +153,27 @@
             // 
             this.chartChiPhi.BackColor = System.Drawing.SystemColors.Control;
             this.chartChiPhi.BorderlineColor = System.Drawing.SystemColors.Control;
-            chartArea7.Name = "ChartArea1";
-            this.chartChiPhi.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chartChiPhi.Legends.Add(legend7);
+            chartArea1.Name = "ChartArea1";
+            this.chartChiPhi.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartChiPhi.Legends.Add(legend1);
             this.chartChiPhi.Location = new System.Drawing.Point(27, 14);
             this.chartChiPhi.Name = "chartChiPhi";
-            series7.BorderColor = System.Drawing.SystemColors.Control;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series7.Color = System.Drawing.SystemColors.Control;
-            series7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series7.Legend = "Legend1";
-            series7.Name = "ChiPhi";
-            dataPoint10.BorderColor = System.Drawing.Color.White;
-            dataPoint10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataPoint10.LegendText = "Nhập hàng";
-            dataPoint11.BackImageTransparentColor = System.Drawing.Color.White;
-            dataPoint11.LegendText = "Trả lương";
-            series7.Points.Add(dataPoint10);
-            series7.Points.Add(dataPoint11);
-            this.chartChiPhi.Series.Add(series7);
+            series1.BorderColor = System.Drawing.SystemColors.Control;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Color = System.Drawing.SystemColors.Control;
+            series1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.Legend = "Legend1";
+            series1.Name = "ChiPhi";
+            dataPoint1.BorderColor = System.Drawing.Color.White;
+            dataPoint1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataPoint1.LegendText = "Nhập hàng";
+            dataPoint2.BackImageTransparentColor = System.Drawing.Color.White;
+            dataPoint2.LegendText = "Trả lương";
+            series1.Points.Add(dataPoint1);
+            series1.Points.Add(dataPoint2);
+            this.chartChiPhi.Series.Add(series1);
             this.chartChiPhi.Size = new System.Drawing.Size(351, 269);
             this.chartChiPhi.TabIndex = 34;
             this.chartChiPhi.Text = "Chi phí";
@@ -247,6 +257,16 @@
             this.guna2Panel2.Size = new System.Drawing.Size(144, 41);
             this.guna2Panel2.TabIndex = 36;
             // 
+            // pbLoiNhuan
+            // 
+            this.pbLoiNhuan.BackgroundImage = global::StationeryManagementSystem.Properties.Resources.loinhuan;
+            this.pbLoiNhuan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbLoiNhuan.Location = new System.Drawing.Point(3, 7);
+            this.pbLoiNhuan.Name = "pbLoiNhuan";
+            this.pbLoiNhuan.Size = new System.Drawing.Size(36, 26);
+            this.pbLoiNhuan.TabIndex = 37;
+            this.pbLoiNhuan.TabStop = false;
+            // 
             // lblDoanhThu
             // 
             this.lblDoanhThu.BackColor = System.Drawing.Color.Transparent;
@@ -302,7 +322,6 @@
             this.lblChiTietNhapHang.TabIndex = 44;
             this.lblChiTietNhapHang.Text = "Xem chi tiết";
             this.lblChiTietNhapHang.Click += new System.EventHandler(this.lblChiTietNhapHang_Click);
-       
             // 
             // lblVND2
             // 
@@ -475,24 +494,24 @@
             // 
             this.chartDoanhThu.BackColor = System.Drawing.SystemColors.Control;
             this.chartDoanhThu.BorderlineColor = System.Drawing.SystemColors.Control;
-            chartArea8.Name = "ChartArea1";
-            this.chartDoanhThu.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chartDoanhThu.Legends.Add(legend8);
+            chartArea2.Name = "ChartArea1";
+            this.chartDoanhThu.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartDoanhThu.Legends.Add(legend2);
             this.chartDoanhThu.Location = new System.Drawing.Point(27, 14);
             this.chartDoanhThu.Name = "chartDoanhThu";
-            series8.BorderColor = System.Drawing.SystemColors.Control;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series8.Color = System.Drawing.SystemColors.Control;
-            series8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series8.Legend = "Legend1";
-            series8.Name = "DoanhThu";
-            dataPoint12.BorderColor = System.Drawing.Color.White;
-            dataPoint12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataPoint12.LegendText = "Doanh thu bán hàng";
-            series8.Points.Add(dataPoint12);
-            this.chartDoanhThu.Series.Add(series8);
+            series2.BorderColor = System.Drawing.SystemColors.Control;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Color = System.Drawing.SystemColors.Control;
+            series2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.Legend = "Legend1";
+            series2.Name = "DoanhThu";
+            dataPoint3.BorderColor = System.Drawing.Color.White;
+            dataPoint3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataPoint3.LegendText = "Doanh thu bán hàng";
+            series2.Points.Add(dataPoint3);
+            this.chartDoanhThu.Series.Add(series2);
             this.chartDoanhThu.Size = new System.Drawing.Size(351, 269);
             this.chartDoanhThu.TabIndex = 34;
             this.chartDoanhThu.Text = "Doanh thu";
@@ -543,26 +562,6 @@
             this.lblVND4.TabIndex = 42;
             this.lblVND4.Text = "VND";
             // 
-            // pbLoiNhuan
-            // 
-            this.pbLoiNhuan.BackgroundImage = global::StationeryManagementSystem.Properties.Resources.loinhuan;
-            this.pbLoiNhuan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbLoiNhuan.Location = new System.Drawing.Point(3, 7);
-            this.pbLoiNhuan.Name = "pbLoiNhuan";
-            this.pbLoiNhuan.Size = new System.Drawing.Size(36, 26);
-            this.pbLoiNhuan.TabIndex = 37;
-            this.pbLoiNhuan.TabStop = false;
-            // 
-            // pbChTieu
-            // 
-            this.pbChTieu.BackgroundImage = global::StationeryManagementSystem.Properties.Resources.chitieu;
-            this.pbChTieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbChTieu.Location = new System.Drawing.Point(3, 7);
-            this.pbChTieu.Name = "pbChTieu";
-            this.pbChTieu.Size = new System.Drawing.Size(36, 26);
-            this.pbChTieu.TabIndex = 37;
-            this.pbChTieu.TabStop = false;
-            // 
             // FormDoanhThu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -582,17 +581,17 @@
             this.pnChiPhi.ResumeLayout(false);
             this.pnTieuDeCP.ResumeLayout(false);
             this.pnTieuDeCP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChTieu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartChiPhi)).EndInit();
             this.pnLoiNhuan.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLoiNhuan)).EndInit();
             this.pnBieuDoChiPhi.ResumeLayout(false);
             this.pnBieuDoChiPhi.PerformLayout();
             this.pnBieuDoLoiNhuan.ResumeLayout(false);
             this.pnBieuDoLoiNhuan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDoanhThu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLoiNhuan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbChTieu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
