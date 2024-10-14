@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StationeryManagementSystem.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,11 @@ namespace StationeryManagementSystem.GUI
         private void FormHoaDonNhap_Load(object sender, EventArgs e)
         {
             dpNgayThanhToan.Value = DateTime.Today;
+        }
+
+        private void gvHD_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -99,6 +99,10 @@
     <Compile Include="Controls\UCHoaDon.Designer.cs">
       <DependentUpon>UCHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\CTHDBDAO.cs" />
+    <Compile Include="DAO\HoaDonBanDAO.cs" />
+    <Compile Include="DAO\HoaDonNhapDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="GUI\FormThemSanPhamVaoHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>

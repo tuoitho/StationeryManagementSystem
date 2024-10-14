@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvHD = new System.Windows.Forms.DataGridView();
             this.maHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,14 +67,14 @@
             // 
             this.gvHD.BackgroundColor = System.Drawing.Color.White;
             this.gvHD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maHD,
@@ -86,14 +86,14 @@
             this.tongThanhToan,
             this.trangThaiThanhToan,
             this.nvLap});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvHD.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvHD.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvHD.GridColor = System.Drawing.Color.White;
             this.gvHD.Location = new System.Drawing.Point(28, 175);
             this.gvHD.Name = "gvHD";
@@ -102,6 +102,7 @@
             this.gvHD.RowTemplate.Height = 24;
             this.gvHD.Size = new System.Drawing.Size(730, 413);
             this.gvHD.TabIndex = 58;
+            this.gvHD.Click += new System.EventHandler(this.gvHD_Click);
             // 
             // maHD
             // 
@@ -205,7 +206,7 @@
             this.lblTongThanhToan.ForeColor = System.Drawing.Color.Teal;
             this.lblTongThanhToan.Location = new System.Drawing.Point(267, 669);
             this.lblTongThanhToan.Name = "lblTongThanhToan";
-            this.lblTongThanhToan.Size = new System.Drawing.Size(82, 26);
+            this.lblTongThanhToan.Size = new System.Drawing.Size(68, 21);
             this.lblTongThanhToan.TabIndex = 47;
             this.lblTongThanhToan.Text = "Tổng tiền";
             // 
@@ -235,7 +236,7 @@
             this.lblNgayThanhToan.ForeColor = System.Drawing.Color.Teal;
             this.lblNgayThanhToan.Location = new System.Drawing.Point(22, 587);
             this.lblNgayThanhToan.Name = "lblNgayThanhToan";
-            this.lblNgayThanhToan.Size = new System.Drawing.Size(143, 26);
+            this.lblNgayThanhToan.Size = new System.Drawing.Size(119, 21);
             this.lblNgayThanhToan.TabIndex = 22;
             this.lblNgayThanhToan.Text = "Ngày thanh toán";
             // 
@@ -246,7 +247,7 @@
             this.lblTenNCC.ForeColor = System.Drawing.Color.Teal;
             this.lblTenNCC.Location = new System.Drawing.Point(22, 167);
             this.lblTenNCC.Name = "lblTenNCC";
-            this.lblTenNCC.Size = new System.Drawing.Size(135, 26);
+            this.lblTenNCC.Size = new System.Drawing.Size(111, 21);
             this.lblTenNCC.TabIndex = 21;
             this.lblTenNCC.Text = "Tên khách hàng";
             // 
@@ -297,7 +298,7 @@
             this.lblTrangThai.ForeColor = System.Drawing.Color.Teal;
             this.lblTrangThai.Location = new System.Drawing.Point(22, 669);
             this.lblTrangThai.Name = "lblTrangThai";
-            this.lblTrangThai.Size = new System.Drawing.Size(187, 26);
+            this.lblTrangThai.Size = new System.Drawing.Size(154, 21);
             this.lblTrangThai.TabIndex = 50;
             this.lblTrangThai.Text = "Trạng thái thanh toán";
             // 
@@ -400,7 +401,7 @@
             this.lblTenNV.ForeColor = System.Drawing.Color.Teal;
             this.lblTenNV.Location = new System.Drawing.Point(22, 92);
             this.lblTenNV.Name = "lblTenNV";
-            this.lblTenNV.Size = new System.Drawing.Size(122, 26);
+            this.lblTenNV.Size = new System.Drawing.Size(100, 21);
             this.lblTenNV.TabIndex = 16;
             this.lblTenNV.Text = "Tên nhân viên";
             // 
@@ -411,7 +412,7 @@
             this.lblNCC.ForeColor = System.Drawing.Color.Teal;
             this.lblNCC.Location = new System.Drawing.Point(269, 14);
             this.lblNCC.Name = "lblNCC";
-            this.lblNCC.Size = new System.Drawing.Size(70, 26);
+            this.lblNCC.Size = new System.Drawing.Size(56, 21);
             this.lblNCC.TabIndex = 15;
             this.lblNCC.Text = "Mã NCC";
             // 
@@ -422,7 +423,7 @@
             this.lblMaNV.ForeColor = System.Drawing.Color.Teal;
             this.lblMaNV.Location = new System.Drawing.Point(137, 14);
             this.lblMaNV.Name = "lblMaNV";
-            this.lblMaNV.Size = new System.Drawing.Size(118, 26);
+            this.lblMaNV.Size = new System.Drawing.Size(97, 21);
             this.lblMaNV.TabIndex = 14;
             this.lblMaNV.Text = "Mã nhân viên";
             // 
@@ -456,7 +457,7 @@
             this.lblMaHD.ForeColor = System.Drawing.Color.Teal;
             this.lblMaHD.Location = new System.Drawing.Point(20, 13);
             this.lblMaHD.Name = "lblMaHD";
-            this.lblMaHD.Size = new System.Drawing.Size(107, 26);
+            this.lblMaHD.Size = new System.Drawing.Size(87, 21);
             this.lblMaHD.TabIndex = 0;
             this.lblMaHD.Text = "Mã hóa đơn";
             // 

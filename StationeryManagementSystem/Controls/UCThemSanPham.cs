@@ -22,5 +22,10 @@ namespace StationeryManagementSystem
             FormThemSanPhamVaoHoaDon f = new FormThemSanPhamVaoHoaDon();
             f.ShowDialog();
         }
+
+        private void gbSP_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
