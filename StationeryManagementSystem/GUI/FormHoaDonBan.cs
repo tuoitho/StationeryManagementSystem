@@ -16,5 +16,12 @@ namespace StationeryManagementSystem
         {
             InitializeComponent();
         }
+
+        private void FormHoaDonBan_Load(object sender, EventArgs e)
+        {
+            dpNgayThanhToan.Value = DateTime.Today;
+        }
+
+
     }
 }

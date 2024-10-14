@@ -1,4 +1,3 @@
-
 .vs/StationeryManagementSystem/v17/.suo
 .vs/StationeryManagementSystem/v17/.suo
 StationeryManagementSystem/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
@@ -24,3 +23,9 @@ UpgradeLog.htm
 .vs/StationeryManagementSystem/FileContentIndex/6c8ccbb1-d789-426d-8036-e366df40bfb9.vsidx
 .vs/StationeryManagementSystem/v17/.suo
 StationeryManagementSystem/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+/.vs
+*.pdb
+*.exe
+/StationeryManagementSystem/bin
+/StationeryManagementSystem/obj
+/StationeryManagementSystem/obj/Debug

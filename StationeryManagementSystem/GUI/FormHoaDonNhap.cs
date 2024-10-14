@@ -16,5 +16,10 @@ namespace StationeryManagementSystem.GUI
         {
             InitializeComponent();
         }
+
+        private void FormHoaDonNhap_Load(object sender, EventArgs e)
+        {
+            dpNgayThanhToan.Value = DateTime.Today;
+        }
     }
 }
