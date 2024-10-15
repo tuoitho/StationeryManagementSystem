@@ -130,10 +130,10 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pbSearch;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dpEnd;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblDen;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dpStart;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTimKiem;
+        public System.Windows.Forms.PictureBox pbSearch;
+        public Guna.UI2.WinForms.Guna2DateTimePicker dpEnd;
+        public Guna.UI2.WinForms.Guna2HtmlLabel lblDen;
+        public Guna.UI2.WinForms.Guna2DateTimePicker dpStart;
+        public Guna.UI2.WinForms.Guna2HtmlLabel lblTimKiem;
     }
 }

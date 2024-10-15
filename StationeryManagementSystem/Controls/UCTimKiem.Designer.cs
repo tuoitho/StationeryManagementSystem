@@ -119,9 +119,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pbSearch;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearh;
-        private Guna.UI2.WinForms.Guna2ComboBox cbLoc;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblLoc;
+        public System.Windows.Forms.PictureBox pbSearch;
+        public Guna.UI2.WinForms.Guna2TextBox txtSearh;
+        public Guna.UI2.WinForms.Guna2ComboBox cbLoc;
+        public Guna.UI2.WinForms.Guna2HtmlLabel lblLoc;
     }
 }

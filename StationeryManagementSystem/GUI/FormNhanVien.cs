@@ -67,31 +67,7 @@ namespace StationeryManagementSystem
             {
                 chucVu = 2;
             }
-            if (gvNhanVien.CurrentRow.Cells[5].Value.ToString() != sdt && NhanVienDao.isUniquePhoneNumber(sdt) == false)
-            {
-                MessageBox.Show("Số điện thoại đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (gvNhanVien.CurrentRow.Cells[6].Value.ToString() != email && NhanVienDao.isUniqueEmail(email) == false)
-            {
-                MessageBox.Show("Email đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (NhanVienDao.isValidPhoneNumber(sdt) == false)
-            {
-                MessageBox.Show("Số điện thoại không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (NhanVienDao.isValidEmail(email) == false)
-            {
-                MessageBox.Show("Email không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (NhanVienDao.checkNotEmpty(hoTen) == false || NhanVienDao.checkNotEmpty(diaChi) == false || NhanVienDao.checkNotEmpty(sdt) == false || NhanVienDao.checkNotEmpty(email) == false)
-            {
-                MessageBox.Show("Không được để trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+                     
             try
             {
                 NhanVienDao.update(maNV, hoTen, ngaySinh, gioiTinh, diaChi, sdt, email, chucVu);
@@ -121,31 +97,7 @@ namespace StationeryManagementSystem
             {
                 chucVu = 2;
             }
-            if (gvNhanVien.CurrentRow.Cells[5].Value.ToString() != sdt && NhanVienDao.isUniquePhoneNumber(sdt) == false)
-            {
-                MessageBox.Show("Số điện thoại đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (gvNhanVien.CurrentRow.Cells[6].Value.ToString() != email && NhanVienDao.isUniqueEmail(email) == false)
-            {
-                MessageBox.Show("Email đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (NhanVienDao.isValidPhoneNumber(sdt) == false)
-            {
-                MessageBox.Show("Số điện thoại không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (NhanVienDao.isValidEmail(email) == false)
-            {
-                MessageBox.Show("Email không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (NhanVienDao.checkNotEmpty(hoTen) == false || NhanVienDao.checkNotEmpty(diaChi) == false || NhanVienDao.checkNotEmpty(sdt) == false || NhanVienDao.checkNotEmpty(email) == false)
-            {
-                MessageBox.Show("Không được để trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            
             try
             {
                 NhanVienDao.insert(hoTen, ngaySinh, gioiTinh, diaChi, sdt, email, chucVu);

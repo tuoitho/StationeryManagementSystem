@@ -20,5 +20,17 @@ namespace StationeryManagementSystem.DAO
                 return dt;
             }
         }
+        public static DataTable insert(int maNV,int maKH)
+        {
+            using (SqlCommand cmd = new SqlCommand("exec sp_ThemHoaDonBan @maNV,@maKH", MyDB.GetConnection))
+            {
+                cmd.Parameters.AddWithValue("@maNV", maNV);
+                cmd.Parameters.AddWithValue("@maKH", maKH);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
     }
 }

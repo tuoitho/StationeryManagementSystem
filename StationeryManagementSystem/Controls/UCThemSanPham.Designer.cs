@@ -184,12 +184,11 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2GroupBox gbSP;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button btnReLoad;
         public System.Windows.Forms.DataGridView gvSP;
+        public Guna.UI2.WinForms.Guna2GroupBox gbSP;
+        public Guna.UI2.WinForms.Guna2Button guna2Button3;
+        public Guna.UI2.WinForms.Guna2Button guna2Button2;
+        public Guna.UI2.WinForms.Guna2Button guna2Button1;
+        public Guna.UI2.WinForms.Guna2Button btnReLoad;
     }
 }

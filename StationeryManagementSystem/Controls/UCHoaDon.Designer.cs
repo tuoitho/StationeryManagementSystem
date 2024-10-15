@@ -179,12 +179,12 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2GroupBox gbListHDN;
-        private UCSearchBill UCSearchBill;
-        private Guna.UI2.WinForms.Guna2GroupBox gbTacVu;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button btnThanhToan;
+        public Guna.UI2.WinForms.Guna2Button btnThanhToan;
+        public Guna.UI2.WinForms.Guna2GroupBox gbListHDN;
+        public UCSearchBill UCSearchBill;
+        public Guna.UI2.WinForms.Guna2GroupBox gbTacVu;
+        public Guna.UI2.WinForms.Guna2Button guna2Button6;
+        public Guna.UI2.WinForms.Guna2Button guna2Button5;
+        public Guna.UI2.WinForms.Guna2Button guna2Button4;
     }
 }
