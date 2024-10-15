@@ -14,9 +14,24 @@ namespace StationeryManagementSystem.DAO
         {
             using (SqlCommand cmd = new SqlCommand("select * from XemDanhSachSanPham", MyDB.GetConnection))
             {
+                MyDB.OpenConnection();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+                MyDB.CloseConnection();
+                return dt;
+            }
+        }
+
+        internal static object getXemSoLuongSanPhamDaBanTrongNgay()
+        {
+            using (SqlCommand cmd = new SqlCommand("select * from XemSoLuongSanPhamDaBanTrongNgay", MyDB.GetConnection))
+            {
+                MyDB.OpenConnection();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                MyDB.CloseConnection();
                 return dt;
             }
         }

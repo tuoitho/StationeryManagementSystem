@@ -103,6 +103,8 @@
     <Compile Include="DAO\HoaDonBanDAO.cs" />
     <Compile Include="DAO\HoaDonNhapDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\LoaiSanPhamDAO.cs" />
+    <Compile Include="DAO\NhaCungCapDAO.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
     <Compile Include="GUI\FormThemHDB.cs">
       <SubType>Form</SubType>

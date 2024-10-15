@@ -14,9 +14,11 @@ namespace StationeryManagementSystem.DAO
         {
            using (SqlCommand cmd = new SqlCommand("select * from v_DanhSachHoaDonBan", MyDB.GetConnection))
             {
+                MyDB.OpenConnection();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+                MyDB.CloseConnection();
                 return dt;
             }
         }
@@ -24,11 +26,13 @@ namespace StationeryManagementSystem.DAO
         {
             using (SqlCommand cmd = new SqlCommand("exec sp_ThemHoaDonBan @maNV,@maKH", MyDB.GetConnection))
             {
+                MyDB.OpenConnection();
                 cmd.Parameters.AddWithValue("@maNV", maNV);
                 cmd.Parameters.AddWithValue("@maKH", maKH);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+                MyDB.CloseConnection();
                 return dt;
             }
         }
