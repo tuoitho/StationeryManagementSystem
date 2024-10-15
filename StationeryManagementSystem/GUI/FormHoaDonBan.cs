@@ -93,7 +93,6 @@ namespace StationeryManagementSystem
         {
             FormThemSanPhamVaoHDB formThemSanPhamVaoHDB = new FormThemSanPhamVaoHDB(int.Parse(txtMaHD.Text));
             formThemSanPhamVaoHDB.ShowDialog();
-            int maHD = int.Parse(txtMaHD.Text);
 
         }
 
@@ -102,6 +101,14 @@ namespace StationeryManagementSystem
             int maHD = int.Parse(txtMaHD.Text);
             gvSP.DataSource = CTHDBDAO.findAllByMaHD(maHD);
 
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            int maHD = int.Parse(txtMaHD.Text);
+            int maSP = int.Parse(gvSP.CurrentRow.Cells[0].Value.ToString());
+            FormThemSanPhamVaoHDB formThemSanPhamVaoHDB = new FormThemSanPhamVaoHDB(int.Parse(txtMaHD.Text),true,maSP);
+            formThemSanPhamVaoHDB.ShowDialog();
         }
     }
 }

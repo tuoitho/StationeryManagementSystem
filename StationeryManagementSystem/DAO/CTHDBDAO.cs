@@ -35,5 +35,18 @@ namespace StationeryManagementSystem.DAO
                 MyDB.CloseConnection();
             }
         }
+
+        internal static void update(int maHD, int maSP, int soLuong)
+        {
+            using (SqlCommand cmd = new SqlCommand("exec sp_CapNhatChiTietHoaDonBan @maHD,@maSP,@soLuong", MyDB.GetConnection))
+            {
+                MyDB.OpenConnection();
+                cmd.Parameters.AddWithValue("@maHD", SqlDbType.Int).Value = maHD;
+                cmd.Parameters.AddWithValue("@maSP", SqlDbType.Int).Value = maSP;
+                cmd.Parameters.AddWithValue("@soLuong", SqlDbType.Int).Value = soLuong;
+                cmd.ExecuteNonQuery();
+                MyDB.CloseConnection();
+            }
+        }
     }
 }

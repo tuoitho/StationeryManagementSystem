@@ -21,7 +21,14 @@ namespace StationeryManagementSystem.GUI
         {   
             this.maHD = maHD;
         }
-        int maHD;
+        public FormThemSanPhamVaoHDB(int maHD,bool isSua,int maSP) : this()
+        {
+            this.maHD = maHD;
+            this.isSua= true;
+            this.maSP= maSP;
+        }
+        int maHD,maSP;
+        bool isSua = false;
         bool isLoaded = false;
         private void FormThemSanPhamVaoHDB_Load(object sender, EventArgs e)
         {
@@ -35,6 +42,13 @@ namespace StationeryManagementSystem.GUI
             cbMaSP.SelectedIndex = -1;
             txtMaHD.Text = maHD.ToString();
             isLoaded = true;
+            if (isSua)
+            {
+                cbMaSP.SelectedValue = maSP; 
+                cbTenSP.SelectedValue = maSP;
+                cbMaSP.Enabled = false;
+                cbTenSP.Enabled = false;
+            }
         }
 
         private void cbTenSP_SelectedIndexChanged(object sender, EventArgs e)
@@ -52,16 +66,34 @@ namespace StationeryManagementSystem.GUI
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            int maSP = int.Parse(cbMaSP.SelectedValue.ToString());
-            int soLuong = int.Parse(txtSoLuong.Text);
-            try
+            if (!isSua)
             {
-                CTHDBDAO.insert(maHD, maSP, soLuong);
-                MessageBox.Show("Thêm sản phẩm vào hóa đơn thành công");
+
+                int maSP = int.Parse(cbMaSP.SelectedValue.ToString());
+                int soLuong = int.Parse(txtSoLuong.Text);
+                try
+                {
+                    CTHDBDAO.insert(maHD, maSP, soLuong);
+                    MessageBox.Show("Thêm sản phẩm vào hóa đơn thành công");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                int maSP = int.Parse(cbMaSP.SelectedValue.ToString());
+                int soLuong = int.Parse(txtSoLuong.Text);
+                try
+                {
+                    CTHDBDAO.update(maHD, maSP, soLuong);
+                    MessageBox.Show("Sữa sản phẩm vào hóa đơn thành công");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

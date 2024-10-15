@@ -158,6 +158,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(97, 41);
             this.guna2Button2.TabIndex = 59;
             this.guna2Button2.Text = "    Sửa";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
             // 
