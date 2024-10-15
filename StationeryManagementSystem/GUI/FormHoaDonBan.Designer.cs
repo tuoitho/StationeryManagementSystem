@@ -45,7 +45,6 @@
             this.dpNgayThanhToan = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.lblNgayThanhToan = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTenKH = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox1_tttt = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbMaKH = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtTenNV = new Guna.UI2.WinForms.Guna2TextBox();
@@ -62,6 +61,7 @@
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.btnThanhToan = new Guna.UI2.WinForms.Guna2Button();
+            this.cbTrangThaiThanhToan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.UCSearchBill = new StationeryManagementSystem.UCSearchBill();
             this.pnHoaDon.SuspendLayout();
             this.gbSP.SuspendLayout();
@@ -76,6 +76,7 @@
             this.pnHoaDon.BorderColor = System.Drawing.Color.Teal;
             this.pnHoaDon.BorderRadius = 10;
             this.pnHoaDon.BorderThickness = 2;
+            this.pnHoaDon.Controls.Add(this.cbTrangThaiThanhToan);
             this.pnHoaDon.Controls.Add(this.gbSP);
             this.pnHoaDon.Controls.Add(this.lblTrangThai);
             this.pnHoaDon.Controls.Add(this.txtTongTin);
@@ -83,7 +84,6 @@
             this.pnHoaDon.Controls.Add(this.dpNgayThanhToan);
             this.pnHoaDon.Controls.Add(this.lblNgayThanhToan);
             this.pnHoaDon.Controls.Add(this.lblTenKH);
-            this.pnHoaDon.Controls.Add(this.guna2TextBox1_tttt);
             this.pnHoaDon.Controls.Add(this.txtTenKH);
             this.pnHoaDon.Controls.Add(this.cbMaKH);
             this.pnHoaDon.Controls.Add(this.txtTenNV);
@@ -317,29 +317,6 @@
             this.lblTenKH.Size = new System.Drawing.Size(135, 26);
             this.lblTenKH.TabIndex = 21;
             this.lblTenKH.Text = "Tên khách hàng";
-            // 
-            // guna2TextBox1_tttt
-            // 
-            this.guna2TextBox1_tttt.BorderColor = System.Drawing.Color.Teal;
-            this.guna2TextBox1_tttt.BorderRadius = 10;
-            this.guna2TextBox1_tttt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1_tttt.DefaultText = "";
-            this.guna2TextBox1_tttt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1_tttt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1_tttt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1_tttt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1_tttt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1_tttt.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1_tttt.ForeColor = System.Drawing.Color.Teal;
-            this.guna2TextBox1_tttt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1_tttt.Location = new System.Drawing.Point(20, 708);
-            this.guna2TextBox1_tttt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1_tttt.Name = "guna2TextBox1_tttt";
-            this.guna2TextBox1_tttt.PasswordChar = '\0';
-            this.guna2TextBox1_tttt.PlaceholderText = "";
-            this.guna2TextBox1_tttt.SelectedText = "";
-            this.guna2TextBox1_tttt.Size = new System.Drawing.Size(208, 36);
-            this.guna2TextBox1_tttt.TabIndex = 20;
             // 
             // txtTenKH
             // 
@@ -620,6 +597,7 @@
             this.guna2Button4.Size = new System.Drawing.Size(135, 50);
             this.guna2Button4.TabIndex = 47;
             this.guna2Button4.Text = "     Sửa";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // btnThanhToan
             // 
@@ -642,6 +620,23 @@
             this.btnThanhToan.TabIndex = 46;
             this.btnThanhToan.Text = "      Tạo lập";
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
+            // 
+            // cbTrangThaiThanhToan
+            // 
+            this.cbTrangThaiThanhToan.BackColor = System.Drawing.Color.Transparent;
+            this.cbTrangThaiThanhToan.BorderColor = System.Drawing.Color.Teal;
+            this.cbTrangThaiThanhToan.BorderRadius = 10;
+            this.cbTrangThaiThanhToan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbTrangThaiThanhToan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTrangThaiThanhToan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTrangThaiThanhToan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTrangThaiThanhToan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTrangThaiThanhToan.ForeColor = System.Drawing.Color.Teal;
+            this.cbTrangThaiThanhToan.ItemHeight = 30;
+            this.cbTrangThaiThanhToan.Location = new System.Drawing.Point(27, 708);
+            this.cbTrangThaiThanhToan.Name = "cbTrangThaiThanhToan";
+            this.cbTrangThaiThanhToan.Size = new System.Drawing.Size(210, 36);
+            this.cbTrangThaiThanhToan.TabIndex = 59;
             // 
             // UCSearchBill
             // 
@@ -704,6 +699,6 @@
         public Guna.UI2.WinForms.Guna2Button guna2Button4;
         public Guna.UI2.WinForms.Guna2Button btnThanhToan;
         public UCSearchBill UCSearchBill;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1_tttt;
+        private Guna.UI2.WinForms.Guna2ComboBox cbTrangThaiThanhToan;
     }
 }

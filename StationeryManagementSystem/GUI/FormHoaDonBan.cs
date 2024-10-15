@@ -30,6 +30,7 @@ namespace StationeryManagementSystem
             cbMaNV.DataSource = NhanVienDao.findAll();
             cbMaNV.DisplayMember = "MaNhanVien";
             cbMaNV.ValueMember = "MaNhanVien";
+            cbTrangThaiThanhToan.DataSource = new List<string> { "Chưa thanh toán", "Đã thanh toán" };
         }
 
         private void UCThemSanPham_Load(object sender, EventArgs e)
@@ -60,7 +61,7 @@ namespace StationeryManagementSystem
             }
             txtTenKH.Text = gvHD.CurrentRow.Cells[5].Value.ToString();
             txtTenNV.Text = gvHD.CurrentRow.Cells[3].Value.ToString();
-            guna2TextBox1_tttt.Text = gvHD.CurrentRow.Cells[7].Value.ToString();
+            cbTrangThaiThanhToan.Text = gvHD.CurrentRow.Cells[7].Value.ToString();
             gvSP.DataSource = CTHDBDAO.findAllByMaHD(maHD);
         }
 
@@ -77,6 +78,8 @@ namespace StationeryManagementSystem
             {
                 HoaDonBanDAO.insert(maNV, maKH);
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                gvHD.DataSource = HoaDonBanDAO.findAll();
+
             }
             catch (Exception ex)
             {
@@ -109,6 +112,22 @@ namespace StationeryManagementSystem
             int maSP = int.Parse(gvSP.CurrentRow.Cells[0].Value.ToString());
             FormThemSanPhamVaoHDB formThemSanPhamVaoHDB = new FormThemSanPhamVaoHDB(int.Parse(txtMaHD.Text),true,maSP);
             formThemSanPhamVaoHDB.ShowDialog();
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            int maHD = int.Parse(txtMaHD.Text);
+            String trangThai = cbTrangThaiThanhToan.Text;
+            try
+            {
+                HoaDonBanDAO.update(maHD, trangThai);
+                MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                gvHD.DataSource = HoaDonBanDAO.findAll();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

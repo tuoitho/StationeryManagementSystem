@@ -32,5 +32,16 @@ namespace StationeryManagementSystem.DAO
                 return dt;
             }
         }
+
+        internal static void update(int maHD, string trangThai)
+        {
+            SqlCommand cmd = new SqlCommand("exec sp_CapNhatTrangThaiThanhToanHoaDonBan @maHD,@trangThai", MyDB.GetConnection);
+            cmd.Parameters.AddWithValue("@maHD", SqlDbType.Int).Value = maHD;
+            cmd.Parameters.AddWithValue("@trangThai", SqlDbType.NVarChar).Value = trangThai;
+            MyDB.OpenConnection();
+            cmd.ExecuteNonQuery();
+            MyDB.CloseConnection();
+
+        }
     }
 }

@@ -46,11 +46,9 @@
             this.lblNgayThanhToan = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTenNCC = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTenNCC = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbTrangThaiThanhToan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblTrangThai = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cbMNNCC = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pnHoaDon = new Guna.UI2.WinForms.Guna2Panel();
-            this.UCThemSanPham = new StationeryManagementSystem.UCThemSanPham();
             this.txtTenNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbMaNV = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblTenNV = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -58,7 +56,9 @@
             this.lblMaNV = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtMaHD = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblMaHD = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cbTrangThaiThanhToan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.UCHoaDonNhap = new StationeryManagementSystem.Controls.UCHoaDon();
+            this.UCThemSanPham = new StationeryManagementSystem.UCThemSanPham();
             ((System.ComponentModel.ISupportInitialize)(this.gvHD)).BeginInit();
             this.pnHoaDon.SuspendLayout();
             this.SuspendLayout();
@@ -206,7 +206,7 @@
             this.lblTongThanhToan.ForeColor = System.Drawing.Color.Teal;
             this.lblTongThanhToan.Location = new System.Drawing.Point(267, 669);
             this.lblTongThanhToan.Name = "lblTongThanhToan";
-            this.lblTongThanhToan.Size = new System.Drawing.Size(68, 21);
+            this.lblTongThanhToan.Size = new System.Drawing.Size(82, 26);
             this.lblTongThanhToan.TabIndex = 47;
             this.lblTongThanhToan.Text = "Tổng tiền";
             // 
@@ -236,7 +236,7 @@
             this.lblNgayThanhToan.ForeColor = System.Drawing.Color.Teal;
             this.lblNgayThanhToan.Location = new System.Drawing.Point(22, 587);
             this.lblNgayThanhToan.Name = "lblNgayThanhToan";
-            this.lblNgayThanhToan.Size = new System.Drawing.Size(119, 21);
+            this.lblNgayThanhToan.Size = new System.Drawing.Size(143, 26);
             this.lblNgayThanhToan.TabIndex = 22;
             this.lblNgayThanhToan.Text = "Ngày thanh toán";
             // 
@@ -247,7 +247,7 @@
             this.lblTenNCC.ForeColor = System.Drawing.Color.Teal;
             this.lblTenNCC.Location = new System.Drawing.Point(22, 167);
             this.lblTenNCC.Name = "lblTenNCC";
-            this.lblTenNCC.Size = new System.Drawing.Size(111, 21);
+            this.lblTenNCC.Size = new System.Drawing.Size(135, 26);
             this.lblTenNCC.TabIndex = 21;
             this.lblTenNCC.Text = "Tên khách hàng";
             // 
@@ -274,23 +274,6 @@
             this.txtTenNCC.Size = new System.Drawing.Size(341, 36);
             this.txtTenNCC.TabIndex = 20;
             // 
-            // cbTrangThaiThanhToan
-            // 
-            this.cbTrangThaiThanhToan.BackColor = System.Drawing.Color.Transparent;
-            this.cbTrangThaiThanhToan.BorderColor = System.Drawing.Color.Teal;
-            this.cbTrangThaiThanhToan.BorderRadius = 10;
-            this.cbTrangThaiThanhToan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbTrangThaiThanhToan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTrangThaiThanhToan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbTrangThaiThanhToan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbTrangThaiThanhToan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTrangThaiThanhToan.ForeColor = System.Drawing.Color.Teal;
-            this.cbTrangThaiThanhToan.ItemHeight = 30;
-            this.cbTrangThaiThanhToan.Location = new System.Drawing.Point(27, 708);
-            this.cbTrangThaiThanhToan.Name = "cbTrangThaiThanhToan";
-            this.cbTrangThaiThanhToan.Size = new System.Drawing.Size(210, 36);
-            this.cbTrangThaiThanhToan.TabIndex = 51;
-            // 
             // lblTrangThai
             // 
             this.lblTrangThai.BackColor = System.Drawing.SystemColors.Control;
@@ -298,7 +281,7 @@
             this.lblTrangThai.ForeColor = System.Drawing.Color.Teal;
             this.lblTrangThai.Location = new System.Drawing.Point(22, 669);
             this.lblTrangThai.Name = "lblTrangThai";
-            this.lblTrangThai.Size = new System.Drawing.Size(154, 21);
+            this.lblTrangThai.Size = new System.Drawing.Size(187, 26);
             this.lblTrangThai.TabIndex = 50;
             this.lblTrangThai.Text = "Trạng thái thanh toán";
             // 
@@ -347,13 +330,6 @@
             this.pnHoaDon.Size = new System.Drawing.Size(470, 770);
             this.pnHoaDon.TabIndex = 57;
             // 
-            // UCThemSanPham
-            // 
-            this.UCThemSanPham.Location = new System.Drawing.Point(20, 253);
-            this.UCThemSanPham.Name = "UCThemSanPham";
-            this.UCThemSanPham.Size = new System.Drawing.Size(447, 328);
-            this.UCThemSanPham.TabIndex = 52;
-            // 
             // txtTenNV
             // 
             this.txtTenNV.BorderColor = System.Drawing.Color.Teal;
@@ -401,7 +377,7 @@
             this.lblTenNV.ForeColor = System.Drawing.Color.Teal;
             this.lblTenNV.Location = new System.Drawing.Point(22, 92);
             this.lblTenNV.Name = "lblTenNV";
-            this.lblTenNV.Size = new System.Drawing.Size(100, 21);
+            this.lblTenNV.Size = new System.Drawing.Size(122, 26);
             this.lblTenNV.TabIndex = 16;
             this.lblTenNV.Text = "Tên nhân viên";
             // 
@@ -412,7 +388,7 @@
             this.lblNCC.ForeColor = System.Drawing.Color.Teal;
             this.lblNCC.Location = new System.Drawing.Point(269, 14);
             this.lblNCC.Name = "lblNCC";
-            this.lblNCC.Size = new System.Drawing.Size(56, 21);
+            this.lblNCC.Size = new System.Drawing.Size(70, 26);
             this.lblNCC.TabIndex = 15;
             this.lblNCC.Text = "Mã NCC";
             // 
@@ -423,7 +399,7 @@
             this.lblMaNV.ForeColor = System.Drawing.Color.Teal;
             this.lblMaNV.Location = new System.Drawing.Point(137, 14);
             this.lblMaNV.Name = "lblMaNV";
-            this.lblMaNV.Size = new System.Drawing.Size(97, 21);
+            this.lblMaNV.Size = new System.Drawing.Size(118, 26);
             this.lblMaNV.TabIndex = 14;
             this.lblMaNV.Text = "Mã nhân viên";
             // 
@@ -457,9 +433,26 @@
             this.lblMaHD.ForeColor = System.Drawing.Color.Teal;
             this.lblMaHD.Location = new System.Drawing.Point(20, 13);
             this.lblMaHD.Name = "lblMaHD";
-            this.lblMaHD.Size = new System.Drawing.Size(87, 21);
+            this.lblMaHD.Size = new System.Drawing.Size(107, 26);
             this.lblMaHD.TabIndex = 0;
             this.lblMaHD.Text = "Mã hóa đơn";
+            // 
+            // cbTrangThaiThanhToan
+            // 
+            this.cbTrangThaiThanhToan.BackColor = System.Drawing.Color.Transparent;
+            this.cbTrangThaiThanhToan.BorderColor = System.Drawing.Color.Teal;
+            this.cbTrangThaiThanhToan.BorderRadius = 10;
+            this.cbTrangThaiThanhToan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbTrangThaiThanhToan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTrangThaiThanhToan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTrangThaiThanhToan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTrangThaiThanhToan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTrangThaiThanhToan.ForeColor = System.Drawing.Color.Teal;
+            this.cbTrangThaiThanhToan.ItemHeight = 30;
+            this.cbTrangThaiThanhToan.Location = new System.Drawing.Point(27, 708);
+            this.cbTrangThaiThanhToan.Name = "cbTrangThaiThanhToan";
+            this.cbTrangThaiThanhToan.Size = new System.Drawing.Size(210, 36);
+            this.cbTrangThaiThanhToan.TabIndex = 51;
             // 
             // UCHoaDonNhap
             // 
@@ -467,6 +460,14 @@
             this.UCHoaDonNhap.Name = "UCHoaDonNhap";
             this.UCHoaDonNhap.Size = new System.Drawing.Size(785, 806);
             this.UCHoaDonNhap.TabIndex = 59;
+            this.UCHoaDonNhap.Load += new System.EventHandler(this.UCHoaDonNhap_Load);
+            // 
+            // UCThemSanPham
+            // 
+            this.UCThemSanPham.Location = new System.Drawing.Point(20, 253);
+            this.UCThemSanPham.Name = "UCThemSanPham";
+            this.UCThemSanPham.Size = new System.Drawing.Size(447, 328);
+            this.UCThemSanPham.TabIndex = 52;
             // 
             // FormHoaDonNhap
             // 
@@ -494,7 +495,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblNgayThanhToan;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTenNCC;
         private Guna.UI2.WinForms.Guna2TextBox txtTenNCC;
-        private Guna.UI2.WinForms.Guna2ComboBox cbTrangThaiThanhToan;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTrangThai;
         private Controls.UCHoaDon UCHoaDonNhap;
         private Guna.UI2.WinForms.Guna2ComboBox cbMNNCC;
@@ -516,5 +516,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn trangThaiThanhToan;
         private System.Windows.Forms.DataGridViewTextBoxColumn nvLap;
         private UCThemSanPham UCThemSanPham;
+        private Guna.UI2.WinForms.Guna2ComboBox cbTrangThaiThanhToan;
     }
 }

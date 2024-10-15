@@ -27,5 +27,10 @@ namespace StationeryManagementSystem.GUI
         {
             
         }
+
+        private void UCHoaDonNhap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
