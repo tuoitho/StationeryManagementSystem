@@ -217,6 +217,7 @@
             // rdNu
             // 
             this.rdNu.AutoSize = true;
+            this.rdNu.Checked = true;
             this.rdNu.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdNu.CheckedState.BorderThickness = 0;
             this.rdNu.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -228,6 +229,7 @@
             this.rdNu.Name = "rdNu";
             this.rdNu.Size = new System.Drawing.Size(48, 23);
             this.rdNu.TabIndex = 1;
+            this.rdNu.TabStop = true;
             this.rdNu.Text = "Nữ";
             this.rdNu.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdNu.UncheckedState.BorderThickness = 2;
@@ -585,6 +587,7 @@
             // 
             // gvNhanVien
             // 
+            this.gvNhanVien.AllowUserToAddRows = false;
             this.gvNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -624,6 +627,7 @@
             this.gvNhanVien.ReadOnly = true;
             this.gvNhanVien.RowHeadersWidth = 51;
             this.gvNhanVien.RowTemplate.Height = 24;
+            this.gvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvNhanVien.Size = new System.Drawing.Size(780, 99);
             this.gvNhanVien.TabIndex = 2;
             this.gvNhanVien.Click += new System.EventHandler(this.gvNhanVien_Click);
@@ -712,10 +716,10 @@
             // UCTimKiemNhanVien
             // 
             this.UCTimKiemNhanVien.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UCTimKiemNhanVien.Location = new System.Drawing.Point(217, 37);
+            this.UCTimKiemNhanVien.Location = new System.Drawing.Point(12, 40);
             this.UCTimKiemNhanVien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.UCTimKiemNhanVien.Name = "UCTimKiemNhanVien";
-            this.UCTimKiemNhanVien.Size = new System.Drawing.Size(554, 48);
+            this.UCTimKiemNhanVien.Size = new System.Drawing.Size(756, 48);
             this.UCTimKiemNhanVien.TabIndex = 3;
             // 
             // FormNhanVien

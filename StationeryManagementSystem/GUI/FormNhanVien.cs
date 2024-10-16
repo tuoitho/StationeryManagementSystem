@@ -20,7 +20,16 @@ namespace StationeryManagementSystem
 
         private void FormNhanVien_Load(object sender, EventArgs e)
         {
-            gvNhanVien.DataSource = NhanVienDao.findAll();
+            //deefault selected row style purple
+            gvNhanVien.DefaultCellStyle.SelectionBackColor = Color.Orange;
+            DataTable dt = NhanVienDao.findAll();
+            gvNhanVien.DataSource = dt;
+            if (dt.Rows.Count > 0)
+            {
+                //click row 0
+                gvNhanVien_Click(gvNhanVien.Rows[0], null);
+
+            }
         }
 
 

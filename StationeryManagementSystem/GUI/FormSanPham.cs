@@ -57,14 +57,7 @@ namespace StationeryManagementSystem
             txtGiaNhap.Text = gvSP.CurrentRow.Cells[4].Value.ToString();
             txtGiaBan.Text = gvSP.CurrentRow.Cells[5].Value.ToString();
             txtSoLuong.Text = gvSP.CurrentRow.Cells[6].Value.ToString();
-            if (gvSP.CurrentRow.Cells[7].Value is DBNull)
-            {
-         }
-            else
-            {
-                cbMaNCC.SelectedValue = gvSP.CurrentRow.Cells[3].Value.ToString();
 
-            }
 
         }
 
