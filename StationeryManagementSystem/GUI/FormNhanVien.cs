@@ -22,6 +22,8 @@ namespace StationeryManagementSystem
         {
             //deefault selected row style purple
             gvNhanVien.DefaultCellStyle.SelectionBackColor = Color.Orange;
+            //disable multiple select
+            gvNhanVien.MultiSelect = false;
             DataTable dt = NhanVienDao.findAll();
             gvNhanVien.DataSource = dt;
             if (dt.Rows.Count > 0)

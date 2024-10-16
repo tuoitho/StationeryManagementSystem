@@ -314,6 +314,7 @@
     <Content Include="Resources\add32px.png" />
     <Content Include="Resources\backward.png" />
     <Content Include="Resources\badge.png" />
+    <None Include="Resources\bg.gif" />
     <Content Include="Resources\bill32.png" />
     <Content Include="Resources\businessman.png" />
     <Content Include="Resources\calamviec32.png" />

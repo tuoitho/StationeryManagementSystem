@@ -198,5 +198,22 @@ namespace StationeryManagementSystem
             ActivateButton(sender);
             lblTiltle.Text = "Khách hàng";
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.White; // Màu chữ
+            label1.BackColor = Color.Transparent; // Đặt nền trong suốt
+            label1.BringToFront();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

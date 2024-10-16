@@ -23,6 +23,11 @@ namespace StationeryManagementSystem
         {
             dpNgayThanhToan.Value = DateTime.Today;
             gvHD.DataSource = HoaDonBanDAO.findAll();
+            //style date dd/mm/yyyy col1,8
+            gvHD.Columns[1].DefaultCellStyle.Format = "dd/MM/yyyy";
+            gvHD.Columns[8].DefaultCellStyle.Format = "dd/MM/yyyy";
+
+
             cbMaKH.DataSource = KhachHangDAO.findAll();
             cbMaKH.DisplayMember = "Mã KH";
             cbMaKH.ValueMember = "Mã KH";
