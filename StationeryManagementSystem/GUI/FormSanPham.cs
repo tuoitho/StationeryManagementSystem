@@ -194,6 +194,21 @@ namespace StationeryManagementSystem
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int maSP = int.Parse(txtMaSP.Text);
+            try
+            {
+                SanPhamDAO.delete(maSP);
+                gvSP.DataSource = SanPhamDAO.findAll();
+                MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
       
 }
