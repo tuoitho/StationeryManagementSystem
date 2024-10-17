@@ -1,0 +1,3 @@
+[submodule "QLVPP_sql"]
+	path = QLVPP_sql
+	url = https://github.com/Trong111a/QLVPP_sql
