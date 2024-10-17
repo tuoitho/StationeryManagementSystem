@@ -188,7 +188,7 @@
             this.btnXoa.ImageSize = new System.Drawing.Size(30, 30);
             this.btnXoa.Location = new System.Drawing.Point(149, 153);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(116, 45);
+            this.btnXoa.Size = new System.Drawing.Size(125, 45);
             this.btnXoa.TabIndex = 47;
             this.btnXoa.Text = "   Xóa";
             // 
@@ -209,7 +209,7 @@
             this.btnReLoad.ImageSize = new System.Drawing.Size(30, 30);
             this.btnReLoad.Location = new System.Drawing.Point(149, 70);
             this.btnReLoad.Name = "btnReLoad";
-            this.btnReLoad.Size = new System.Drawing.Size(116, 45);
+            this.btnReLoad.Size = new System.Drawing.Size(125, 45);
             this.btnReLoad.TabIndex = 45;
             this.btnReLoad.Text = "     Reload";
             // 

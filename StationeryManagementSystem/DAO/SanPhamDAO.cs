@@ -36,6 +36,17 @@ namespace StationeryManagementSystem.DAO
                 return dt;
             }
         }
-       
+
+        internal static void insert(string tenSP, int maLoai)
+        {
+            using (SqlCommand cmd = new SqlCommand("exec sp_ThemSanPham @tenSP, @maLoai", MyDB.GetConnection))
+            {
+                cmd.Parameters.AddWithValue("@tenSP", SqlDbType.NVarChar).Value = tenSP;
+                cmd.Parameters.AddWithValue("@maLoai", SqlDbType.Int).Value = maLoai;
+                MyDB.OpenConnection();
+                cmd.ExecuteNonQuery();
+                MyDB.CloseConnection();
+            }
+        }
     }
 }
