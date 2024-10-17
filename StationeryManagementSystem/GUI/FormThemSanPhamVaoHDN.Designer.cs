@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbListSP = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtSearh = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLoc = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -45,6 +45,8 @@
             this.lblMaSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtMaHD = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblMaHD = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtGiaNhap = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbListSP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvSP)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +91,7 @@
             this.txtSearh.SelectedText = "";
             this.txtSearh.Size = new System.Drawing.Size(416, 36);
             this.txtSearh.TabIndex = 21;
+            this.txtSearh.TextChanged += new System.EventHandler(this.txtSearh_TextChanged);
             // 
             // lblLoc
             // 
@@ -107,34 +110,35 @@
             this.gvSP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvSP.BackgroundColor = System.Drawing.Color.White;
             this.gvSP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.gvSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvSP.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvSP.DefaultCellStyle = dataGridViewCellStyle8;
             this.gvSP.GridColor = System.Drawing.Color.White;
             this.gvSP.Location = new System.Drawing.Point(25, 122);
             this.gvSP.Name = "gvSP";
             this.gvSP.ReadOnly = true;
             this.gvSP.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Green;
-            this.gvSP.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Green;
+            this.gvSP.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.gvSP.RowTemplate.Height = 24;
             this.gvSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvSP.Size = new System.Drawing.Size(1065, 487);
             this.gvSP.TabIndex = 3;
+            this.gvSP.Click += new System.EventHandler(this.gvSP_Click);
             // 
             // btnHuy
             // 
@@ -151,11 +155,12 @@
             this.btnHuy.Image = global::StationeryManagementSystem.Properties.Resources.huy;
             this.btnHuy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHuy.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHuy.Location = new System.Drawing.Point(1011, 185);
+            this.btnHuy.Location = new System.Drawing.Point(1167, 185);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(116, 41);
             this.btnHuy.TabIndex = 71;
             this.btnHuy.Text = "    Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnXacNhan
             // 
@@ -172,11 +177,12 @@
             this.btnXacNhan.Image = global::StationeryManagementSystem.Properties.Resources.xacnhan;
             this.btnXacNhan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnXacNhan.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnXacNhan.Location = new System.Drawing.Point(844, 185);
+            this.btnXacNhan.Location = new System.Drawing.Point(1000, 185);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(132, 41);
             this.btnXacNhan.TabIndex = 70;
             this.btnXacNhan.Text = "       Xác nhận";
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // txtSoLuong
             // 
@@ -228,6 +234,7 @@
             this.cbTenSP.Name = "cbTenSP";
             this.cbTenSP.Size = new System.Drawing.Size(331, 36);
             this.cbTenSP.TabIndex = 67;
+            this.cbTenSP.SelectedIndexChanged += new System.EventHandler(this.cbTenSP_SelectedIndexChanged);
             // 
             // lblTenSP
             // 
@@ -256,6 +263,7 @@
             this.cbMaSP.Name = "cbMaSP";
             this.cbMaSP.Size = new System.Drawing.Size(117, 36);
             this.cbMaSP.TabIndex = 65;
+            this.cbMaSP.SelectedIndexChanged += new System.EventHandler(this.cbMaSP_SelectedIndexChanged);
             // 
             // lblMaSP
             // 
@@ -300,15 +308,51 @@
             this.lblMaHD.ForeColor = System.Drawing.Color.Teal;
             this.lblMaHD.Location = new System.Drawing.Point(91, 24);
             this.lblMaHD.Name = "lblMaHD";
-            this.lblMaHD.Size = new System.Drawing.Size(194, 33);
+            this.lblMaHD.Size = new System.Drawing.Size(155, 26);
             this.lblMaHD.TabIndex = 62;
             this.lblMaHD.Text = "Mã hóa đơn nhập";
+            // 
+            // txtGiaNhap
+            // 
+            this.txtGiaNhap.BorderColor = System.Drawing.Color.Teal;
+            this.txtGiaNhap.BorderRadius = 10;
+            this.txtGiaNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGiaNhap.DefaultText = "0";
+            this.txtGiaNhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtGiaNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtGiaNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGiaNhap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGiaNhap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGiaNhap.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiaNhap.ForeColor = System.Drawing.Color.Teal;
+            this.txtGiaNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGiaNhap.Location = new System.Drawing.Point(817, 190);
+            this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtGiaNhap.Name = "txtGiaNhap";
+            this.txtGiaNhap.PasswordChar = '\0';
+            this.txtGiaNhap.PlaceholderText = "";
+            this.txtGiaNhap.SelectedText = "";
+            this.txtGiaNhap.Size = new System.Drawing.Size(127, 36);
+            this.txtGiaNhap.TabIndex = 74;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Teal;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(817, 157);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(101, 33);
+            this.guna2HtmlLabel1.TabIndex = 73;
+            this.guna2HtmlLabel1.Text = "Giá Nhập";
             // 
             // FormThemSanPhamVaoHDN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1313, 920);
+            this.ClientSize = new System.Drawing.Size(1370, 957);
+            this.Controls.Add(this.txtGiaNhap);
+            this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.gbListSP);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnXacNhan);
@@ -322,6 +366,7 @@
             this.Controls.Add(this.lblMaHD);
             this.Name = "FormThemSanPhamVaoHDN";
             this.Text = "FormThemSanPhamVaoHDN";
+            this.Load += new System.EventHandler(this.FormThemSanPhamVaoHDN_Load);
             this.gbListSP.ResumeLayout(false);
             this.gbListSP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvSP)).EndInit();
@@ -346,5 +391,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMaSP;
         private Guna.UI2.WinForms.Guna2TextBox txtMaHD;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMaHD;
+        private Guna.UI2.WinForms.Guna2TextBox txtGiaNhap;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

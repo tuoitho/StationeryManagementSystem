@@ -140,5 +140,39 @@ namespace StationeryManagementSystem
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void UCSearchBill_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbSearch_Click(object sender, EventArgs e)
+        {
+            DateTime dps=dpStart.Value;
+            DateTime dpe = dpEnd.Value;
+            
+            DataTable dt = (DataTable)gvHD.DataSource;
+
+
+            dt.DefaultView.RowFilter = "[Ngày Lập] >= #" + dps.ToString("MM/dd/yyyy") + "# AND [Ngày Lập] <= #" + dpe.ToString("MM/dd/yyyy") + "#";
+            
+
+
+            gvSP.DataSource = dt;
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            int maHD = int.Parse(txtMaHD.Text);
+            try
+            {
+                HoaDonBanDAO.delete(maHD);
+                MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

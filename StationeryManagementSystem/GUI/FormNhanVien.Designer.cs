@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhanVien));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbThongTin = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtLuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLuong = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -58,7 +58,6 @@
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.btnReLoad = new Guna.UI2.WinForms.Guna2Button();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
-            this.UCTimKiemNhanVien = new StationeryManagementSystem.UCTimKiem();
             this.gvNhanVien = new System.Windows.Forms.DataGridView();
             this.maNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +68,7 @@
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.luongTheoGio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UCTimKiemNhanVien = new StationeryManagementSystem.UCTimKiem();
             this.gbThongTin.SuspendLayout();
             this.gbChucVu.SuspendLayout();
             this.gbGioiTinh.SuspendLayout();
@@ -461,7 +461,6 @@
             // 
             this.gbListNV.BorderRadius = 10;
             this.gbListNV.BorderThickness = 2;
-            this.gbListNV.Controls.Add(this.gbTacVu);
             this.gbListNV.Controls.Add(this.UCTimKiemNhanVien);
             this.gbListNV.Controls.Add(this.gvNhanVien);
             this.gbListNV.CustomBorderColor = System.Drawing.Color.Teal;
@@ -487,7 +486,7 @@
             this.gbTacVu.FillColor = System.Drawing.SystemColors.Control;
             this.gbTacVu.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTacVu.ForeColor = System.Drawing.Color.White;
-            this.gbTacVu.Location = new System.Drawing.Point(14, 257);
+            this.gbTacVu.Location = new System.Drawing.Point(275, 772);
             this.gbTacVu.Margin = new System.Windows.Forms.Padding(2);
             this.gbTacVu.Name = "gbTacVu";
             this.gbTacVu.Size = new System.Drawing.Size(534, 114);
@@ -586,15 +585,6 @@
             this.btnThem.Text = "  Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // UCTimKiemNhanVien
-            // 
-            this.UCTimKiemNhanVien.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UCTimKiemNhanVien.Location = new System.Drawing.Point(14, 49);
-            this.UCTimKiemNhanVien.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.UCTimKiemNhanVien.Name = "UCTimKiemNhanVien";
-            this.UCTimKiemNhanVien.Size = new System.Drawing.Size(882, 59);
-            this.UCTimKiemNhanVien.TabIndex = 3;
-            // 
             // gvNhanVien
             // 
             this.gvNhanVien.AllowUserToAddRows = false;
@@ -603,14 +593,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gvNhanVien.BackgroundColor = System.Drawing.Color.White;
             this.gvNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maNV,
@@ -622,14 +612,14 @@
             this.sdt,
             this.email,
             this.luongTheoGio});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvNhanVien.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvNhanVien.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvNhanVien.GridColor = System.Drawing.Color.White;
             this.gvNhanVien.Location = new System.Drawing.Point(14, 117);
             this.gvNhanVien.Margin = new System.Windows.Forms.Padding(2);
@@ -638,7 +628,7 @@
             this.gvNhanVien.RowHeadersWidth = 51;
             this.gvNhanVien.RowTemplate.Height = 24;
             this.gvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvNhanVien.Size = new System.Drawing.Size(910, 122);
+            this.gvNhanVien.Size = new System.Drawing.Size(910, 255);
             this.gvNhanVien.TabIndex = 2;
             this.gvNhanVien.Click += new System.EventHandler(this.gvNhanVien_Click);
             // 
@@ -723,12 +713,22 @@
             this.luongTheoGio.ReadOnly = true;
             this.luongTheoGio.Width = 170;
             // 
+            // UCTimKiemNhanVien
+            // 
+            this.UCTimKiemNhanVien.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UCTimKiemNhanVien.Location = new System.Drawing.Point(14, 49);
+            this.UCTimKiemNhanVien.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.UCTimKiemNhanVien.Name = "UCTimKiemNhanVien";
+            this.UCTimKiemNhanVien.Size = new System.Drawing.Size(882, 59);
+            this.UCTimKiemNhanVien.TabIndex = 3;
+            // 
             // FormNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1031, 764);
+            this.ClientSize = new System.Drawing.Size(1045, 911);
+            this.Controls.Add(this.gbTacVu);
             this.Controls.Add(this.gbListNV);
             this.Controls.Add(this.gbThongTin);
             this.Margin = new System.Windows.Forms.Padding(2);

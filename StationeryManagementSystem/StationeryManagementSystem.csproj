@@ -100,23 +100,24 @@
       <DependentUpon>UCHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\CTHDBDAO.cs" />
+    <Compile Include="DAO\CTHDNDAO.cs" />
     <Compile Include="DAO\HoaDonBanDAO.cs" />
     <Compile Include="DAO\HoaDonNhapDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\LoaiSanPhamDAO.cs" />
     <Compile Include="DAO\NhaCungCapDAO.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
-    <Compile Include="GUI\FormThemHDB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\FormThemHDB.Designer.cs">
-      <DependentUpon>FormThemHDB.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\FormThemSanPhamVaoHDB.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\FormThemSanPhamVaoHDB.Designer.cs">
       <DependentUpon>FormThemSanPhamVaoHDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormThemSanPhamVaoHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormThemSanPhamVaoHDN.Designer.cs">
+      <DependentUpon>FormThemSanPhamVaoHDN.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormThemSanPhamVaoHoaDon.cs">
       <SubType>Form</SubType>
@@ -235,11 +236,11 @@
     <EmbeddedResource Include="Controls\UCHoaDon.resx">
       <DependentUpon>UCHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormThemHDB.resx">
-      <DependentUpon>FormThemHDB.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormThemSanPhamVaoHDB.resx">
       <DependentUpon>FormThemSanPhamVaoHDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormThemSanPhamVaoHDN.resx">
+      <DependentUpon>FormThemSanPhamVaoHDN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormThemSanPhamVaoHoaDon.resx">
       <DependentUpon>FormThemSanPhamVaoHoaDon.cs</DependentUpon>
