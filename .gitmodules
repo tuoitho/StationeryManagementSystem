@@ -1,0 +1,4 @@
+[submodule "--force"]
+	path = QLVPP_sql
+	url = https://github.com/Trong111a/QLVPP_sql
+	branch = main
