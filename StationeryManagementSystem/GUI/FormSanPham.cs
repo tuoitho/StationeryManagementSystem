@@ -94,39 +94,42 @@ namespace StationeryManagementSystem
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (gvSP.CurrentRow == null || gvSP.CurrentRow.Cells[0].Value == null)
+            //if (gvSP.CurrentRow == null || gvSP.CurrentRow.Cells[0].Value == null)
+            //{
+            //    return;
+            //}
+
+            //string tenLoai = gvSP.CurrentRow.Cells[3].Value?.ToString() ?? string.Empty;
+            //string maLoai = gvSP.CurrentRow.Cells[2].Value?.ToString() ?? string.Empty;
+
+            //string tenNCC = gvSP.CurrentRow.Cells[5].Value?.ToString() ?? string.Empty;
+            //int maNCC = int.Parse(gvSP.CurrentRow.Cells[4].Value?.ToString() ?? "0");
+            //if (maNCC == 0)
+            //{
+            //    MessageBox.Show("Vui lòng chọn nhà cung cấp");
+            //    return;
+            //}
+            //cbMaNCC.Text = maNCC.ToString();
+            //txtMaSP.Text = gvSP.CurrentRow.Cells[0].Value?.ToString() ?? string.Empty;
+            //txtTenSP.Text = gvSP.CurrentRow.Cells[1].Value?.ToString() ?? string.Empty;
+            //txtTenLoai.Text = gvSP.CurrentRow.Cells[3].Value?.ToString() ?? string.Empty;
+            //txtGiaNhap.Text = gvSP.CurrentRow.Cells[6].Value?.ToString() ?? string.Empty;
+            //txtGiaBan.Text = gvSP.CurrentRow.Cells[7].Value?.ToString() ?? string.Empty;
+            //txtSoLuong.Text = gvSP.CurrentRow.Cells[8].Value?.ToString() ?? string.Empty;
+
+            string tenSP = txtTenSP.Text;
+            int maLoai = int.Parse(cbMaLoai.Text);
+            try
             {
-                return;
+                SanPhamDAO.insert(tenSP, maLoai);
+                gvSP.DataSource = SanPhamDAO.findAll();
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            string tenLoai = gvSP.CurrentRow.Cells[3].Value?.ToString() ?? string.Empty;
-            string maLoai = gvSP.CurrentRow.Cells[2].Value?.ToString() ?? string.Empty;
-
-            string tenNCC = gvSP.CurrentRow.Cells[5].Value?.ToString() ?? string.Empty;
-            int maNCC = int.Parse(gvSP.CurrentRow.Cells[4].Value?.ToString() ?? "0");
-            if (maNCC == 0)
-            {
-                MessageBox.Show("Vui lòng chọn nhà cung cấp");
-                return;
-            }
-            cbMaNCC.Text = maNCC.ToString();
-            txtMaSP.Text = gvSP.CurrentRow.Cells[0].Value?.ToString() ?? string.Empty;
-            txtTenSP.Text = gvSP.CurrentRow.Cells[1].Value?.ToString() ?? string.Empty;
-            txtTenLoai.Text = gvSP.CurrentRow.Cells[3].Value?.ToString() ?? string.Empty;
-            txtGiaNhap.Text = gvSP.CurrentRow.Cells[6].Value?.ToString() ?? string.Empty;
-            txtGiaBan.Text = gvSP.CurrentRow.Cells[7].Value?.ToString() ?? string.Empty;
-            txtSoLuong.Text = gvSP.CurrentRow.Cells[8].Value?.ToString() ?? string.Empty;
-
-            if (!string.IsNullOrEmpty(maLoai) && !string.IsNullOrEmpty(maNCC))
-            {
-                cbMaLoai.Text = maLoai;
-                cbMaNCC.Text = maNCC;
-            }
-            else
-            {
-                cbMaLoai.SelectedIndex = -1;
-                cbMaNCC.SelectedIndex = -1;
-            }
         }
 
         private void gbListSP_Click(object sender, EventArgs e)
@@ -170,6 +173,26 @@ namespace StationeryManagementSystem
         private void pbSearch_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = SanPhamDAO.getXemSoLuongSanPhamDaBanTrongNgay(dpsáchBan.Value);
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            int maSP = int.Parse(txtMaSP.Text);
+            string tenSP = txtTenSP.Text;
+            float giaNhap = float.Parse(txtGiaNhap.Text);
+            float giaBan = float.Parse(txtGiaBan.Text);
+            int maLoai = int.Parse(cbMaLoai.Text);
+            int soLuong = int.Parse(txtSoLuong.Text);
+            try
+            {
+                SanPhamDAO.update(maSP, tenSP, giaNhap, giaBan, maLoai, soLuong);
+                gvSP.DataSource = SanPhamDAO.findAll();
+                MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
       
