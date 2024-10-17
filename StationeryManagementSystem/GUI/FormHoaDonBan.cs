@@ -99,6 +99,12 @@ namespace StationeryManagementSystem
 
         private void btnReLoad_Click(object sender, EventArgs e)
         {
+            if (txtMaHD.Text == "")
+            {
+                MessageBox.Show("Chọn hóa đơn cần thêm sp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             FormThemSanPhamVaoHDB formThemSanPhamVaoHDB = new FormThemSanPhamVaoHDB(int.Parse(txtMaHD.Text));
             formThemSanPhamVaoHDB.ShowDialog();
 

@@ -23,10 +23,11 @@ namespace StationeryManagementSystem.DAO
             }
         }
 
-        internal static object getXemSoLuongSanPhamDaBanTrongNgay()
+        internal static DataTable getXemSoLuongSanPhamDaBanTrongNgay(DateTime dateTime)
         {
-            using (SqlCommand cmd = new SqlCommand("select * from XemSoLuongSanPhamDaBanTrongNgay", MyDB.GetConnection))
+            using (SqlCommand cmd = new SqlCommand("select * from fn_DanhSachSanPhamDaBanTrongNgay(@ngay)", MyDB.GetConnection))
             {
+                cmd.Parameters.AddWithValue("@ngay", SqlDbType.Date).Value = dateTime;
                 MyDB.OpenConnection();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -35,5 +36,6 @@ namespace StationeryManagementSystem.DAO
                 return dt;
             }
         }
+       
     }
 }

@@ -32,13 +32,15 @@ namespace StationeryManagementSystem.GUI
         bool isLoaded = false;
         private void FormThemSanPhamVaoHDB_Load(object sender, EventArgs e)
         {
+            gvSP.DataSource = SanPhamDAO.findAll();
+
             cbTenSP.DataSource = DAO.SanPhamDAO.findAll();
-            cbTenSP.DisplayMember = "TenSanPham";
-            cbTenSP.ValueMember = "MaSanPham";
+            cbTenSP.DisplayMember = "Tên SP";
+            cbTenSP.ValueMember = "Mã SP";
             cbTenSP.SelectedIndex = -1;
             cbMaSP.DataSource = DAO.SanPhamDAO.findAll();
-            cbMaSP.DisplayMember = "MaSanPham";
-            cbMaSP.ValueMember = "MaSanPham";
+            cbMaSP.DisplayMember = "Mã SP";
+            cbMaSP.ValueMember = "Mã SP";
             cbMaSP.SelectedIndex = -1;
             txtMaHD.Text = maHD.ToString();
             isLoaded = true;
@@ -48,6 +50,8 @@ namespace StationeryManagementSystem.GUI
                 cbTenSP.SelectedValue = maSP;
                 cbMaSP.Enabled = false;
                 cbTenSP.Enabled = false;
+                gvSP.Enabled = false;
+
             }
         }
 
@@ -55,6 +59,16 @@ namespace StationeryManagementSystem.GUI
         {
             if (!isLoaded) return;
             cbMaSP.SelectedValue = cbTenSP.SelectedValue;
+            //click vào sản phẩm trong data grid view
+            for (int i = 0; i < gvSP.Rows.Count; i++)
+            {
+                if (int.Parse(gvSP.Rows[i].Cells[0].Value.ToString()) == int.Parse(cbMaSP.SelectedValue.ToString()))
+                {
+                    gvSP.Rows[i].Selected = true;
+                    gvSP.CurrentCell = gvSP.Rows[i].Cells[0];
+                    break;
+                }
+            }
         }
 
         private void cbMaSP_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,6 +76,16 @@ namespace StationeryManagementSystem.GUI
             if (!isLoaded) return;
 
             cbTenSP.SelectedValue = cbMaSP.SelectedValue;
+            //click vào sản phẩm trong data grid view
+            for (int i = 0; i < gvSP.Rows.Count; i++)
+            {
+                if (int.Parse(gvSP.Rows[i].Cells[0].Value.ToString()) == int.Parse(cbMaSP.SelectedValue.ToString()))
+                {
+                    gvSP.Rows[i].Selected = true;
+                    gvSP.CurrentCell = gvSP.Rows[i].Cells[0];
+                    break;
+                }
+            }
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
@@ -94,6 +118,57 @@ namespace StationeryManagementSystem.GUI
                 {
                     MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void gvSP_Click(object sender, EventArgs e)
+        {
+            int maSP = int.Parse(gvSP.CurrentRow.Cells[0].Value.ToString());
+            cbMaSP.SelectedValue = maSP;
+            cbTenSP.SelectedValue = maSP;
+
+        }
+
+        private void txtSearh_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearh.Text == "")
+            {
+                gvSP.DataSource = SanPhamDAO.findAll();
+                return;
+            }
+            String input = txtSearh.Text;
+            int maSP;
+            DataTable dt = (DataTable)gvSP.DataSource;
+            bool isNumber = int.TryParse(input, out maSP);  // Chuyển đổi chuỗi thành số (nếu có thể)
+            if (isNumber)
+            {
+                DataRow[] rows = dt.Select("Mã SP = " + maSP);
+                if (rows.Length == 0)
+                {
+                    gvSP.DataSource = null;
+                    return;
+                }
+                DataTable newDt = dt.Clone();
+                foreach (DataRow row in rows)
+                {
+                    newDt.ImportRow(row);
+                }
+                gvSP.DataSource = newDt;
+            }
+            else
+            {
+                DataRow[] rows = dt.Select("[Tên SP] like '%" + input + "%'");
+                if (rows.Length == 0)
+                {
+                    gvSP.DataSource = null;
+                    return;
+                }
+                DataTable newDt = dt.Clone();
+                foreach (DataRow row in rows)
+                {
+                    newDt.ImportRow(row);
+                }
+                gvSP.DataSource = newDt;
             }
         }
 
