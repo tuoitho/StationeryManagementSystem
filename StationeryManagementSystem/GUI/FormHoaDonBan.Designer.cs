@@ -33,12 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnHoaDon = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbTrangThaiThanhToan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.gbSP = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.gvSP = new System.Windows.Forms.DataGridView();
-            this.btnReLoad = new Guna.UI2.WinForms.Guna2Button();
             this.lblTrangThai = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTongTin = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTongThanhToan = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -57,12 +54,15 @@
             this.gvHD = new System.Windows.Forms.DataGridView();
             this.gbListHDN = new Guna.UI2.WinForms.Guna2GroupBox();
             this.gbTacVu = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.UCSearchBill = new StationeryManagementSystem.UCSearchBill();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.btnThanhToan = new Guna.UI2.WinForms.Guna2Button();
-            this.cbTrangThaiThanhToan = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.UCSearchBill = new StationeryManagementSystem.UCSearchBill();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReLoad = new Guna.UI2.WinForms.Guna2Button();
             this.pnHoaDon.SuspendLayout();
             this.gbSP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvSP)).BeginInit();
@@ -99,6 +99,23 @@
             this.pnHoaDon.Size = new System.Drawing.Size(476, 770);
             this.pnHoaDon.TabIndex = 0;
             // 
+            // cbTrangThaiThanhToan
+            // 
+            this.cbTrangThaiThanhToan.BackColor = System.Drawing.Color.Transparent;
+            this.cbTrangThaiThanhToan.BorderColor = System.Drawing.Color.Teal;
+            this.cbTrangThaiThanhToan.BorderRadius = 10;
+            this.cbTrangThaiThanhToan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbTrangThaiThanhToan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTrangThaiThanhToan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTrangThaiThanhToan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTrangThaiThanhToan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTrangThaiThanhToan.ForeColor = System.Drawing.Color.Teal;
+            this.cbTrangThaiThanhToan.ItemHeight = 30;
+            this.cbTrangThaiThanhToan.Location = new System.Drawing.Point(27, 708);
+            this.cbTrangThaiThanhToan.Name = "cbTrangThaiThanhToan";
+            this.cbTrangThaiThanhToan.Size = new System.Drawing.Size(210, 36);
+            this.cbTrangThaiThanhToan.TabIndex = 59;
+            // 
             // gbSP
             // 
             this.gbSP.BorderRadius = 10;
@@ -117,68 +134,6 @@
             this.gbSP.Size = new System.Drawing.Size(427, 315);
             this.gbSP.TabIndex = 58;
             this.gbSP.Text = "Sản phẩm";
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.guna2Button3.BorderRadius = 10;
-            this.guna2Button3.BorderThickness = 2;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.Linen;
-            this.guna2Button3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.guna2Button3.Image = global::StationeryManagementSystem.Properties.Resources.loading;
-            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.Location = new System.Drawing.Point(117, 256);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(97, 41);
-            this.guna2Button3.TabIndex = 60;
-            this.guna2Button3.Text = "    Reload";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.guna2Button2.BorderRadius = 10;
-            this.guna2Button2.BorderThickness = 2;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Linen;
-            this.guna2Button2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.guna2Button2.Image = global::StationeryManagementSystem.Properties.Resources.edit;
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.Location = new System.Drawing.Point(220, 256);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(97, 41);
-            this.guna2Button2.TabIndex = 59;
-            this.guna2Button2.Text = "    Sửa";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.BorderThickness = 2;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Linen;
-            this.guna2Button1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.guna2Button1.Image = global::StationeryManagementSystem.Properties.Resources.cross;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(321, 256);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(97, 41);
-            this.guna2Button1.TabIndex = 58;
-            this.guna2Button1.Text = "    Xóa";
             // 
             // gvSP
             // 
@@ -210,27 +165,6 @@
             this.gvSP.RowTemplate.Height = 24;
             this.gvSP.Size = new System.Drawing.Size(411, 170);
             this.gvSP.TabIndex = 57;
-            // 
-            // btnReLoad
-            // 
-            this.btnReLoad.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.btnReLoad.BorderRadius = 10;
-            this.btnReLoad.BorderThickness = 2;
-            this.btnReLoad.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReLoad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReLoad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReLoad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReLoad.FillColor = System.Drawing.Color.Linen;
-            this.btnReLoad.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReLoad.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnReLoad.Image = global::StationeryManagementSystem.Properties.Resources.plus;
-            this.btnReLoad.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnReLoad.Location = new System.Drawing.Point(10, 256);
-            this.btnReLoad.Name = "btnReLoad";
-            this.btnReLoad.Size = new System.Drawing.Size(97, 41);
-            this.btnReLoad.TabIndex = 1;
-            this.btnReLoad.Text = "    Thêm";
-            this.btnReLoad.Click += new System.EventHandler(this.btnReLoad_Click);
             // 
             // lblTrangThai
             // 
@@ -534,6 +468,15 @@
             this.gbTacVu.TabIndex = 56;
             this.gbTacVu.Text = "Tác vụ";
             // 
+            // UCSearchBill
+            // 
+            this.UCSearchBill.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UCSearchBill.Location = new System.Drawing.Point(5, 58);
+            this.UCSearchBill.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.UCSearchBill.Name = "UCSearchBill";
+            this.UCSearchBill.Size = new System.Drawing.Size(755, 60);
+            this.UCSearchBill.TabIndex = 0;
+            // 
             // guna2Button6
             // 
             this.guna2Button6.BorderColor = System.Drawing.Color.MidnightBlue;
@@ -621,31 +564,88 @@
             this.btnThanhToan.Text = "      Tạo lập";
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
-            // cbTrangThaiThanhToan
+            // guna2Button3
             // 
-            this.cbTrangThaiThanhToan.BackColor = System.Drawing.Color.Transparent;
-            this.cbTrangThaiThanhToan.BorderColor = System.Drawing.Color.Teal;
-            this.cbTrangThaiThanhToan.BorderRadius = 10;
-            this.cbTrangThaiThanhToan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbTrangThaiThanhToan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTrangThaiThanhToan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbTrangThaiThanhToan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbTrangThaiThanhToan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTrangThaiThanhToan.ForeColor = System.Drawing.Color.Teal;
-            this.cbTrangThaiThanhToan.ItemHeight = 30;
-            this.cbTrangThaiThanhToan.Location = new System.Drawing.Point(27, 708);
-            this.cbTrangThaiThanhToan.Name = "cbTrangThaiThanhToan";
-            this.cbTrangThaiThanhToan.Size = new System.Drawing.Size(210, 36);
-            this.cbTrangThaiThanhToan.TabIndex = 59;
+            this.guna2Button3.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.guna2Button3.BorderRadius = 10;
+            this.guna2Button3.BorderThickness = 2;
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.FillColor = System.Drawing.Color.Linen;
+            this.guna2Button3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.guna2Button3.Image = global::StationeryManagementSystem.Properties.Resources.loading;
+            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button3.Location = new System.Drawing.Point(117, 256);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(97, 41);
+            this.guna2Button3.TabIndex = 60;
+            this.guna2Button3.Text = "    Reload";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
-            // UCSearchBill
+            // guna2Button2
             // 
-            this.UCSearchBill.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UCSearchBill.Location = new System.Drawing.Point(5, 58);
-            this.UCSearchBill.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.UCSearchBill.Name = "UCSearchBill";
-            this.UCSearchBill.Size = new System.Drawing.Size(755, 60);
-            this.UCSearchBill.TabIndex = 0;
+            this.guna2Button2.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.guna2Button2.BorderRadius = 10;
+            this.guna2Button2.BorderThickness = 2;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.Linen;
+            this.guna2Button2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.guna2Button2.Image = global::StationeryManagementSystem.Properties.Resources.edit;
+            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button2.Location = new System.Drawing.Point(220, 256);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(97, 41);
+            this.guna2Button2.TabIndex = 59;
+            this.guna2Button2.Text = "    Sửa";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.BorderThickness = 2;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Linen;
+            this.guna2Button1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.guna2Button1.Image = global::StationeryManagementSystem.Properties.Resources.cross;
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.Location = new System.Drawing.Point(321, 256);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(97, 41);
+            this.guna2Button1.TabIndex = 58;
+            this.guna2Button1.Text = "    Xóa";
+            // 
+            // btnReLoad
+            // 
+            this.btnReLoad.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnReLoad.BorderRadius = 10;
+            this.btnReLoad.BorderThickness = 2;
+            this.btnReLoad.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReLoad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReLoad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReLoad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReLoad.FillColor = System.Drawing.Color.Linen;
+            this.btnReLoad.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReLoad.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnReLoad.Image = global::StationeryManagementSystem.Properties.Resources.plus;
+            this.btnReLoad.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReLoad.Location = new System.Drawing.Point(10, 256);
+            this.btnReLoad.Name = "btnReLoad";
+            this.btnReLoad.Size = new System.Drawing.Size(97, 41);
+            this.btnReLoad.TabIndex = 1;
+            this.btnReLoad.Text = "    Thêm";
+            this.btnReLoad.Click += new System.EventHandler(this.btnReLoad_Click);
             // 
             // FormHoaDonBan
             // 

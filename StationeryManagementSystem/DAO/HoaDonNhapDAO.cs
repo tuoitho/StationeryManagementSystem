@@ -14,10 +14,13 @@ namespace StationeryManagementSystem.DAO
         {
             using (SqlCommand cmd = new SqlCommand("SELECT * FROM v_DanhSachHoaDonNhap", MyDB.GetConnection))
             {
+                MyDB.OpenConnection();
+                cmd.CommandType = CommandType.Text;
                 using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                 {
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
+                    MyDB.CloseConnection();
                     return dt;
                 }
             }
