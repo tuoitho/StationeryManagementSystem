@@ -99,6 +99,12 @@ namespace StationeryManagementSystem
 
         private void btnReLoad_Click(object sender, EventArgs e)
         {
+            if (txtMaHD.Text == "")
+            {
+                MessageBox.Show("Chọn hóa đơn cần thêm sp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             FormThemSanPhamVaoHDB formThemSanPhamVaoHDB = new FormThemSanPhamVaoHDB(int.Parse(txtMaHD.Text));
             formThemSanPhamVaoHDB.ShowDialog();
 
@@ -128,6 +134,40 @@ namespace StationeryManagementSystem
                 HoaDonBanDAO.update(maHD, trangThai);
                 MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 gvHD.DataSource = HoaDonBanDAO.findAll();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void UCSearchBill_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbSearch_Click(object sender, EventArgs e)
+        {
+            DateTime dps=dpStart.Value;
+            DateTime dpe = dpEnd.Value;
+            
+            DataTable dt = (DataTable)gvHD.DataSource;
+
+
+            dt.DefaultView.RowFilter = "[Ngày Lập] >= #" + dps.ToString("MM/dd/yyyy") + "# AND [Ngày Lập] <= #" + dpe.ToString("MM/dd/yyyy") + "#";
+            
+
+
+            gvSP.DataSource = dt;
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            int maHD = int.Parse(txtMaHD.Text);
+            try
+            {
+                HoaDonBanDAO.delete(maHD);
+                MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

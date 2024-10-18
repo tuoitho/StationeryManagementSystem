@@ -11,49 +11,25 @@ using System.Windows.Forms;
 
 namespace StationeryManagementSystem.GUI
 {
-    public partial class FormThemSanPhamVaoHDB : Form
+    public partial class FormThemSanPhamVaoHDN : Form
     {
-        public FormThemSanPhamVaoHDB()
+        public FormThemSanPhamVaoHDN()
         {
             InitializeComponent();
         }
-        public FormThemSanPhamVaoHDB(int maHD):this()
-        {   
-            this.maHD = maHD;
-        }
-        public FormThemSanPhamVaoHDB(int maHD,bool isSua,int maSP) : this()
+        public FormThemSanPhamVaoHDN(int maHD) : this()
         {
             this.maHD = maHD;
-            this.isSua= true;
-            this.maSP= maSP;
         }
-        int maHD,maSP;
+        public FormThemSanPhamVaoHDN(int maHD, bool isSua, int maSP) : this()
+        {
+            this.maHD = maHD;
+            this.isSua = true;
+            this.maSP = maSP;
+        }
+        int maHD, maSP;
         bool isSua = false;
         bool isLoaded = false;
-        private void FormThemSanPhamVaoHDB_Load(object sender, EventArgs e)
-        {
-            gvSP.DataSource = SanPhamDAO.findAll();
-
-            cbTenSP.DataSource = DAO.SanPhamDAO.findAll();
-            cbTenSP.DisplayMember = "Tên SP";
-            cbTenSP.ValueMember = "Mã SP";
-            cbTenSP.SelectedIndex = -1;
-            cbMaSP.DataSource = DAO.SanPhamDAO.findAll();
-            cbMaSP.DisplayMember = "Mã SP";
-            cbMaSP.ValueMember = "Mã SP";
-            cbMaSP.SelectedIndex = -1;
-            txtMaHD.Text = maHD.ToString();
-            isLoaded = true;
-            if (isSua)
-            {
-                cbMaSP.SelectedValue = maSP; 
-                cbTenSP.SelectedValue = maSP;
-                cbMaSP.Enabled = false;
-                cbTenSP.Enabled = false;
-                gvSP.Enabled = false;
-
-            }
-        }
 
         private void cbTenSP_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -95,9 +71,10 @@ namespace StationeryManagementSystem.GUI
 
                 int maSP = int.Parse(cbMaSP.SelectedValue.ToString());
                 int soLuong = int.Parse(txtSoLuong.Text);
+                float giaNhap = float.Parse(txtGiaNhap.Text);
                 try
                 {
-                    CTHDBDAO.insert(maHD, maSP, soLuong);
+                    CTHDNDAO.insert(maHD, maSP, soLuong, giaNhap);
                     MessageBox.Show("Thêm sản phẩm vào hóa đơn thành công");
                 }
                 catch (Exception ex)
@@ -109,9 +86,10 @@ namespace StationeryManagementSystem.GUI
             {
                 int maSP = int.Parse(cbMaSP.SelectedValue.ToString());
                 int soLuong = int.Parse(txtSoLuong.Text);
+                float giaNhap = float.Parse(txtGiaNhap.Text);
                 try
                 {
-                    CTHDBDAO.update(maHD, maSP, soLuong);
+                    CTHDNDAO.update(maHD, maSP, soLuong, giaNhap);
                     MessageBox.Show("Sữa sản phẩm vào hóa đơn thành công");
                 }
                 catch (Exception ex)
@@ -126,7 +104,6 @@ namespace StationeryManagementSystem.GUI
             int maSP = int.Parse(gvSP.CurrentRow.Cells[0].Value.ToString());
             cbMaSP.SelectedValue = maSP;
             cbTenSP.SelectedValue = maSP;
-
         }
 
         private void txtSearh_TextChanged(object sender, EventArgs e)
@@ -175,6 +152,32 @@ namespace StationeryManagementSystem.GUI
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.Close();
+
+        }
+
+        private void FormThemSanPhamVaoHDN_Load(object sender, EventArgs e)
+        {
+            gvSP.DataSource = SanPhamDAO.findAll();
+
+            cbTenSP.DataSource = DAO.SanPhamDAO.findAll();
+            cbTenSP.DisplayMember = "Tên SP";
+            cbTenSP.ValueMember = "Mã SP";
+            cbTenSP.SelectedIndex = -1;
+            cbMaSP.DataSource = DAO.SanPhamDAO.findAll();
+            cbMaSP.DisplayMember = "Mã SP";
+            cbMaSP.ValueMember = "Mã SP";
+            cbMaSP.SelectedIndex = -1;
+            txtMaHD.Text = maHD.ToString();
+            isLoaded = true;
+            if (isSua)
+            {
+                cbMaSP.SelectedValue = maSP;
+                cbTenSP.SelectedValue = maSP;
+                cbMaSP.Enabled = false;
+                cbTenSP.Enabled = false;
+                gvSP.Enabled = false;
+
+            }
         }
     }
 }

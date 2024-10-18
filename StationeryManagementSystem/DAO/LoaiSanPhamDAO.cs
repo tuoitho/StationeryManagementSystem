@@ -12,7 +12,7 @@ namespace StationeryManagementSystem.DAO
     {
         public static DataTable findAll()
         {
-            SqlCommand cmd = new SqlCommand("select * from v_LpaiSanPham", MyDB.GetConnection);
+            SqlCommand cmd = new SqlCommand("select * from LoaiSanPham", MyDB.GetConnection);
             MyDB.OpenConnection();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
