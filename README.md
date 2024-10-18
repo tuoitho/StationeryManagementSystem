@@ -1,19 +1,11 @@
 # [Database](https://github.com/Trong111a/QLVPP_sql/tree/main)
- # 📦 StationeryManagementSystem - Hệ thống quản lý văn phòng phẩm
-### 🧑‍💼 Students
+# Stationery Management System
 
+The **Stationery Management System** is designed to efficiently manage office supply inventory, bills, and supplier data, utilizing a robust DBMS for backend operations and WinForms in C# for the display interface.
 
-**1. Nguyeng dgdgdg eddg**
-**ID:  22111**: ![GitHub](https://img.icons8.com/ios-filled/20/000000/github.png) [GitHub](https://github.com/tuoitho/) ![Facebook](https://img.icons8.com/ios-filled/20/000000/facebook--v1.png) [Facebook](https://www.facebook.com/tuoithodakhoc/) ![Email](https://img.icons8.com/ios-filled/20/000000/email.png) dinhtri42@gmail.com ![Phone](https://img.icons8.com/ios-filled/20/000000/phone.png) <img src="https://media.tenor.com/TAqs38FFJiwAAAAi/loading.gif" width="40" height="40" />
+## Features
 
+- Visualize and manage inventory, bills, and suppliers.
+- Easy-to-use WinForms interface for real-time data representation.
+- Secure and efficient DBMS integration for core functionality.
 
-**2. Nguyeng dgdgdg eddg**  
-**ID:  22111**: ![GitHub](https://img.icons8.com/ios-filled/20/000000/github.png) [GitHub](https://github.com/tuoitho/) ![Facebook](https://img.icons8.com/ios-filled/20/000000/facebook--v1.png) [Facebook](https://www.facebook.com/tuoithodakhoc/) ![Email](https://img.icons8.com/ios-filled/20/000000/email.png) dinhtri42@gmail.com ![Phone](https://img.icons8.com/ios-filled/20/000000/phone.png) <img src="https://media.tenor.com/TAqs38FFJiwAAAAi/loading.gif" width="40" height="40" />
-
-
-**3. Lê Đình Trí**  
-**ID:  22110442**: ![GitHub](https://img.icons8.com/ios-filled/20/000000/github.png) [GitHub](https://github.com/tuoitho/) ![Facebook](https://img.icons8.com/ios-filled/20/000000/facebook--v1.png) [Facebook](https://www.facebook.com/tuoithodakhoc/) ![Email](https://img.icons8.com/ios-filled/20/000000/email.png) dinhtri42@gmail.com ![Phone](https://img.icons8.com/ios-filled/20/000000/phone.png) 0362092749
-
-
-**4. Nguyeng dgdgdg eddg**  
-**ID:  22111**: ![GitHub](https://img.icons8.com/ios-filled/20/000000/github.png) [GitHub](https://github.com/tuoitho/) ![Facebook](https://img.icons8.com/ios-filled/20/000000/facebook--v1.png) [Facebook](https://www.facebook.com/tuoithodakhoc/) ![Email](https://img.icons8.com/ios-filled/20/000000/email.png) dinhtri42@gmail.com ![Phone](https://img.icons8.com/ios-filled/20/000000/phone.png) <img src="https://media.tenor.com/TAqs38FFJiwAAAAi/loading.gif" width="40" height="40" />
