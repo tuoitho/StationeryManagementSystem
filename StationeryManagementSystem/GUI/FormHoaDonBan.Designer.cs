@@ -273,6 +273,7 @@
             this.gvSP.RowHeadersWidth = 51;
             this.gvSP.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.gvSP.RowTemplate.Height = 24;
+            this.gvSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvSP.Size = new System.Drawing.Size(411, 170);
             this.gvSP.TabIndex = 57;
             this.gvSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSP_CellClick);

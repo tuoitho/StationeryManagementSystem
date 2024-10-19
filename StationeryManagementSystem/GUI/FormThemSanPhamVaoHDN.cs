@@ -85,6 +85,10 @@ namespace StationeryManagementSystem.GUI
             }
             else
             {
+                if (dt is null)
+                {
+                    return;
+                }
                 DataRow[] rows = dt.Select("[Tên SP] like '%" + input + "%'");
                 if (rows.Length == 0)
                 {

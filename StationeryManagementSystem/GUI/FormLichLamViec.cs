@@ -46,6 +46,11 @@ namespace StationeryManagementSystem.GUI
         {
 
             
-        }   
+        }
+
+        private void btnPhanCa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

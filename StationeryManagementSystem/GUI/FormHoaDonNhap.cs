@@ -131,10 +131,6 @@ namespace StationeryManagementSystem.GUI
 
         private void gvHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex<= 0)
-            {
-                return;
-            }
             if (gvHD.SelectedRows.Count <= 0)
             {
                 return;
@@ -238,6 +234,16 @@ namespace StationeryManagementSystem.GUI
                 MessageBox.Show("Vui lòng chọn dòng dữ liệu hợp lệ để thao tác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+        }
+
+        private void gvHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gvSP_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

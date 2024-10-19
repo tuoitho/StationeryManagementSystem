@@ -102,18 +102,21 @@ namespace StationeryManagementSystem.GUI
             }
             else
             {
-                DataRow[] rows = dt.Select("[Tên SP] like '%" + input + "%'");
-                if (rows.Length == 0)
-                {
-                    gvSP.DataSource = null;
-                    return;
-                }
-                DataTable newDt = dt.Clone();
-                foreach (DataRow row in rows)
-                {
-                    newDt.ImportRow(row);
-                }
-                gvSP.DataSource = newDt;
+                dt.DefaultView.RowFilter = string.Format("[Tên SP] like '%{0}%'", input);
+                gvSP.DataSource = dt;
+
+                //DataRow[] rows = dt.Select("[Tên SP] like '%" + input + "%'");
+                //if (rows.Length == 0 || dt is null)
+                //{
+                //    gvSP.DataSource = null;
+                //    return;
+                //}
+                //DataTable newDt = dt.Clone();
+                //foreach (DataRow row in rows)
+                //{
+                //    newDt.ImportRow(row);
+                //}
+                //gvSP.DataSource = newDt;
             }
         }
 

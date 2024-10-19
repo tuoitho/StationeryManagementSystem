@@ -222,10 +222,6 @@ namespace StationeryManagementSystem
 
         private void gvSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex <= 0)
-            {
-                return;
-            }
             var selectedRow = gvSP.SelectedRows[0];
             if (selectedRow.IsNewRow || string.IsNullOrWhiteSpace(selectedRow.Cells["maSP"].Value?.ToString()))
             {

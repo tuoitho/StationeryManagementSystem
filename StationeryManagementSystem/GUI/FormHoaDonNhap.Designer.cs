@@ -32,6 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtTongTien = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTongTien = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dpNgayThanhToan = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -418,10 +420,14 @@
             this.gvSP.Name = "gvSP";
             this.gvSP.ReadOnly = true;
             this.gvSP.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Teal;
+            this.gvSP.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.gvSP.RowTemplate.Height = 24;
+            this.gvSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvSP.Size = new System.Drawing.Size(411, 170);
             this.gvSP.TabIndex = 57;
             this.gvSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSP_CellClick);
+            this.gvSP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSP_CellContentClick);
             // 
             // maSP
             // 
@@ -606,14 +612,14 @@
             this.gvHD.AllowUserToAddRows = false;
             this.gvHD.BackgroundColor = System.Drawing.Color.White;
             this.gvHD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gvHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maHD,
@@ -625,23 +631,27 @@
             this.giaTri,
             this.trangThaiThanhToan,
             this.ngayThanhToan});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvHD.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvHD.DefaultCellStyle = dataGridViewCellStyle5;
             this.gvHD.GridColor = System.Drawing.Color.White;
             this.gvHD.Location = new System.Drawing.Point(18, 157);
             this.gvHD.Name = "gvHD";
             this.gvHD.ReadOnly = true;
             this.gvHD.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Teal;
+            this.gvHD.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.gvHD.RowTemplate.Height = 24;
+            this.gvHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvHD.Size = new System.Drawing.Size(730, 413);
             this.gvHD.TabIndex = 68;
             this.gvHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvHD_CellClick);
+            this.gvHD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvHD_CellContentClick);
             // 
             // maHD
             // 
