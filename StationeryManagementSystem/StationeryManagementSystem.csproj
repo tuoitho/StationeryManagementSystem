@@ -93,18 +93,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\UCHoaDon.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\UCHoaDon.Designer.cs">
-      <DependentUpon>UCHoaDon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\FormThemSanPhamVaoHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\FormThemSanPhamVaoHoaDon.Designer.cs">
-      <DependentUpon>FormThemSanPhamVaoHoaDon.cs</DependentUpon>
-    </Compile>
+    <Compile Include="DAO\ChiTietHDBDAO.cs" />
+    <Compile Include="DAO\ClhiTietHDNDAO.cs" />
+    <Compile Include="DAO\HoaDonBanDAO.cs" />
+    <Compile Include="DAO\HoaDonNhapDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\LoaiSanPhamDAO.cs" />
+    <Compile Include="DAO\NhaCungCapDAO.cs" />
+    <Compile Include="DAO\SanPhamDAO.cs" />
     <Compile Include="GUI\FormChiTietDoanhThu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +143,12 @@
     <Compile Include="GUI\FormHoaDonNhap.Designer.cs">
       <DependentUpon>FormHoaDonNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormKhachHang.Designer.cs">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormLichLamViec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,7 +186,19 @@
       <DependentUpon>FormTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\MyDB.cs" />
-    <Compile Include="DAO\NhanVienDao.cs" />
+    <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="GUI\FormThemSanPhamVaoHDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormThemSanPhamVaoHDB.Designer.cs">
+      <DependentUpon>FormThemSanPhamVaoHDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormThemSanPhamVaoHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormThemSanPhamVaoHDN.Designer.cs">
+      <DependentUpon>FormThemSanPhamVaoHDN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -195,29 +209,11 @@
     <Compile Include="Controls\RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\UCTimKiem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\UCTimKiem.Designer.cs">
-      <DependentUpon>UCTimKiem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\UCSearchBill.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\UCSearchBill.Designer.cs">
-      <DependentUpon>UCSearchBill.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\UCThemSanPham.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\UCThemSanPham.Designer.cs">
-      <DependentUpon>UCThemSanPham.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Controls\UCHoaDon.resx">
-      <DependentUpon>UCHoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormKhachHang.resx">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormThemSanPhamVaoHoaDon.resx">
-      <DependentUpon>FormThemSanPhamVaoHoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormLichLamViec.resx">
+      <DependentUpon>FormLichLamViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormChiTietDoanhThu.resx">
       <DependentUpon>FormChiTietDoanhThu.cs</DependentUpon>
@@ -252,6 +248,12 @@
     <EmbeddedResource Include="GUI\FormTaiKhoan.resx">
       <DependentUpon>FormTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormThemSanPhamVaoHDB.resx">
+      <DependentUpon>FormThemSanPhamVaoHDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormThemSanPhamVaoHDN.resx">
+      <DependentUpon>FormThemSanPhamVaoHDN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -259,15 +261,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\RoundedButton.resx">
       <DependentUpon>RoundedButton.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UCTimKiem.resx">
-      <DependentUpon>UCTimKiem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UCSearchBill.resx">
-      <DependentUpon>UCSearchBill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UCThemSanPham.resx">
-      <DependentUpon>UCThemSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

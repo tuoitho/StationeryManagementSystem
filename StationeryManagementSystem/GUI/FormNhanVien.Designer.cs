@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhanVien));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhanVien));
             this.gbThongTin = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtLuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLuong = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -54,12 +54,11 @@
             this.lblMaNV = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbListNV = new Guna.UI2.WinForms.Guna2GroupBox();
             this.gbTacVu = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.gvNhanVien = new System.Windows.Forms.DataGridView();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.btnReLoad = new Guna.UI2.WinForms.Guna2Button();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
-            this.UCTimKiemNhanVien = new StationeryManagementSystem.UCTimKiem();
-            this.gvNhanVien = new System.Windows.Forms.DataGridView();
             this.maNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +68,7 @@
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.luongTheoGio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        
             this.gbThongTin.SuspendLayout();
             this.gbChucVu.SuspendLayout();
             this.gbGioiTinh.SuspendLayout();
@@ -371,6 +371,7 @@
             this.txtMaNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtMaNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaNV.Enabled = false;
             this.txtMaNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaNV.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNV.ForeColor = System.Drawing.Color.Teal;
@@ -380,8 +381,9 @@
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.PasswordChar = '\0';
             this.txtMaNV.PlaceholderText = "";
+            this.txtMaNV.ReadOnly = true;
             this.txtMaNV.SelectedText = "";
-            this.txtMaNV.Size = new System.Drawing.Size(282, 30);
+            this.txtMaNV.Size = new System.Drawing.Size(67, 30);
             this.txtMaNV.TabIndex = 5;
             // 
             // lblEmail
@@ -444,7 +446,7 @@
             this.gbListNV.BorderRadius = 10;
             this.gbListNV.BorderThickness = 2;
             this.gbListNV.Controls.Add(this.gbTacVu);
-            this.gbListNV.Controls.Add(this.UCTimKiemNhanVien);
+          
             this.gbListNV.Controls.Add(this.gvNhanVien);
             this.gbListNV.CustomBorderColor = System.Drawing.Color.Teal;
             this.gbListNV.FillColor = System.Drawing.SystemColors.Control;
@@ -473,99 +475,6 @@
             this.gbTacVu.Size = new System.Drawing.Size(610, 115);
             this.gbTacVu.TabIndex = 13;
             this.gbTacVu.Text = "Tác vụ";
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.btnXoa.BorderRadius = 20;
-            this.btnXoa.BorderThickness = 2;
-            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXoa.FillColor = System.Drawing.Color.LightYellow;
-            this.btnXoa.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnXoa.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnXoa.Location = new System.Drawing.Point(453, 54);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(133, 45);
-            this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "   Xóa";
-            // 
-            // btnSua
-            // 
-            this.btnSua.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.btnSua.BorderRadius = 20;
-            this.btnSua.BorderThickness = 2;
-            this.btnSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSua.FillColor = System.Drawing.Color.LightYellow;
-            this.btnSua.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSua.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSua.Location = new System.Drawing.Point(300, 54);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(133, 45);
-            this.btnSua.TabIndex = 2;
-            this.btnSua.Text = "  Sửa";
-            // 
-            // btnReLoad
-            // 
-            this.btnReLoad.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.btnReLoad.BorderRadius = 20;
-            this.btnReLoad.BorderThickness = 2;
-            this.btnReLoad.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReLoad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReLoad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReLoad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReLoad.FillColor = System.Drawing.Color.LightYellow;
-            this.btnReLoad.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReLoad.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnReLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnReLoad.Image")));
-            this.btnReLoad.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnReLoad.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnReLoad.Location = new System.Drawing.Point(151, 54);
-            this.btnReLoad.Name = "btnReLoad";
-            this.btnReLoad.Size = new System.Drawing.Size(133, 45);
-            this.btnReLoad.TabIndex = 1;
-            this.btnReLoad.Text = "     Reload";
-            // 
-            // btnThem
-            // 
-            this.btnThem.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.btnThem.BorderRadius = 20;
-            this.btnThem.BorderThickness = 2;
-            this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThem.FillColor = System.Drawing.Color.LightYellow;
-            this.btnThem.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThem.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnThem.Location = new System.Drawing.Point(11, 54);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(133, 45);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "  Thêm";
-            // 
-            // UCTimKiemNhanVien
-            // 
-            this.UCTimKiemNhanVien.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UCTimKiemNhanVien.Location = new System.Drawing.Point(289, 46);
-            this.UCTimKiemNhanVien.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.UCTimKiemNhanVien.Name = "UCTimKiemNhanVien";
-            this.UCTimKiemNhanVien.Size = new System.Drawing.Size(738, 59);
-            this.UCTimKiemNhanVien.TabIndex = 3;
             // 
             // gvNhanVien
             // 
@@ -609,6 +518,95 @@
             this.gvNhanVien.RowTemplate.Height = 24;
             this.gvNhanVien.Size = new System.Drawing.Size(1040, 122);
             this.gvNhanVien.TabIndex = 2;
+            this.gvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvNhanVien_CellClick);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnXoa.BorderRadius = 20;
+            this.btnXoa.BorderThickness = 2;
+            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoa.FillColor = System.Drawing.Color.LightYellow;
+            this.btnXoa.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnXoa.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnXoa.Location = new System.Drawing.Point(453, 54);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(133, 45);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "   Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnSua.BorderRadius = 20;
+            this.btnSua.BorderThickness = 2;
+            this.btnSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSua.FillColor = System.Drawing.Color.LightYellow;
+            this.btnSua.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSua.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnSua.Location = new System.Drawing.Point(300, 54);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(133, 45);
+            this.btnSua.TabIndex = 2;
+            this.btnSua.Text = "  Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnReLoad
+            // 
+            this.btnReLoad.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnReLoad.BorderRadius = 20;
+            this.btnReLoad.BorderThickness = 2;
+            this.btnReLoad.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReLoad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReLoad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReLoad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReLoad.FillColor = System.Drawing.Color.LightYellow;
+            this.btnReLoad.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReLoad.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnReLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnReLoad.Image")));
+            this.btnReLoad.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReLoad.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnReLoad.Location = new System.Drawing.Point(151, 54);
+            this.btnReLoad.Name = "btnReLoad";
+            this.btnReLoad.Size = new System.Drawing.Size(133, 45);
+            this.btnReLoad.TabIndex = 1;
+            this.btnReLoad.Text = "     Reload";
+            this.btnReLoad.Click += new System.EventHandler(this.btnReLoad_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnThem.BorderRadius = 20;
+            this.btnThem.BorderThickness = 2;
+            this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThem.FillColor = System.Drawing.Color.LightYellow;
+            this.btnThem.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThem.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnThem.Location = new System.Drawing.Point(11, 54);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(133, 45);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "  Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // maNV
             // 
@@ -626,7 +624,7 @@
             this.tenNV.MinimumWidth = 6;
             this.tenNV.Name = "tenNV";
             this.tenNV.ReadOnly = true;
-            this.tenNV.Width = 150;
+            this.tenNV.Width = 170;
             // 
             // ngaySinh
             // 
@@ -691,6 +689,10 @@
             this.luongTheoGio.ReadOnly = true;
             this.luongTheoGio.Width = 170;
             // 
+            // UCTimKiemNhanVien
+            // 
+           
+            // 
             // FormNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -743,7 +745,10 @@
         private Guna.UI2.WinForms.Guna2Button btnXoa;
         private Guna.UI2.WinForms.Guna2Button btnSua;
         private Guna.UI2.WinForms.Guna2Button btnReLoad;
-        private UCTimKiem ucTimKiemNV;
+ 
+        private Guna.UI2.WinForms.Guna2TextBox txtLuong;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblLuong;
+
         private System.Windows.Forms.DataGridViewTextBoxColumn maNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinh;
@@ -753,8 +758,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn luongTheoGio;
-        private Guna.UI2.WinForms.Guna2TextBox txtLuong;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblLuong;
-        private UCTimKiem UCTimKiemNhanVien;
     }
 }
