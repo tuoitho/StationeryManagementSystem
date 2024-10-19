@@ -131,6 +131,14 @@ namespace StationeryManagementSystem.GUI
 
         private void gvHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex<= 0)
+            {
+                return;
+            }
+            if (gvHD.SelectedRows.Count <= 0)
+            {
+                return;
+            }
             var selectedRow = gvHD.SelectedRows[0];
             if (selectedRow.IsNewRow || string.IsNullOrWhiteSpace(selectedRow.Cells["maHD"].Value?.ToString()))
             {
@@ -220,6 +228,10 @@ namespace StationeryManagementSystem.GUI
 
         private void gvSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (gvSP.SelectedRows.Count <= 0)
+            {
+                return;
+            }
             var selectedRow = gvSP.SelectedRows[0];
             if (selectedRow.IsNewRow || string.IsNullOrWhiteSpace(selectedRow.Cells["maSP"].Value?.ToString()))
             {

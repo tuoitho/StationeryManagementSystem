@@ -9,8 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using StationeryManagementSystem.DAO;
-using StationeryManagementSystem.GUI;
 
 namespace StationeryManagementSystem
 {
@@ -42,9 +40,7 @@ namespace StationeryManagementSystem
             cbTrangThaiThanhToan.DataSource = new List<string> { "Chưa thanh toán", "Đã thanh toán" };
         }
 
-        private void UCThemSanPham_Load(object sender, EventArgs e)
-        {
-
+ 
         private void btnThemSP_Click(object sender, EventArgs e)
         {
             if (txtMaHD.Text == "")
@@ -167,6 +163,10 @@ namespace StationeryManagementSystem
 
         private void gvHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex <= 0)
+            {
+                return;
+            }
             var selectedRow = gvHD.SelectedRows[0];
             if (selectedRow.IsNewRow || string.IsNullOrWhiteSpace(selectedRow.Cells["maHD"].Value?.ToString()))
             {
@@ -225,6 +225,10 @@ namespace StationeryManagementSystem
 
         private void gvSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex <= 0)
+            {
+                return;
+            }
             var selectedRow = gvSP.SelectedRows[0];
             if (selectedRow.IsNewRow || string.IsNullOrWhiteSpace(selectedRow.Cells["maSP"].Value?.ToString()))
             {

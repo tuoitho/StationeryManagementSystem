@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtTongTien = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTongTien = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dpNgayThanhToan = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -42,6 +42,7 @@
             this.lblTrangThai = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cbMaNCC = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pnHoaDon = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbMaNV = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnTaoLap = new Guna.UI2.WinForms.Guna2Button();
             this.gbSP = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnReloadSP = new Guna.UI2.WinForms.Guna2Button();
@@ -62,16 +63,6 @@
             this.lblMaHD = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbListHDN = new Guna.UI2.WinForms.Guna2GroupBox();
             this.gvHD = new System.Windows.Forms.DataGridView();
-            this.pbSeach = new System.Windows.Forms.PictureBox();
-            this.dpEnd = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.lblDen = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.dpStart = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.lblTimKiem = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.gbTacVu = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
-            this.btnReload = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSua = new Guna.UI2.WinForms.Guna2Button();
-            this.cbMaNV = new Guna.UI2.WinForms.Guna2ComboBox();
             this.maHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,6 +72,15 @@
             this.giaTri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trangThaiThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pbSeach = new System.Windows.Forms.PictureBox();
+            this.dpEnd = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.lblDen = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.dpStart = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.lblTimKiem = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.gbTacVu = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReload = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.pnHoaDon.SuspendLayout();
             this.gbSP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvSP)).BeginInit();
@@ -265,6 +265,24 @@
             this.pnHoaDon.Size = new System.Drawing.Size(470, 770);
             this.pnHoaDon.TabIndex = 57;
             // 
+            // cbMaNV
+            // 
+            this.cbMaNV.BackColor = System.Drawing.Color.Transparent;
+            this.cbMaNV.BorderColor = System.Drawing.Color.Teal;
+            this.cbMaNV.BorderRadius = 10;
+            this.cbMaNV.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbMaNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMaNV.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMaNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMaNV.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMaNV.ForeColor = System.Drawing.Color.Teal;
+            this.cbMaNV.ItemHeight = 30;
+            this.cbMaNV.Location = new System.Drawing.Point(137, 46);
+            this.cbMaNV.Name = "cbMaNV";
+            this.cbMaNV.Size = new System.Drawing.Size(117, 36);
+            this.cbMaNV.TabIndex = 61;
+            this.cbMaNV.SelectedIndexChanged += new System.EventHandler(this.cbMaNV_SelectedIndexChanged);
+            // 
             // btnTaoLap
             // 
             this.btnTaoLap.BorderColor = System.Drawing.Color.MidnightBlue;
@@ -369,16 +387,17 @@
             // 
             // gvSP
             // 
+            this.gvSP.AllowUserToAddRows = false;
             this.gvSP.BackgroundColor = System.Drawing.Color.White;
             this.gvSP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvSP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maSP,
@@ -386,14 +405,14 @@
             this.soLuong,
             this.donGia,
             this.tonhTien});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvSP.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvSP.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvSP.GridColor = System.Drawing.Color.White;
             this.gvSP.Location = new System.Drawing.Point(7, 65);
             this.gvSP.Name = "gvSP";
@@ -584,16 +603,17 @@
             // 
             // gvHD
             // 
+            this.gvHD.AllowUserToAddRows = false;
             this.gvHD.BackgroundColor = System.Drawing.Color.White;
             this.gvHD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gvHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maHD,
@@ -605,14 +625,14 @@
             this.giaTri,
             this.trangThaiThanhToan,
             this.ngayThanhToan});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvHD.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvHD.DefaultCellStyle = dataGridViewCellStyle4;
             this.gvHD.GridColor = System.Drawing.Color.White;
             this.gvHD.Location = new System.Drawing.Point(18, 157);
             this.gvHD.Name = "gvHD";
@@ -622,6 +642,87 @@
             this.gvHD.Size = new System.Drawing.Size(730, 413);
             this.gvHD.TabIndex = 68;
             this.gvHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvHD_CellClick);
+            // 
+            // maHD
+            // 
+            this.maHD.DataPropertyName = "Mã HĐ Nhập";
+            this.maHD.HeaderText = "Mã hóa đơn";
+            this.maHD.MinimumWidth = 6;
+            this.maHD.Name = "maHD";
+            this.maHD.ReadOnly = true;
+            this.maHD.Width = 170;
+            // 
+            // ngayLap
+            // 
+            this.ngayLap.DataPropertyName = "Ngày Lập";
+            this.ngayLap.HeaderText = "Ngày lập";
+            this.ngayLap.MinimumWidth = 6;
+            this.ngayLap.Name = "ngayLap";
+            this.ngayLap.ReadOnly = true;
+            this.ngayLap.Width = 170;
+            // 
+            // maNV
+            // 
+            this.maNV.DataPropertyName = "Mã NV";
+            this.maNV.HeaderText = "Mã nhân viên";
+            this.maNV.MinimumWidth = 6;
+            this.maNV.Name = "maNV";
+            this.maNV.ReadOnly = true;
+            this.maNV.Width = 170;
+            // 
+            // tenNV
+            // 
+            this.tenNV.DataPropertyName = "Họ Tên NV";
+            this.tenNV.HeaderText = "Tên nhân viên";
+            this.tenNV.MinimumWidth = 6;
+            this.tenNV.Name = "tenNV";
+            this.tenNV.ReadOnly = true;
+            this.tenNV.Width = 170;
+            // 
+            // maNCC
+            // 
+            this.maNCC.DataPropertyName = "Mã NCC";
+            this.maNCC.HeaderText = "Mã NCC";
+            this.maNCC.MinimumWidth = 6;
+            this.maNCC.Name = "maNCC";
+            this.maNCC.ReadOnly = true;
+            this.maNCC.Width = 170;
+            // 
+            // tenNCC
+            // 
+            this.tenNCC.DataPropertyName = "Tên NCC";
+            this.tenNCC.HeaderText = "Tên NCC";
+            this.tenNCC.MinimumWidth = 6;
+            this.tenNCC.Name = "tenNCC";
+            this.tenNCC.ReadOnly = true;
+            this.tenNCC.Width = 200;
+            // 
+            // giaTri
+            // 
+            this.giaTri.DataPropertyName = "Giá Trị";
+            this.giaTri.HeaderText = "Giá trị";
+            this.giaTri.MinimumWidth = 6;
+            this.giaTri.Name = "giaTri";
+            this.giaTri.ReadOnly = true;
+            this.giaTri.Width = 170;
+            // 
+            // trangThaiThanhToan
+            // 
+            this.trangThaiThanhToan.DataPropertyName = "Trạng thái thanh toán";
+            this.trangThaiThanhToan.HeaderText = "Trạng thái thanh toán";
+            this.trangThaiThanhToan.MinimumWidth = 6;
+            this.trangThaiThanhToan.Name = "trangThaiThanhToan";
+            this.trangThaiThanhToan.ReadOnly = true;
+            this.trangThaiThanhToan.Width = 230;
+            // 
+            // ngayThanhToan
+            // 
+            this.ngayThanhToan.DataPropertyName = "Ngày Thanh Toán";
+            this.ngayThanhToan.HeaderText = "Ngày thanh toán";
+            this.ngayThanhToan.MinimumWidth = 6;
+            this.ngayThanhToan.Name = "ngayThanhToan";
+            this.ngayThanhToan.ReadOnly = true;
+            this.ngayThanhToan.Width = 170;
             // 
             // pbSeach
             // 
@@ -776,105 +877,6 @@
             this.btnSua.TabIndex = 47;
             this.btnSua.Text = "     Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // cbMaNV
-            // 
-            this.cbMaNV.BackColor = System.Drawing.Color.Transparent;
-            this.cbMaNV.BorderColor = System.Drawing.Color.Teal;
-            this.cbMaNV.BorderRadius = 10;
-            this.cbMaNV.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbMaNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMaNV.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbMaNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbMaNV.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMaNV.ForeColor = System.Drawing.Color.Teal;
-            this.cbMaNV.ItemHeight = 30;
-            this.cbMaNV.Location = new System.Drawing.Point(137, 46);
-            this.cbMaNV.Name = "cbMaNV";
-            this.cbMaNV.Size = new System.Drawing.Size(117, 36);
-            this.cbMaNV.TabIndex = 61;
-            this.cbMaNV.SelectedIndexChanged += new System.EventHandler(this.cbMaNV_SelectedIndexChanged);
-            // 
-            // maHD
-            // 
-            this.maHD.DataPropertyName = "Mã HĐ Nhập";
-            this.maHD.HeaderText = "Mã hóa đơn";
-            this.maHD.MinimumWidth = 6;
-            this.maHD.Name = "maHD";
-            this.maHD.ReadOnly = true;
-            this.maHD.Width = 170;
-            // 
-            // ngayLap
-            // 
-            this.ngayLap.DataPropertyName = "Ngày Lập";
-            this.ngayLap.HeaderText = "Ngày lập";
-            this.ngayLap.MinimumWidth = 6;
-            this.ngayLap.Name = "ngayLap";
-            this.ngayLap.ReadOnly = true;
-            this.ngayLap.Width = 170;
-            // 
-            // maNV
-            // 
-            this.maNV.DataPropertyName = "Mã NV";
-            this.maNV.HeaderText = "Mã nhân viên";
-            this.maNV.MinimumWidth = 6;
-            this.maNV.Name = "maNV";
-            this.maNV.ReadOnly = true;
-            this.maNV.Width = 170;
-            // 
-            // tenNV
-            // 
-            this.tenNV.DataPropertyName = "Họ Tên NV";
-            this.tenNV.HeaderText = "Tên nhân viên";
-            this.tenNV.MinimumWidth = 6;
-            this.tenNV.Name = "tenNV";
-            this.tenNV.ReadOnly = true;
-            this.tenNV.Width = 170;
-            // 
-            // maNCC
-            // 
-            this.maNCC.DataPropertyName = "Mã NCC";
-            this.maNCC.HeaderText = "Mã NCC";
-            this.maNCC.MinimumWidth = 6;
-            this.maNCC.Name = "maNCC";
-            this.maNCC.ReadOnly = true;
-            this.maNCC.Width = 170;
-            // 
-            // tenNCC
-            // 
-            this.tenNCC.DataPropertyName = "Tên NCC";
-            this.tenNCC.HeaderText = "Tên NCC";
-            this.tenNCC.MinimumWidth = 6;
-            this.tenNCC.Name = "tenNCC";
-            this.tenNCC.ReadOnly = true;
-            this.tenNCC.Width = 200;
-            // 
-            // giaTri
-            // 
-            this.giaTri.DataPropertyName = "Giá Trị";
-            this.giaTri.HeaderText = "Giá trị";
-            this.giaTri.MinimumWidth = 6;
-            this.giaTri.Name = "giaTri";
-            this.giaTri.ReadOnly = true;
-            this.giaTri.Width = 170;
-            // 
-            // trangThaiThanhToan
-            // 
-            this.trangThaiThanhToan.DataPropertyName = "Trạng thái thanh toán";
-            this.trangThaiThanhToan.HeaderText = "Trạng thái thanh toán";
-            this.trangThaiThanhToan.MinimumWidth = 6;
-            this.trangThaiThanhToan.Name = "trangThaiThanhToan";
-            this.trangThaiThanhToan.ReadOnly = true;
-            this.trangThaiThanhToan.Width = 230;
-            // 
-            // ngayThanhToan
-            // 
-            this.ngayThanhToan.DataPropertyName = "Ngày Thanh Toán";
-            this.ngayThanhToan.HeaderText = "Ngày thanh toán";
-            this.ngayThanhToan.MinimumWidth = 6;
-            this.ngayThanhToan.Name = "ngayThanhToan";
-            this.ngayThanhToan.ReadOnly = true;
-            this.ngayThanhToan.Width = 170;
             // 
             // FormHoaDonNhap
             // 
