@@ -12,7 +12,7 @@ namespace StationeryManagementSystem.DAO
     {
         public static DataTable findAll()
         {
-           using (SqlCommand cmd = new SqlCommand("select * from v_DanhSachHoaDonBan", MyDB.GetConnection))
+            using (SqlCommand cmd = new SqlCommand("select * from v_DanhSachHoaDonBan", MyDB.GetConnection))
             {
                 MyDB.OpenConnection();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -22,7 +22,7 @@ namespace StationeryManagementSystem.DAO
                 return dt;
             }
         }
-        public static DataTable insert(int maNV,int maKH)
+        public static DataTable insert(int maNV, int maKH)
         {
             using (SqlCommand cmd = new SqlCommand("exec sp_ThemHoaDonBan @maNV,@maKH", MyDB.GetConnection))
             {

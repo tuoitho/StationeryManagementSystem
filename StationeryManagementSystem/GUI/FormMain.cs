@@ -31,6 +31,7 @@ namespace StationeryManagementSystem
             childForm.Dock = DockStyle.Fill;
             this.panel_childForm.Controls.Add(childForm);
             this.panel_childForm.Tag = childForm;
+            this.panel_childForm.AutoScroll = true;
             childForm.BringToFront();
             childForm.Show();
             lblTiltle.Text = childForm.Text;
@@ -99,7 +100,76 @@ namespace StationeryManagementSystem
 
         bool isCollapsed = false;
 
-        private void roundedButton1_Click(object sender, EventArgs e)
+        private void roundedButton_qltk_Click(object sender, EventArgs e)
+        {
+            FormTaiKhoan formTaiKhoan = new FormTaiKhoan();
+            OpenChildForm(formTaiKhoan, sender);
+            lblTiltle.Text = "Quản lý tài khoản";
+        }
+
+        private void roundedButton_qlnv_Click(object sender, EventArgs e)
+        {
+            FormNhanVien formNhanVien = new FormNhanVien();
+            OpenChildForm(formNhanVien, sender);
+            lblTiltle.Text = "Quản lý nhân viên";
+        }
+
+        private void roundedButton_lv_Click(object sender, EventArgs e)
+        {
+            FormLichLamViec formLichLamViec = new FormLichLamViec();
+            OpenChildForm(formLichLamViec, sender);
+            lblTiltle.Text = "Quản lý lịch làm việc";
+        }
+
+        private void roundedButton_qlsp_Click(object sender, EventArgs e)
+        {
+            FormSanPham formSanPham = new FormSanPham();
+            OpenChildForm(formSanPham, sender);
+            lblTiltle.Text = "Quản lý sản phẩm";
+        }
+
+        private void roundedButton_hdb_Click(object sender, EventArgs e)
+        {
+            FormHoaDonBan formHoaDonBan = new FormHoaDonBan();
+            OpenChildForm(formHoaDonBan, sender);
+            lblTiltle.Text = "Quản lý hóa đơn bán";
+        }
+
+        private void roundedButton_hdn_Click(object sender, EventArgs e)
+        {
+            FormHoaDonNhap formHoaDonNhap = new FormHoaDonNhap();
+            OpenChildForm(formHoaDonNhap, sender);
+            lblTiltle.Text = "Quản lý hóa đơn nhập";
+        }
+
+        private void roundedButton_ncc_Click(object sender, EventArgs e)
+        {
+            FormNhaCungCap formNhaCungCap = new FormNhaCungCap();
+            OpenChildForm(formNhaCungCap, sender);
+            lblTiltle.Text = "Quản lý nhà cung cấp";
+        }
+
+        private void roundedButton_qlkh_Click(object sender, EventArgs e)
+        {
+            FormKhachHang formKhachHang = new FormKhachHang();
+            OpenChildForm(formKhachHang, sender);
+            lblTiltle.Text = "Khách hàng";
+        }
+
+        private void roundedButton_qldt_Click(object sender, EventArgs e)
+        {
+            FormDoanhThu formDoanhThu = new FormDoanhThu();
+            OpenChildForm(formDoanhThu, sender);
+            lblTiltle.Text = "Thống kê";
+        }
+
+        private void roundedButton_thoat_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            Application.Exit();
+        }
+
+        private void roundedButton6_Click(object sender, EventArgs e)
         {
             if (!isCollapsed)
             {
@@ -119,101 +189,15 @@ namespace StationeryManagementSystem
                 isCollapsed = false;
                 roundedButton_qltk.Text = "   Quản lý tài khoản";
                 roundedButton_qlnv.Text = "   Quản lý nhân viên";
-                roundedButton_qlsp.Text = "   Quản lý sản phẩm";
-                roundedButton_hdn.Text = "   Quản lý hóa đơn nhập";
-                roundedButton_hdb.Text = "   Quản lý hóa đơn bán";
-                roundedButton_qldt.Text = "   Thống kê";
                 roundedButton_lv.Text = "   Quản lý lịch làm việc";
+                roundedButton_qlsp.Text = "   Quản lý sản phẩm";
+                roundedButton_hdb.Text = "   Quản lý hóa đơn bán";
+                roundedButton_hdn.Text = "   Quản lý hóa đơn nhập";
                 roundedButton_ncc.Text = "   Quản lý nhà cung cấp";
-                roundedButton_ncc.Text = "   Khách hàng";
-                roundedButton_qlkh.Text = "   Thoát";
+                roundedButton_qlkh.Text = "   Khách hàng";
+                roundedButton_qldt.Text = "   Thống kê";
+                roundedButton_thoat.Text = "   Thoát";
             }
-        }
-
-        private void roundedButton_qltk_Click(object sender, EventArgs e)
-        {
-            FormTaiKhoan formTaiKhoan = new FormTaiKhoan();
-            OpenChildForm(formTaiKhoan, sender);
-            lblTiltle.Text = "Quản lý tài khoản";
-        }
-
-        private void roundedButton_qlnv_Click(object sender, EventArgs e)
-        {
-            FormNhanVien formNhanVien = new FormNhanVien();
-            OpenChildForm(formNhanVien, sender);
-            lblTiltle.Text = "Quản lý nhân viên";
-        }
-
-        private void roundedButton_qlsp_Click(object sender, EventArgs e)
-        {
-            FormSanPham formSanPham = new FormSanPham();
-            OpenChildForm(formSanPham, sender);
-            lblTiltle.Text = "Quản lý sản phẩm";
-        }
-
-        private void roundedButton_hdn_Click(object sender, EventArgs e)
-        {
-            FormHoaDonNhap formHoaDonNhap  = new FormHoaDonNhap();
-            OpenChildForm(formHoaDonNhap, sender);
-            lblTiltle.Text = "Quản lý hóa đơn nhập";
-        }
-
-        private void roundedButton_hdb_Click(object sender, EventArgs e)
-        {
-            FormHoaDonBan formHoaDonBan = new FormHoaDonBan();
-            OpenChildForm(formHoaDonBan, sender);
-            lblTiltle.Text = "Quản lý hóa đơn bán";
-        }
-
-        private void roundedButton_qldt_Click(object sender, EventArgs e)
-        {
-            FormDoanhThu formDoanhThu = new FormDoanhThu();
-            OpenChildForm(formDoanhThu, sender);
-            lblTiltle.Text = "Thống kê";
-        }
-
-        private void roundedButton_lv_Click(object sender, EventArgs e)
-        {
-            FormLichLamViec formLichLamViec = new FormLichLamViec();
-            OpenChildForm(formLichLamViec, sender);
-            lblTiltle.Text = "Quản lý lịch làm việc";
-        }
-
-        private void roundedButton_ncc_Click(object sender, EventArgs e)
-        {
-            FormNhaCungCap formNhaCungCap = new FormNhaCungCap();
-            OpenChildForm(formNhaCungCap, sender);
-            lblTiltle.Text = "Quản lý nhà cung cấp";
-        }
-
-
-        private void roundedButton_thoat_Click_1(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            Application.Exit();
-        }
-
-        private void roundedButton_qlkh_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            lblTiltle.Text = "Khách hàng";
-        }
-
-        private void FormMain_Load(object sender, EventArgs e)
-        {
-            label1.ForeColor = Color.White; // Màu chữ
-            label1.BackColor = Color.Transparent; // Đặt nền trong suốt
-            label1.BringToFront();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StationeryManagementSystem.Controls
+namespace StationeryManagementSystem.GUI
 {
-    public partial class UCHoaDon : UserControl
+    public partial class FormKhachHang : Form
     {
-        public UCHoaDon()
+        public FormKhachHang()
         {
             InitializeComponent();
         }

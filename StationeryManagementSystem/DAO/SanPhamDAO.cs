@@ -73,7 +73,7 @@ namespace StationeryManagementSystem.DAO
                 MyDB.OpenConnection();
                 cmd.ExecuteNonQuery();
                 MyDB.CloseConnection();
-            }   
+            }
         }
     }
 }

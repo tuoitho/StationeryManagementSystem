@@ -57,15 +57,15 @@ namespace StationeryManagementSystem.GUI
 
         private void ChartLoiNhuan_GetToolTipText(object sender, ToolTipEventArgs e)
         {
-            // Lấy điểm được hover
+           
             var result = chartDoanhThu.HitTest(e.X, e.Y);
             if (result.ChartElementType == ChartElementType.DataPoint)
             {
-                // Lấy phần trăm và hiển thị trong tooltip
+                
                 var point = result.Series.Points[result.PointIndex];
                 double total = chartDoanhThu.Series["DoanhThu"].Points.Sum(p => p.YValues[0]);
                 double percent = (point.YValues[0] / total) * 100;
-                e.Text = $"{percent:0.##}%"; // Định dạng phần trăm
+                e.Text = $"{percent:0.##}%"; 
             }
         }
 

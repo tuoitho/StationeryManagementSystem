@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace StationeryManagementSystem.DAO
 {
-    internal class NhanVienDao
+    internal class NhanVienDAO
     {
         public static DataTable findAll()
         {
@@ -24,6 +24,7 @@ namespace StationeryManagementSystem.DAO
             }
         }
        
+
         public static void insert(String hoTen, DateTime ngaySinh, String gioiTinh, String diaChi, String sdt, String email, int machucVu)
         {
             MyDB.OpenConnection();
