@@ -87,18 +87,21 @@ namespace StationeryManagementSystem.GUI
             bool isNumber = int.TryParse(input, out maSP);  // Chuyển đổi chuỗi thành số (nếu có thể)
             if (isNumber)
             {
-                DataRow[] rows = dt.Select("Mã SP = " + maSP);
-                if (rows.Length == 0)
-                {
-                    gvSP.DataSource = null;
-                    return;
-                }
-                DataTable newDt = dt.Clone();
-                foreach (DataRow row in rows)
-                {
-                    newDt.ImportRow(row);
-                }
-                gvSP.DataSource = newDt;
+                dt.DefaultView.RowFilter = string.Format("Mã SP = {0}", maSP);
+                gvSP.DataSource = dt;
+
+                //DataRow[] rows = dt.Select("Mã SP = " + maSP);
+                //if (rows.Length == 0)
+                //{
+                //    gvSP.DataSource = null;
+                //    return;
+                //}
+                //DataTable newDt = dt.Clone();
+                //foreach (DataRow row in rows)
+                //{
+                //    newDt.ImportRow(row);
+                //}
+                //gvSP.DataSource = newDt;
             }
             else
             {
