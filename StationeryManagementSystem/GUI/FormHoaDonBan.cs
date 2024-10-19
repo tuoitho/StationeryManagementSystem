@@ -163,10 +163,7 @@ namespace StationeryManagementSystem
 
         private void gvHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex <= 0)
-            {
-                return;
-            }
+
             var selectedRow = gvHD.SelectedRows[0];
             if (selectedRow.IsNewRow || string.IsNullOrWhiteSpace(selectedRow.Cells["maHD"].Value?.ToString()))
             {
@@ -235,6 +232,11 @@ namespace StationeryManagementSystem
                 MessageBox.Show("Vui lòng chọn dòng dữ liệu hợp lệ để thao tác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+        }
+
+        private void gvHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

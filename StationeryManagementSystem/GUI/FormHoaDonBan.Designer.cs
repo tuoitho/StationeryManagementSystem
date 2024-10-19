@@ -37,13 +37,13 @@
             this.btnReloadSP = new Guna.UI2.WinForms.Guna2Button();
             this.btnSuaSP = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoaSP = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThemSP = new Guna.UI2.WinForms.Guna2Button();
             this.gvSP = new System.Windows.Forms.DataGridView();
             this.maSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tonhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnThemSP = new Guna.UI2.WinForms.Guna2Button();
             this.cbTrangThaiThanhToan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnTaoLap = new Guna.UI2.WinForms.Guna2Button();
             this.lblTrangThai = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -217,6 +217,27 @@
             this.btnXoaSP.TabIndex = 58;
             this.btnXoaSP.Text = "    Xóa";
             // 
+            // btnThemSP
+            // 
+            this.btnThemSP.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnThemSP.BorderRadius = 10;
+            this.btnThemSP.BorderThickness = 2;
+            this.btnThemSP.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemSP.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemSP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThemSP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThemSP.FillColor = System.Drawing.Color.Linen;
+            this.btnThemSP.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemSP.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnThemSP.Image = global::StationeryManagementSystem.Properties.Resources.plus;
+            this.btnThemSP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThemSP.Location = new System.Drawing.Point(10, 256);
+            this.btnThemSP.Name = "btnThemSP";
+            this.btnThemSP.Size = new System.Drawing.Size(97, 41);
+            this.btnThemSP.TabIndex = 1;
+            this.btnThemSP.Text = "    Thêm";
+            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
+            // 
             // gvSP
             // 
             this.gvSP.AllowUserToAddRows = false;
@@ -300,27 +321,6 @@
             this.tonhTien.Name = "tonhTien";
             this.tonhTien.ReadOnly = true;
             this.tonhTien.Width = 170;
-            // 
-            // btnThemSP
-            // 
-            this.btnThemSP.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.btnThemSP.BorderRadius = 10;
-            this.btnThemSP.BorderThickness = 2;
-            this.btnThemSP.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemSP.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemSP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThemSP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThemSP.FillColor = System.Drawing.Color.Linen;
-            this.btnThemSP.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemSP.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnThemSP.Image = global::StationeryManagementSystem.Properties.Resources.plus;
-            this.btnThemSP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThemSP.Location = new System.Drawing.Point(10, 256);
-            this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.Size = new System.Drawing.Size(97, 41);
-            this.btnThemSP.TabIndex = 1;
-            this.btnThemSP.Text = "    Thêm";
-            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
             // 
             // cbTrangThaiThanhToan
             // 
@@ -603,7 +603,6 @@
             // 
             // gvHD
             // 
-            this.gvHD.AllowUserToAddRows = false;
             this.gvHD.BackgroundColor = System.Drawing.Color.White;
             this.gvHD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gvHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -632,9 +631,11 @@
             this.gvHD.RowHeadersWidth = 51;
             this.gvHD.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.gvHD.RowTemplate.Height = 24;
+            this.gvHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvHD.Size = new System.Drawing.Size(730, 413);
             this.gvHD.TabIndex = 68;
             this.gvHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvHD_CellClick);
+            this.gvHD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvHD_CellContentClick);
             // 
             // maHD
             // 
