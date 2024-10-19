@@ -16,5 +16,41 @@ namespace StationeryManagementSystem.GUI
         {
             InitializeComponent();
         }
+
+        private void FormLichLamViec_Load(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void pbSearch_MouseEnter(object sender, EventArgs e)
+        {
+            pbSearch.Size = new Size(pbSearch.Width + 10, pbSearch.Height + 10);
+            pbSearch.Location = new Point(pbSearch.Location.X - 5, pbSearch.Location.Y - 5);
+        }
+
+        private void pbSearch_MouseLeave(object sender, EventArgs e)
+        {
+            pbSearch.Size = new Size(pbSearch.Width - 10, pbSearch.Height - 10);
+            pbSearch.Location = new Point(pbSearch.Location.X + 5, pbSearch.Location.Y + 5);
+        }
+
+
+        private void gvLichLamViec_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+
+        }
+
+        private void gvLichLamViec_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+            
+        }
+
+        private void btnPhanCa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

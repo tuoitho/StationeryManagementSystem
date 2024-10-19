@@ -31,22 +31,6 @@ namespace StationeryManagementSystem.GUI
         bool isSua = false;
         bool isLoaded = false;
 
-        private void cbTenSP_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (!isLoaded) return;
-            cbMaSP.SelectedValue = cbTenSP.SelectedValue;
-            //click vào sản phẩm trong data grid view
-            for (int i = 0; i < gvSP.Rows.Count; i++)
-            {
-                if (int.Parse(gvSP.Rows[i].Cells[0].Value.ToString()) == int.Parse(cbMaSP.SelectedValue.ToString()))
-                {
-                    gvSP.Rows[i].Selected = true;
-                    gvSP.CurrentCell = gvSP.Rows[i].Cells[0];
-                    break;
-                }
-            }
-        }
-
         private void cbMaSP_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!isLoaded) return;
@@ -64,40 +48,7 @@ namespace StationeryManagementSystem.GUI
             }
         }
 
-        private void btnXacNhan_Click(object sender, EventArgs e)
-        {
-            if (!isSua)
-            {
-
-                int maSP = int.Parse(cbMaSP.SelectedValue.ToString());
-                int soLuong = int.Parse(txtSoLuong.Text);
-                float giaNhap = float.Parse(txtGiaNhap.Text);
-                try
-                {
-                    CTHDNDAO.insert(maHD, maSP, soLuong, giaNhap);
-                    MessageBox.Show("Thêm sản phẩm vào hóa đơn thành công");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                int maSP = int.Parse(cbMaSP.SelectedValue.ToString());
-                int soLuong = int.Parse(txtSoLuong.Text);
-                float giaNhap = float.Parse(txtGiaNhap.Text);
-                try
-                {
-                    CTHDNDAO.update(maHD, maSP, soLuong, giaNhap);
-                    MessageBox.Show("Sữa sản phẩm vào hóa đơn thành công");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
+      
 
         private void gvSP_Click(object sender, EventArgs e)
         {
@@ -119,40 +70,45 @@ namespace StationeryManagementSystem.GUI
             bool isNumber = int.TryParse(input, out maSP);  // Chuyển đổi chuỗi thành số (nếu có thể)
             if (isNumber)
             {
-                DataRow[] rows = dt.Select("Mã SP = " + maSP);
-                if (rows.Length == 0)
-                {
-                    gvSP.DataSource = null;
-                    return;
-                }
-                DataTable newDt = dt.Clone();
-                foreach (DataRow row in rows)
-                {
-                    newDt.ImportRow(row);
-                }
-                gvSP.DataSource = newDt;
+                dt.DefaultView.RowFilter = string.Format("Mã SP = {0}", maSP);
+                gvSP.DataSource = dt;
+
+                //DataRow[] rows = dt.Select("Mã SP = " + maSP);
+                //if (rows.Length == 0)
+                //{
+                //    gvSP.DataSource = null;
+                //    return;
+                //}
+                //DataTable newDt = dt.Clone();
+                //foreach (DataRow row in rows)
+                //{
+                //    newDt.ImportRow(row);
+                //}
+                //gvSP.DataSource = newDt;
             }
             else
             {
-                DataRow[] rows = dt.Select("[Tên SP] like '%" + input + "%'");
-                if (rows.Length == 0)
-                {
-                    gvSP.DataSource = null;
-                    return;
-                }
-                DataTable newDt = dt.Clone();
-                foreach (DataRow row in rows)
-                {
-                    newDt.ImportRow(row);
-                }
-                gvSP.DataSource = newDt;
+                dt.DefaultView.RowFilter = string.Format("[Tên SP] like '%{0}%'", input);
+                gvSP.DataSource = dt;
+
+                //DataRow[] rows = dt.Select("[Tên SP] like '%" + input + "%'");
+                //if (rows.Length == 0)
+                //{
+                //    gvSP.DataSource = null;
+                //    return;
+                //}
+                //DataTable newDt = dt.Clone();
+                //foreach (DataRow row in rows)
+                //{
+                //    newDt.ImportRow(row);
+                //}
+                //gvSP.DataSource = newDt;
             }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.Close();
-
         }
 
         private void FormThemSanPhamVaoHDN_Load(object sender, EventArgs e)
@@ -179,5 +135,60 @@ namespace StationeryManagementSystem.GUI
 
             }
         }
+
+        private void btnXacNhan_Click(object sender, EventArgs e)
+        {
+            if (!isSua)
+            {
+
+                int maSP = int.Parse(cbMaSP.SelectedValue.ToString());
+                int soLuong = int.Parse(txtSoLuong.Text);
+                float giaNhap = float.Parse(txtGiaNhap.Text);
+                try
+                {
+                    ChiTietHDNDAO.insert(maHD, maSP, soLuong, giaNhap);
+                    MessageBox.Show("Thêm sản phẩm vào hóa đơn thành công");
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                int maSP = int.Parse(cbMaSP.SelectedValue.ToString());
+                int soLuong = int.Parse(txtSoLuong.Text);
+                float giaNhap = float.Parse(txtGiaNhap.Text);
+                try
+                {
+                    ChiTietHDNDAO.update(maHD, maSP, soLuong, giaNhap);
+                    MessageBox.Show("Sữa sản phẩm vào hóa đơn thành công");
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void cbTenSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!isLoaded) return;
+            cbMaSP.SelectedValue = cbTenSP.SelectedValue;
+            //click vào sản phẩm trong data grid view
+            for (int i = 0; i < gvSP.Rows.Count; i++)
+            {
+                if (int.Parse(gvSP.Rows[i].Cells[0].Value.ToString()) == int.Parse(cbMaSP.SelectedValue.ToString()))
+                {
+                    gvSP.Rows[i].Selected = true;
+                    gvSP.CurrentCell = gvSP.Rows[i].Cells[0];
+                    break;
+                }
+            }
+        }
+
+  
     }
 }

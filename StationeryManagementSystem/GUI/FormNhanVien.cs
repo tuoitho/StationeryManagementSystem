@@ -20,98 +20,87 @@ namespace StationeryManagementSystem
 
         private void FormNhanVien_Load(object sender, EventArgs e)
         {
-            //deefault selected row style purple
-            gvNhanVien.DefaultCellStyle.SelectionBackColor = Color.Orange;
-            //disable multiple select
-            gvNhanVien.MultiSelect = false;
-            DataTable dt = NhanVienDao.findAll();
-            gvNhanVien.DataSource = dt;
-            if (dt.Rows.Count > 0)
-            {
-                //click row 0
-                gvNhanVien_Click(gvNhanVien.Rows[0], null);
-
-            }
-        }
-
-
-        private void gvNhanVien_Click(object sender, EventArgs e)
-        {
-            if (gvNhanVien.CurrentRow == null || gvNhanVien.CurrentRow.Cells[0].Value == null)
-            {
-                return;
-            }
-            txtMaNV.Text = gvNhanVien.CurrentRow.Cells[0].Value.ToString();
-            txtHoTen.Text = gvNhanVien.CurrentRow.Cells[1].Value.ToString();
-            dpNgaySinh.Value = DateTime.Parse(gvNhanVien.CurrentRow.Cells[2].Value.ToString());
-            rdNam.Checked = (bool)gvNhanVien.CurrentRow.Cells[3].Value.ToString().Equals("Nam");
-            rdNu.Checked = (bool)gvNhanVien.CurrentRow.Cells[3].Value.ToString().Equals("Nữ");
-            txtDiaChi.Text = gvNhanVien.CurrentRow.Cells[4].Value.ToString();
-            txtSDT.Text = gvNhanVien.CurrentRow.Cells[5].Value.ToString();
-            txtEmail.Text = gvNhanVien.CurrentRow.Cells[6].Value.ToString();
-            rdBanHang.Checked = (bool)gvNhanVien.CurrentRow.Cells[7].Value.ToString().Contains("án");
-            rdKiemKho.Checked = (bool)gvNhanVien.CurrentRow.Cells[7].Value.ToString().Contains("ho");
-            txtLuong.Text = gvNhanVien.CurrentRow.Cells[8].Value.ToString();
-
+            gvNhanVien.DataSource = NhanVienDAO.findAll();
         }
 
         private void btnReLoad_Click(object sender, EventArgs e)
         {
-            gvNhanVien.DataSource = NhanVienDao.findAll();
+            LamTrongField();
+            gvNhanVien.DataSource = NhanVienDAO.findAll();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            int maNV = int.Parse(txtMaNV.Text);
-            String hoTen = txtHoTen.Text;
+            if (gvNhanVien.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Vui lòng chọn một dòng dữ liệu nhân viên để sửa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; 
+            }
+
+            var selectedRow = gvNhanVien.SelectedRows[0];
+
+            if (selectedRow.IsNewRow || string.IsNullOrWhiteSpace(selectedRow.Cells["maNV"].Value?.ToString()))
+            {
+                MessageBox.Show("Dòng được chọn không hợp lệ. Vui lòng chọn một dòng dữ liệu hợp lệ để sửa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; 
+            }
+
+            int maNV = int.Parse(selectedRow.Cells["maNV"].Value.ToString()); 
+            string hoTen = txtHoTen.Text;
             DateTime ngaySinh = dpNgaySinh.Value;
-            String gioiTinh = rdNam.Checked ? "Nam" : "Nữ";
-            String diaChi = txtDiaChi.Text;
-            String sdt = txtSDT.Text;
-            String email = txtEmail.Text;
-            int chucVu = 1;
-            if (rdBanHang.Checked)
+            string gioiTinh = rdNam.Checked ? "Nam" : "Nữ"; 
+            string diaChi = txtDiaChi.Text;
+            string sdt = txtSDT.Text;
+            string email = txtEmail.Text;
+            int chucVu = rdBanHang.Checked ? 1 : (rdKiemKho.Checked ? 2 : 0); 
+            if (chucVu == 0)
             {
-                chucVu = 1;
+                MessageBox.Show("Vui lòng chọn chức vụ cho nhân viên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; 
             }
-            else if (rdKiemKho.Checked)
-            {
-                chucVu = 2;
-            }
-                     
+
             try
             {
-                NhanVienDao.update(maNV, hoTen, ngaySinh, gioiTinh, diaChi, sdt, email, chucVu);
+                NhanVienDAO.update(maNV, hoTen, ngaySinh, gioiTinh, diaChi, sdt, email, chucVu);
                 MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi khi sửa dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             String hoTen = txtHoTen.Text;
             DateTime ngaySinh = dpNgaySinh.Value;
-            String gioiTinh = rdNam.Checked ? "Nam" : "Nữ";
+            String gioiTinh = "";
+            if(rdNam.Checked)
+            {
+                gioiTinh = "Nam";
+            }
+            if(rdNu.Checked)
+            {
+                gioiTinh = "Nữ";
+            }
+
             String diaChi = txtDiaChi.Text;
             String sdt = txtSDT.Text;
             String email = txtEmail.Text;
-            int chucVu = 1;
+            int chucVu = 0;
             if (rdBanHang.Checked)
             {
                 chucVu = 1;
             }
-            else if (rdKiemKho.Checked)
+            if (rdKiemKho.Checked)
             {
                 chucVu = 2;
             }
-            
+           
+
             try
             {
-                NhanVienDao.insert(hoTen, ngaySinh, gioiTinh, diaChi, sdt, email, chucVu);
+                NhanVienDAO.insert(hoTen, ngaySinh, gioiTinh, diaChi, sdt, email, chucVu);
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -122,16 +111,87 @@ namespace StationeryManagementSystem
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int maNV = int.Parse(txtMaNV.Text);
-            try
+            if (gvNhanVien.SelectedRows.Count <= 0)
             {
-                NhanVienDao.delete(maNV);
-                MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vui lòng chọn một dòng dữ liệu nhân viên để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                var selectedRow = gvNhanVien.SelectedRows[0];
+                if (selectedRow.IsNewRow || string.IsNullOrWhiteSpace(selectedRow.Cells["maNV"].Value?.ToString()))
+                {
+                    MessageBox.Show("Dòng được chọn không hợp lệ. Vui lòng chọn dòng dữ liệu hợp lệ để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int maNV = int.Parse(txtMaNV.Text);
+                try
+                {
+                    NhanVienDAO.delete(maNV);
+                    MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+        }
+
+        private void gvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (gvNhanVien.CurrentRow == null || gvNhanVien.CurrentRow.Cells[0].Value == null)
+            {
+                return;
+            }
+
+            txtMaNV.Text = gvNhanVien.CurrentRow.Cells[0].Value?.ToString() ?? string.Empty;
+            txtHoTen.Text = gvNhanVien.CurrentRow.Cells[1].Value?.ToString() ?? string.Empty;
+
+            string ngaySinhText = gvNhanVien.CurrentRow.Cells[2].Value?.ToString();
+            if (!string.IsNullOrEmpty(ngaySinhText))
+            {
+                DateTime ngaySinh;
+                if (DateTime.TryParse(ngaySinhText, out ngaySinh))
+                {
+                    dpNgaySinh.Value = ngaySinh;
+                }
+                else
+                {
+                    dpNgaySinh.Value = DateTime.Today;
+                }
+            }
+            else
+            {
+                dpNgaySinh.Value = DateTime.Today;
+            }
+
+            rdNam.Checked = gvNhanVien.CurrentRow.Cells[3].Value?.ToString().Equals("Nam") ?? false;
+            rdNu.Checked = gvNhanVien.CurrentRow.Cells[3].Value?.ToString().Equals("Nữ") ?? false;
+
+            txtDiaChi.Text = gvNhanVien.CurrentRow.Cells[4].Value?.ToString() ?? string.Empty;
+            txtSDT.Text = gvNhanVien.CurrentRow.Cells[5].Value?.ToString() ?? string.Empty;
+            txtEmail.Text = gvNhanVien.CurrentRow.Cells[6].Value?.ToString() ?? string.Empty;
+
+            rdBanHang.Checked = gvNhanVien.CurrentRow.Cells[7].Value?.ToString().Contains("án") ?? false;
+            rdKiemKho.Checked = gvNhanVien.CurrentRow.Cells[7].Value?.ToString().Contains("ho") ?? false;
+
+            txtLuong.Text = gvNhanVien.CurrentRow.Cells[8].Value?.ToString() ?? string.Empty;
+        }
+
+        private void LamTrongField()
+        {
+            txtMaNV.Text = "";
+            txtHoTen.Clear();
+            dpNgaySinh.Value = DateTime.Today;
+            rdNam.Checked = false;
+            rdNu.Checked = false;
+            txtDiaChi.Clear();
+            txtEmail.Clear();
+            txtSDT.Clear();
+            rdBanHang.Checked = false;
+            rdKiemKho.Checked = false;
+            txtLuong.Clear();
+
         }
     }
 }
