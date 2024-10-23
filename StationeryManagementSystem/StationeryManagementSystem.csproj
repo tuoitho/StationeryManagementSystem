@@ -186,7 +186,7 @@
     <Compile Include="GUI\FormTaiKhoan.Designer.cs">
       <DependentUpon>FormTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="DAO\MyDB.cs" />
+    <Compile Include="DBConnection\MyDB.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="GUI\FormThemSanPhamVaoHDB.cs">
       <SubType>Form</SubType>
