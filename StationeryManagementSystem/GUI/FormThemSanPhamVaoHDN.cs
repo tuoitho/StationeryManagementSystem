@@ -50,12 +50,7 @@ namespace StationeryManagementSystem.GUI
 
       
 
-        private void gvSP_Click(object sender, EventArgs e)
-        {
-            int maSP = int.Parse(gvSP.CurrentRow.Cells[0].Value.ToString());
-            cbMaSP.SelectedValue = maSP;
-            cbTenSP.SelectedValue = maSP;
-        }
+       
 
         private void txtSearh_TextChanged(object sender, EventArgs e)
         {
@@ -171,6 +166,13 @@ namespace StationeryManagementSystem.GUI
                     MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void gvSP_Click(object sender, EventArgs e)
+        {
+            int maSP = int.Parse(gvSP.CurrentRow.Cells[0].Value.ToString());
+            cbMaSP.SelectedValue = maSP;
+            cbTenSP.SelectedValue = maSP;
         }
 
         private void cbTenSP_SelectedIndexChanged(object sender, EventArgs e)

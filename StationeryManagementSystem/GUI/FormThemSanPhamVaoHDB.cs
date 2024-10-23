@@ -34,45 +34,10 @@ namespace StationeryManagementSystem.GUI
 
        
 
-        private void cbTenSP_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (!isLoaded) return;
-            cbMaSP.SelectedValue = cbTenSP.SelectedValue;
-            //click vào sản phẩm trong data grid view
-            for (int i = 0; i < gvSP.Rows.Count; i++)
-            {
-                if (int.Parse(gvSP.Rows[i].Cells[0].Value.ToString()) == int.Parse(cbMaSP.SelectedValue.ToString()))
-                {
-                    gvSP.Rows[i].Selected = true;
-                    gvSP.CurrentCell = gvSP.Rows[i].Cells[0];
-                    break;
-                }
-            }
-        }
-
-        private void cbMaSP_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (!isLoaded) return;
-
-            cbTenSP.SelectedValue = cbMaSP.SelectedValue;
-            for (int i = 0; i < gvSP.Rows.Count; i++)
-            {
-                if (int.Parse(gvSP.Rows[i].Cells[0].Value.ToString()) == int.Parse(cbMaSP.SelectedValue.ToString()))
-                {
-                    gvSP.Rows[i].Selected = true;
-                    gvSP.CurrentCell = gvSP.Rows[i].Cells[0];
-                    break;
-                }
-            }
-        }
+       
 
        
-        private void gvSP_Click(object sender, EventArgs e)
-        {
-            int maSP = int.Parse(gvSP.CurrentRow.Cells[0].Value.ToString());
-            cbMaSP.SelectedValue = maSP;
-            cbTenSP.SelectedValue = maSP;
-        }
+      
 
         private void txtSearh_TextChanged(object sender, EventArgs e)
         {
@@ -161,6 +126,45 @@ namespace StationeryManagementSystem.GUI
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void gvSP_Click(object sender, EventArgs e)
+        {
+            int maSP = int.Parse(gvSP.CurrentRow.Cells[0].Value.ToString());
+            cbMaSP.SelectedValue = maSP;
+            cbTenSP.SelectedValue = maSP;
+        }
+
+        private void cbMaSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!isLoaded) return;
+
+            cbTenSP.SelectedValue = cbMaSP.SelectedValue;
+            for (int i = 0; i < gvSP.Rows.Count; i++)
+            {
+                if (int.Parse(gvSP.Rows[i].Cells[0].Value.ToString()) == int.Parse(cbMaSP.SelectedValue.ToString()))
+                {
+                    gvSP.Rows[i].Selected = true;
+                    gvSP.CurrentCell = gvSP.Rows[i].Cells[0];
+                    break;
+                }
+            }
+        }
+
+        private void cbTenSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!isLoaded) return;
+            cbMaSP.SelectedValue = cbTenSP.SelectedValue;
+            //click vào sản phẩm trong data grid view
+            for (int i = 0; i < gvSP.Rows.Count; i++)
+            {
+                if (int.Parse(gvSP.Rows[i].Cells[0].Value.ToString()) == int.Parse(cbMaSP.SelectedValue.ToString()))
+                {
+                    gvSP.Rows[i].Selected = true;
+                    gvSP.CurrentCell = gvSP.Rows[i].Cells[0];
+                    break;
+                }
+            }
         }
 
         private void FormThemSanPhamVaoHDB_Load(object sender, EventArgs e)

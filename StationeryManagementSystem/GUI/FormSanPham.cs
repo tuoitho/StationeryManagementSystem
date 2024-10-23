@@ -23,6 +23,7 @@ namespace StationeryManagementSystem
         {
             dpSPBan.Value = DateTime.Today;
             gvSP.DataSource = SanPhamDAO.findAll();
+            gvSPTrongNgay.Columns["ngayLap"].DefaultCellStyle.Format = "dd/MM/yyyy";
             gvSPTrongNgay.DataSource = SanPhamDAO.getXemSoLuongSanPhamDaBanTrongNgay(DateTime.Now);
             cbMaLoai.DataSource = LoaiSanPhamDAO.findAll();
             cbMaLoai.DisplayMember = "MaLoaiSanPham";
@@ -131,6 +132,7 @@ namespace StationeryManagementSystem
         private void pbSearch_Click(object sender, EventArgs e)
         {
             gvSPTrongNgay.DataSource = SanPhamDAO.getXemSoLuongSanPhamDaBanTrongNgay(dpSPBan.Value);
+            gvSPTrongNgay.Columns["ngayLap"].DefaultCellStyle.Format = "dd/MM/yyyy";
         }
 
         private void btnSua_Click(object sender, EventArgs e)
