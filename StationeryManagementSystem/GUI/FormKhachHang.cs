@@ -115,20 +115,7 @@ namespace StationeryManagementSystem.GUI
 
         private void gvKH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var selectedRow = gvKH.SelectedRows[0];
-            if (selectedRow.IsNewRow || string.IsNullOrWhiteSpace(selectedRow.Cells["maKH"].Value?.ToString()))
-            {
-                MessageBox.Show("Vui lòng chọn dữ liệu hợp lệ để thao tác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else
-            {
-                int maKH = int.Parse(gvKH.CurrentRow.Cells["maKH"].Value.ToString());
-                txtMaKH.Text = maKH.ToString();
-                txtHoTen.Text = gvKH.CurrentRow.Cells["tenKH"].Value.ToString();
-                txtDiaChi.Text = gvKH.CurrentRow.Cells["diaChi"].Value.ToString();
-                txtSDT.Text = gvKH.CurrentRow.Cells["soDienThoai"].Value.ToString();
-            }
+            
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -156,6 +143,24 @@ namespace StationeryManagementSystem.GUI
             }
 
             gvKH.DataSource = dt;
+        }
+
+        private void gvKH_Click(object sender, EventArgs e)
+        {
+            var selectedRow = gvKH.SelectedRows[0];
+            if (selectedRow.IsNewRow || string.IsNullOrWhiteSpace(selectedRow.Cells["maKH"].Value?.ToString()))
+            {
+                MessageBox.Show("Vui lòng chọn dữ liệu hợp lệ để thao tác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                int maKH = int.Parse(gvKH.CurrentRow.Cells["maKH"].Value.ToString());
+                txtMaKH.Text = maKH.ToString();
+                txtHoTen.Text = gvKH.CurrentRow.Cells["tenKH"].Value.ToString();
+                txtDiaChi.Text = gvKH.CurrentRow.Cells["diaChi"].Value.ToString();
+                txtSDT.Text = gvKH.CurrentRow.Cells["soDienThoai"].Value.ToString();
+            }
         }
     }
 }

@@ -222,14 +222,14 @@
             // 
             // gvKH
             // 
-            this.gvKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.gvKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gvKH.BackgroundColor = System.Drawing.Color.White;
             this.gvKH.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
@@ -243,8 +243,8 @@
             this.soDienThoai});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.ForestGreen;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightYellow;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -255,9 +255,11 @@
             this.gvKH.ReadOnly = true;
             this.gvKH.RowHeadersWidth = 51;
             this.gvKH.RowTemplate.Height = 24;
+            this.gvKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvKH.Size = new System.Drawing.Size(718, 168);
             this.gvKH.TabIndex = 2;
             this.gvKH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvKH_CellClick);
+            this.gvKH.Click += new System.EventHandler(this.gvKH_Click);
             // 
             // maKH
             // 
