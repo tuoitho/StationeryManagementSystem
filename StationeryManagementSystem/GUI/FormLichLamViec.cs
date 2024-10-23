@@ -107,7 +107,7 @@ namespace StationeryManagementSystem.GUI
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             DateTime chonngay = dpChonNgay.Value;
-            gvPhanCa.DataSource = PhanCaDAO.findAll(chonngay, false);
+            gvDangKy.DataSource = PhanCaDAO.findAll(chonngay, false);
 
         }
 
