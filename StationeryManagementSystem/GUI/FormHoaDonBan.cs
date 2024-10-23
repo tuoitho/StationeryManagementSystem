@@ -40,7 +40,7 @@ namespace StationeryManagementSystem
             cbTrangThaiThanhToan.DataSource = new List<string> { "Chưa thanh toán", "Đã thanh toán" };
         }
 
- 
+
         private void btnThemSP_Click(object sender, EventArgs e)
         {
             if (txtMaHD.Text == "")
@@ -73,7 +73,7 @@ namespace StationeryManagementSystem
 
         private void btnTaoLap_Click(object sender, EventArgs e)
         {
-            
+
             int maKH = int.Parse(cbMaKH.SelectedValue.ToString());
             int maNV = int.Parse(cbMaNV.SelectedValue.ToString());
             try
@@ -111,13 +111,17 @@ namespace StationeryManagementSystem
             }
             else
             {
-                int maHD = int.Parse(txtMaHD.Text);
-                string trangThai = cbTrangThaiThanhToan.Text;
                 try
                 {
+                    int maHD = int.Parse(txtMaHD.Text);
+                    string trangThai = cbTrangThaiThanhToan.Text;
                     HoaDonBanDAO.update(maHD, trangThai);
                     MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     gvHD.DataSource = HoaDonBanDAO.findAll();
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Chọn hóa đơn để sửa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (Exception ex)
                 {
@@ -126,7 +130,7 @@ namespace StationeryManagementSystem
             }
         }
 
-        
+
 
         private void pbSearch_Click(object sender, EventArgs e)
         {
@@ -147,11 +151,16 @@ namespace StationeryManagementSystem
             }
             else
             {
-                int maHD = int.Parse(txtMaHD.Text);
+
                 try
                 {
+                    int maHD = int.Parse(txtMaHD.Text);
                     HoaDonBanDAO.delete(maHD);
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Chọn hóa đơn để xóa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (Exception ex)
                 {
@@ -182,11 +191,11 @@ namespace StationeryManagementSystem
                 cbTrangThaiThanhToan.Text = gvHD.CurrentRow.Cells["trangThaiThanhToan"].Value.ToString();
                 if (gvHD.CurrentRow.Cells["ngayThanhToan"].Value is DBNull)
                 {
-                    dpNgayThanhToan.Enabled= true;
+                    dpNgayThanhToan.Enabled = true;
                 }
                 else
                 {
-                    dpNgayThanhToan.Enabled= false;
+                    dpNgayThanhToan.Enabled = false;
                 }
 
                 if (gvHD.CurrentRow.Cells["trangThaiThanhToan"].Value.ToString() == "Đã thanh toán")
@@ -196,43 +205,69 @@ namespace StationeryManagementSystem
                     lblTongTien.Visible = true;
                     txtTongTien.Visible = true;
                 }
-                else 
+                else
                 {
                     cbTrangThaiThanhToan.Enabled = true;
                     txtTongTien.Enabled = true;
                     lblTongTien.Visible = false;
                     txtTongTien.Visible = false;
                 }
-                
+
                 gvSP.DataSource = ChiTietHDBDAO.findAllByMaHD(maHD);
             }
         }
 
         private void cbMaNV_SelectedIndexChanged(object sender, EventArgs e)
         {
-           gvSP.DataSource = null;
-           // txtTenNV.Text = 
+            gvSP.DataSource = null;
+            // txtTenNV.Text = 
         }
 
         private void cbMaKH_SelectedIndexChanged(object sender, EventArgs e)
         {
-           gvSP.DataSource = null;
+            gvSP.DataSource = null;
             // txtTenKH.Text = 
         }
 
         private void gvSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var selectedRow = gvSP.SelectedRows[0];
-            if (selectedRow.IsNewRow || string.IsNullOrWhiteSpace(selectedRow.Cells["maSP"].Value?.ToString()))
+            if (gvSP.CurrentRow == null)
             {
                 MessageBox.Show("Vui lòng chọn dòng dữ liệu hợp lệ để thao tác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
         }
 
-        private void gvHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnXoaSP_Click(object sender, EventArgs e)
         {
+            if (gvSP.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Vui lòng chọn một sản phẩm để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int maHD = int.Parse(txtMaHD.Text);
+            string trangThaiThanhToan = gvHD.CurrentRow.Cells["trangThaiThanhToan"].Value.ToString();
 
+            if (trangThaiThanhToan == "Đã thanh toán")
+            {
+                MessageBox.Show("Không thể xóa sản phẩm khỏi hóa đơn đã thanh toán.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                int maSP = int.Parse(gvSP.CurrentRow.Cells[0].Value.ToString());
+
+                ChiTietHDBDAO.delete(maHD, maSP);
+
+                gvSP.DataSource = ChiTietHDBDAO.findAllByMaHD(maHD);
+
+                MessageBox.Show("Xóa sản phẩm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

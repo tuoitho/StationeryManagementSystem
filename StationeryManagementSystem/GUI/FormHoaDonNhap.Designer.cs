@@ -386,6 +386,7 @@
             this.btnXoaSP.Size = new System.Drawing.Size(97, 41);
             this.btnXoaSP.TabIndex = 58;
             this.btnXoaSP.Text = "    Xóa";
+            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
             // 
             // gvSP
             // 
@@ -394,7 +395,7 @@
             this.gvSP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
@@ -409,8 +410,8 @@
             this.tonhTien});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightYellow;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -427,7 +428,6 @@
             this.gvSP.Size = new System.Drawing.Size(411, 170);
             this.gvSP.TabIndex = 57;
             this.gvSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSP_CellClick);
-            this.gvSP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSP_CellContentClick);
             // 
             // maSP
             // 
@@ -614,7 +614,7 @@
             this.gvHD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightYellow;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Teal;
@@ -633,8 +633,8 @@
             this.ngayThanhToan});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightYellow;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -651,7 +651,6 @@
             this.gvHD.Size = new System.Drawing.Size(730, 413);
             this.gvHD.TabIndex = 68;
             this.gvHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvHD_CellClick);
-            this.gvHD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvHD_CellContentClick);
             // 
             // maHD
             // 
@@ -919,7 +918,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTenNCC;
         private Guna.UI2.WinForms.Guna2ComboBox cbTrangThaiThanhToan;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTrangThai;
-       
+
         private Guna.UI2.WinForms.Guna2ComboBox cbMaNCC;
         private Guna.UI2.WinForms.Guna2Panel pnHoaDon;
         private Guna.UI2.WinForms.Guna2TextBox txtTenNV;

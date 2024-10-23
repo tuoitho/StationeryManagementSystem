@@ -21,7 +21,7 @@ namespace StationeryManagementSystem.GUI
         {
             this.maHD = maHD;
         }
-        public FormThemSanPhamVaoHDN(int maHD, bool isSua, int maSP) : this()
+        public FormThemSanPhamVaoHDN(int maHD, bool isSua, int maSP, int maNCC) : this()
         {
             this.maHD = maHD;
             this.isSua = true;
@@ -48,14 +48,6 @@ namespace StationeryManagementSystem.GUI
             }
         }
 
-      
-
-        private void gvSP_Click(object sender, EventArgs e)
-        {
-            int maSP = int.Parse(gvSP.CurrentRow.Cells[0].Value.ToString());
-            cbMaSP.SelectedValue = maSP;
-            cbTenSP.SelectedValue = maSP;
-        }
 
         private void txtSearh_TextChanged(object sender, EventArgs e)
         {
@@ -173,6 +165,13 @@ namespace StationeryManagementSystem.GUI
             }
         }
 
+        private void gvSP_Click(object sender, EventArgs e)
+        {
+            int maSP = int.Parse(gvSP.CurrentRow.Cells[0].Value.ToString());
+            cbMaSP.SelectedValue = maSP;
+            cbTenSP.SelectedValue = maSP;
+        }
+
         private void cbTenSP_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!isLoaded) return;
@@ -189,6 +188,6 @@ namespace StationeryManagementSystem.GUI
             }
         }
 
-  
+
     }
 }

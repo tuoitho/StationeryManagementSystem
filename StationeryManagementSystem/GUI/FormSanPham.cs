@@ -23,13 +23,14 @@ namespace StationeryManagementSystem
         {
             dpSPBan.Value = DateTime.Today;
             gvSP.DataSource = SanPhamDAO.findAll();
+            gvSPTrongNgay.Columns["ngayLap"].DefaultCellStyle.Format = "dd/MM/yyyy";
             gvSPTrongNgay.DataSource = SanPhamDAO.getXemSoLuongSanPhamDaBanTrongNgay(DateTime.Now);
             cbMaLoai.DataSource = LoaiSanPhamDAO.findAll();
             cbMaLoai.DisplayMember = "MaLoaiSanPham";
             cbMaLoai.ValueMember = "TenLoaiSanPham";
             cbMaLoai.SelectedIndex = -1;
             txtTenLoai.Enabled = false;
-           
+
         }
 
         private void pbSearch_MouseEnter(object sender, EventArgs e)
@@ -131,6 +132,7 @@ namespace StationeryManagementSystem
         private void pbSearch_Click(object sender, EventArgs e)
         {
             gvSPTrongNgay.DataSource = SanPhamDAO.getXemSoLuongSanPhamDaBanTrongNgay(dpSPBan.Value);
+            gvSPTrongNgay.Columns["ngayLap"].DefaultCellStyle.Format = "dd/MM/yyyy";
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -185,7 +187,7 @@ namespace StationeryManagementSystem
             gvSP.DataSource = SanPhamDAO.findAll();
             txtMaSP.Text = "";
             txtTenSP.Text = "";
-            cbMaLoai.SelectedIndex = -1;
+
             cbMaLoai.Text = "";
             txtTenLoai.Text = "";
             txtSoLuong.Text = "0";
@@ -194,5 +196,5 @@ namespace StationeryManagementSystem
             txtMaNCC.Text = "";
             txtTenNCC.Text = "";
         }
-    }     
+    }
 }
