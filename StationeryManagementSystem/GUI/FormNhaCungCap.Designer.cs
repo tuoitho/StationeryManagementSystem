@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhaCungCap));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbListNCC = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.gvNhaCungCap = new System.Windows.Forms.DataGridView();
+            this.maNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblLoc = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtSearh = new Guna.UI2.WinForms.Guna2TextBox();
             this.gbTacVu = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
@@ -47,17 +54,10 @@
             this.lblSDT = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblMaNCC = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbThongTin = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.txtSearh = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblLoc = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.gvNhaCungCap = new System.Windows.Forms.DataGridView();
-            this.maNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbListNCC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvNhaCungCap)).BeginInit();
             this.gbTacVu.SuspendLayout();
             this.gbThongTin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvNhaCungCap)).BeginInit();
             this.SuspendLayout();
             // 
             // gbListNCC
@@ -77,6 +77,115 @@
             this.gbListNCC.Size = new System.Drawing.Size(569, 583);
             this.gbListNCC.TabIndex = 18;
             this.gbListNCC.Text = "Danh sách nhà cung cấp ";
+            // 
+            // gvNhaCungCap
+            // 
+            this.gvNhaCungCap.BackgroundColor = System.Drawing.Color.White;
+            this.gvNhaCungCap.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvNhaCungCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gvNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvNhaCungCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maNCC,
+            this.tenNCC,
+            this.diaChi,
+            this.soDienThoai});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvNhaCungCap.DefaultCellStyle = dataGridViewCellStyle4;
+            this.gvNhaCungCap.GridColor = System.Drawing.Color.White;
+            this.gvNhaCungCap.Location = new System.Drawing.Point(22, 141);
+            this.gvNhaCungCap.Name = "gvNhaCungCap";
+            this.gvNhaCungCap.ReadOnly = true;
+            this.gvNhaCungCap.RowHeadersWidth = 51;
+            this.gvNhaCungCap.RowTemplate.Height = 24;
+            this.gvNhaCungCap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gvNhaCungCap.Size = new System.Drawing.Size(522, 396);
+            this.gvNhaCungCap.TabIndex = 25;
+            this.gvNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvNhaCungCap_CellClick_1);
+            // 
+            // maNCC
+            // 
+            this.maNCC.DataPropertyName = "Mã NCC";
+            this.maNCC.HeaderText = "Mã NCC";
+            this.maNCC.MinimumWidth = 6;
+            this.maNCC.Name = "maNCC";
+            this.maNCC.ReadOnly = true;
+            this.maNCC.Width = 170;
+            // 
+            // tenNCC
+            // 
+            this.tenNCC.DataPropertyName = "Tên NCC";
+            this.tenNCC.HeaderText = "Tên NCC";
+            this.tenNCC.MinimumWidth = 6;
+            this.tenNCC.Name = "tenNCC";
+            this.tenNCC.ReadOnly = true;
+            this.tenNCC.Width = 200;
+            // 
+            // diaChi
+            // 
+            this.diaChi.DataPropertyName = "Địa Chỉ";
+            this.diaChi.HeaderText = "Địa chỉ";
+            this.diaChi.MinimumWidth = 6;
+            this.diaChi.Name = "diaChi";
+            this.diaChi.ReadOnly = true;
+            this.diaChi.Width = 200;
+            // 
+            // soDienThoai
+            // 
+            this.soDienThoai.DataPropertyName = "Số Điện Thoại";
+            this.soDienThoai.HeaderText = "Số điên thoại";
+            this.soDienThoai.MinimumWidth = 6;
+            this.soDienThoai.Name = "soDienThoai";
+            this.soDienThoai.ReadOnly = true;
+            this.soDienThoai.Width = 200;
+            // 
+            // lblLoc
+            // 
+            this.lblLoc.BackColor = System.Drawing.Color.Transparent;
+            this.lblLoc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoc.ForeColor = System.Drawing.Color.Teal;
+            this.lblLoc.Location = new System.Drawing.Point(40, 92);
+            this.lblLoc.Name = "lblLoc";
+            this.lblLoc.Size = new System.Drawing.Size(80, 26);
+            this.lblLoc.TabIndex = 24;
+            this.lblLoc.Text = "Tìm kiếm";
+            // 
+            // txtSearh
+            // 
+            this.txtSearh.BorderRadius = 20;
+            this.txtSearh.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.txtSearh.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearh.DefaultText = "";
+            this.txtSearh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearh.FillColor = System.Drawing.Color.LightYellow;
+            this.txtSearh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearh.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearh.ForeColor = System.Drawing.Color.Teal;
+            this.txtSearh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearh.Location = new System.Drawing.Point(145, 78);
+            this.txtSearh.Margin = new System.Windows.Forms.Padding(0);
+            this.txtSearh.Name = "txtSearh";
+            this.txtSearh.PasswordChar = '\0';
+            this.txtSearh.PlaceholderText = "";
+            this.txtSearh.SelectedText = "";
+            this.txtSearh.Size = new System.Drawing.Size(324, 36);
+            this.txtSearh.TabIndex = 22;
+            this.txtSearh.TextChanged += new System.EventHandler(this.txtSearh_TextChanged);
             // 
             // gbTacVu
             // 
@@ -369,113 +478,6 @@
             this.gbThongTin.TabIndex = 17;
             this.gbThongTin.Text = "Thông tin nhà cung cấp";
             // 
-            // txtSearh
-            // 
-            this.txtSearh.BorderRadius = 20;
-            this.txtSearh.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.txtSearh.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearh.DefaultText = "";
-            this.txtSearh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearh.FillColor = System.Drawing.Color.LightYellow;
-            this.txtSearh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearh.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearh.ForeColor = System.Drawing.Color.Teal;
-            this.txtSearh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearh.Location = new System.Drawing.Point(145, 78);
-            this.txtSearh.Margin = new System.Windows.Forms.Padding(0);
-            this.txtSearh.Name = "txtSearh";
-            this.txtSearh.PasswordChar = '\0';
-            this.txtSearh.PlaceholderText = "";
-            this.txtSearh.SelectedText = "";
-            this.txtSearh.Size = new System.Drawing.Size(324, 36);
-            this.txtSearh.TabIndex = 22;
-            // 
-            // lblLoc
-            // 
-            this.lblLoc.BackColor = System.Drawing.Color.Transparent;
-            this.lblLoc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoc.ForeColor = System.Drawing.Color.Teal;
-            this.lblLoc.Location = new System.Drawing.Point(40, 92);
-            this.lblLoc.Name = "lblLoc";
-            this.lblLoc.Size = new System.Drawing.Size(80, 26);
-            this.lblLoc.TabIndex = 24;
-            this.lblLoc.Text = "Tìm kiếm";
-            // 
-            // gvNhaCungCap
-            // 
-            this.gvNhaCungCap.BackgroundColor = System.Drawing.Color.White;
-            this.gvNhaCungCap.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvNhaCungCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.gvNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvNhaCungCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maNCC,
-            this.tenNCC,
-            this.diaChi,
-            this.soDienThoai});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvNhaCungCap.DefaultCellStyle = dataGridViewCellStyle8;
-            this.gvNhaCungCap.GridColor = System.Drawing.Color.White;
-            this.gvNhaCungCap.Location = new System.Drawing.Point(22, 141);
-            this.gvNhaCungCap.Name = "gvNhaCungCap";
-            this.gvNhaCungCap.ReadOnly = true;
-            this.gvNhaCungCap.RowHeadersWidth = 51;
-            this.gvNhaCungCap.RowTemplate.Height = 24;
-            this.gvNhaCungCap.Size = new System.Drawing.Size(522, 396);
-            this.gvNhaCungCap.TabIndex = 25;
-            this.gvNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvNhaCungCap_CellClick_1);
-            // 
-            // maNCC
-            // 
-            this.maNCC.DataPropertyName = "Mã NCC";
-            this.maNCC.HeaderText = "Mã NCC";
-            this.maNCC.MinimumWidth = 6;
-            this.maNCC.Name = "maNCC";
-            this.maNCC.ReadOnly = true;
-            this.maNCC.Width = 170;
-            // 
-            // tenNCC
-            // 
-            this.tenNCC.DataPropertyName = "Tên NCC";
-            this.tenNCC.HeaderText = "Tên NCC";
-            this.tenNCC.MinimumWidth = 6;
-            this.tenNCC.Name = "tenNCC";
-            this.tenNCC.ReadOnly = true;
-            this.tenNCC.Width = 200;
-            // 
-            // diaChi
-            // 
-            this.diaChi.DataPropertyName = "Địa Chỉ";
-            this.diaChi.HeaderText = "Địa chỉ";
-            this.diaChi.MinimumWidth = 6;
-            this.diaChi.Name = "diaChi";
-            this.diaChi.ReadOnly = true;
-            this.diaChi.Width = 200;
-            // 
-            // soDienThoai
-            // 
-            this.soDienThoai.DataPropertyName = "Số Điện Thoại";
-            this.soDienThoai.HeaderText = "Số điên thoại";
-            this.soDienThoai.MinimumWidth = 6;
-            this.soDienThoai.Name = "soDienThoai";
-            this.soDienThoai.ReadOnly = true;
-            this.soDienThoai.Width = 200;
-            // 
             // FormNhaCungCap
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -487,10 +489,10 @@
             this.Load += new System.EventHandler(this.FormNhaCungCap_Load);
             this.gbListNCC.ResumeLayout(false);
             this.gbListNCC.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvNhaCungCap)).EndInit();
             this.gbTacVu.ResumeLayout(false);
             this.gbThongTin.ResumeLayout(false);
             this.gbThongTin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvNhaCungCap)).EndInit();
             this.ResumeLayout(false);
 
         }
