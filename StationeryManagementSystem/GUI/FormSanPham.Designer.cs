@@ -64,11 +64,6 @@
             this.txtSearh = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLoc = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gvSP = new System.Windows.Forms.DataGridView();
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.pbSearch = new System.Windows.Forms.PictureBox();
-            this.lblChonNgay = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.dpSPBan = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.gvSPTrongNgay = new System.Windows.Forms.DataGridView();
             this.maSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +73,11 @@
             this.giaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.pbSearch = new System.Windows.Forms.PictureBox();
+            this.lblChonNgay = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.dpSPBan = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.gvSPTrongNgay = new System.Windows.Forms.DataGridView();
             this.maSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -229,7 +229,7 @@
             this.lblVND2.BackColor = System.Drawing.Color.Transparent;
             this.lblVND2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVND2.ForeColor = System.Drawing.Color.Teal;
-            this.lblVND2.Location = new System.Drawing.Point(250, 286);
+            this.lblVND2.Location = new System.Drawing.Point(250, 332);
             this.lblVND2.Name = "lblVND2";
             this.lblVND2.Size = new System.Drawing.Size(41, 26);
             this.lblVND2.TabIndex = 51;
@@ -240,7 +240,7 @@
             this.lblVND1.BackColor = System.Drawing.Color.Transparent;
             this.lblVND1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVND1.ForeColor = System.Drawing.Color.Teal;
-            this.lblVND1.Location = new System.Drawing.Point(250, 240);
+            this.lblVND1.Location = new System.Drawing.Point(250, 286);
             this.lblVND1.Name = "lblVND1";
             this.lblVND1.Size = new System.Drawing.Size(41, 26);
             this.lblVND1.TabIndex = 50;
@@ -652,6 +652,87 @@
             this.gvSP.TabIndex = 3;
             this.gvSP.Click += new System.EventHandler(this.gvSP_Click);
             // 
+            // maSP
+            // 
+            this.maSP.DataPropertyName = "Mã SP";
+            this.maSP.HeaderText = "Mã sản phẩm";
+            this.maSP.MinimumWidth = 6;
+            this.maSP.Name = "maSP";
+            this.maSP.ReadOnly = true;
+            this.maSP.Width = 170;
+            // 
+            // tenSP
+            // 
+            this.tenSP.DataPropertyName = "Tên SP";
+            this.tenSP.HeaderText = "Tên sản phẩm";
+            this.tenSP.MinimumWidth = 6;
+            this.tenSP.Name = "tenSP";
+            this.tenSP.ReadOnly = true;
+            this.tenSP.Width = 170;
+            // 
+            // maLoai
+            // 
+            this.maLoai.DataPropertyName = "Mã Loại SP";
+            this.maLoai.HeaderText = "Mã loại";
+            this.maLoai.MinimumWidth = 6;
+            this.maLoai.Name = "maLoai";
+            this.maLoai.ReadOnly = true;
+            this.maLoai.Width = 125;
+            // 
+            // tenLoai
+            // 
+            this.tenLoai.DataPropertyName = "Tên Loại SP";
+            this.tenLoai.HeaderText = "Tên loại";
+            this.tenLoai.MinimumWidth = 6;
+            this.tenLoai.Name = "tenLoai";
+            this.tenLoai.ReadOnly = true;
+            this.tenLoai.Width = 150;
+            // 
+            // maNCC
+            // 
+            this.maNCC.DataPropertyName = "Mã NCC";
+            this.maNCC.HeaderText = "Mã NCC";
+            this.maNCC.MinimumWidth = 6;
+            this.maNCC.Name = "maNCC";
+            this.maNCC.ReadOnly = true;
+            this.maNCC.Width = 125;
+            // 
+            // tenNCC
+            // 
+            this.tenNCC.DataPropertyName = "Tên NCC";
+            this.tenNCC.HeaderText = "Tên nhà cung cấp";
+            this.tenNCC.MinimumWidth = 6;
+            this.tenNCC.Name = "tenNCC";
+            this.tenNCC.ReadOnly = true;
+            this.tenNCC.Width = 200;
+            // 
+            // giaNhap
+            // 
+            this.giaNhap.DataPropertyName = "Giá Nhập";
+            this.giaNhap.HeaderText = "Giá nhập";
+            this.giaNhap.MinimumWidth = 6;
+            this.giaNhap.Name = "giaNhap";
+            this.giaNhap.ReadOnly = true;
+            this.giaNhap.Width = 120;
+            // 
+            // giaBan
+            // 
+            this.giaBan.DataPropertyName = "Giá Bán";
+            this.giaBan.HeaderText = "Giá bán";
+            this.giaBan.MinimumWidth = 6;
+            this.giaBan.Name = "giaBan";
+            this.giaBan.ReadOnly = true;
+            this.giaBan.Width = 120;
+            // 
+            // soLuong
+            // 
+            this.soLuong.DataPropertyName = "SL Tồn Kho";
+            this.soLuong.HeaderText = "Số lượng trong kho";
+            this.soLuong.MinimumWidth = 6;
+            this.soLuong.Name = "soLuong";
+            this.soLuong.ReadOnly = true;
+            this.soLuong.Width = 170;
+            // 
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.BorderRadius = 10;
@@ -747,87 +828,6 @@
             this.gvSPTrongNgay.RowTemplate.Height = 24;
             this.gvSPTrongNgay.Size = new System.Drawing.Size(694, 164);
             this.gvSPTrongNgay.TabIndex = 3;
-            // 
-            // maSP
-            // 
-            this.maSP.DataPropertyName = "Mã SP";
-            this.maSP.HeaderText = "Mã sản phẩm";
-            this.maSP.MinimumWidth = 6;
-            this.maSP.Name = "maSP";
-            this.maSP.ReadOnly = true;
-            this.maSP.Width = 170;
-            // 
-            // tenSP
-            // 
-            this.tenSP.DataPropertyName = "Tên SP";
-            this.tenSP.HeaderText = "Tên sản phẩm";
-            this.tenSP.MinimumWidth = 6;
-            this.tenSP.Name = "tenSP";
-            this.tenSP.ReadOnly = true;
-            this.tenSP.Width = 170;
-            // 
-            // maLoai
-            // 
-            this.maLoai.DataPropertyName = "Mã Loại SP";
-            this.maLoai.HeaderText = "Mã loại";
-            this.maLoai.MinimumWidth = 6;
-            this.maLoai.Name = "maLoai";
-            this.maLoai.ReadOnly = true;
-            this.maLoai.Width = 125;
-            // 
-            // tenLoai
-            // 
-            this.tenLoai.DataPropertyName = "Tên Loại SP";
-            this.tenLoai.HeaderText = "Tên loại";
-            this.tenLoai.MinimumWidth = 6;
-            this.tenLoai.Name = "tenLoai";
-            this.tenLoai.ReadOnly = true;
-            this.tenLoai.Width = 150;
-            // 
-            // maNCC
-            // 
-            this.maNCC.DataPropertyName = "Mã NCC";
-            this.maNCC.HeaderText = "Mã NCC";
-            this.maNCC.MinimumWidth = 6;
-            this.maNCC.Name = "maNCC";
-            this.maNCC.ReadOnly = true;
-            this.maNCC.Width = 125;
-            // 
-            // tenNCC
-            // 
-            this.tenNCC.DataPropertyName = "Tên NCC";
-            this.tenNCC.HeaderText = "Tên nhà cung cấp";
-            this.tenNCC.MinimumWidth = 6;
-            this.tenNCC.Name = "tenNCC";
-            this.tenNCC.ReadOnly = true;
-            this.tenNCC.Width = 200;
-            // 
-            // giaNhap
-            // 
-            this.giaNhap.DataPropertyName = "Giá Nhập";
-            this.giaNhap.HeaderText = "Giá nhập";
-            this.giaNhap.MinimumWidth = 6;
-            this.giaNhap.Name = "giaNhap";
-            this.giaNhap.ReadOnly = true;
-            this.giaNhap.Width = 120;
-            // 
-            // giaBan
-            // 
-            this.giaBan.DataPropertyName = "Giá Bán";
-            this.giaBan.HeaderText = "Giá bán";
-            this.giaBan.MinimumWidth = 6;
-            this.giaBan.Name = "giaBan";
-            this.giaBan.ReadOnly = true;
-            this.giaBan.Width = 120;
-            // 
-            // soLuong
-            // 
-            this.soLuong.DataPropertyName = "SL Tồn Kho";
-            this.soLuong.HeaderText = "Số lượng trong kho";
-            this.soLuong.MinimumWidth = 6;
-            this.soLuong.Name = "soLuong";
-            this.soLuong.ReadOnly = true;
-            this.soLuong.Width = 170;
             // 
             // maSanPham
             // 

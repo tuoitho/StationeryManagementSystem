@@ -34,9 +34,9 @@ namespace StationeryManagementSystem
         {
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTiltle = new System.Windows.Forms.Label();
-            this.panel_childForm = new System.Windows.Forms.Panel();
             this.panel_logo = new System.Windows.Forms.Panel();
             this.panel_menu = new System.Windows.Forms.Panel();
+            this.panel_childForm = new System.Windows.Forms.Panel();
             this.roundedButton_thoat = new StationeryManagementSystem.RoundedButton();
             this.roundedButton_qldt = new StationeryManagementSystem.RoundedButton();
             this.roundedButton_qlkh = new StationeryManagementSystem.RoundedButton();
@@ -69,8 +69,8 @@ namespace StationeryManagementSystem
             // 
             // lblTiltle
             // 
-            this.lblTiltle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblTiltle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTiltle.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTiltle.ForeColor = System.Drawing.Color.White;
@@ -81,17 +81,6 @@ namespace StationeryManagementSystem
             this.lblTiltle.TabIndex = 0;
             this.lblTiltle.Text = "Home";
             this.lblTiltle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel_childForm
-            // 
-            this.panel_childForm.AutoScroll = true;
-            this.panel_childForm.BackColor = System.Drawing.Color.Transparent;
-            this.panel_childForm.Font = new System.Drawing.Font("Verdana", 10.2F);
-            this.panel_childForm.Location = new System.Drawing.Point(320, 92);
-            this.panel_childForm.Margin = new System.Windows.Forms.Padding(2);
-            this.panel_childForm.Name = "panel_childForm";
-            this.panel_childForm.Size = new System.Drawing.Size(1601, 1081);
-            this.panel_childForm.TabIndex = 5;
             // 
             // panel_logo
             // 
@@ -126,6 +115,18 @@ namespace StationeryManagementSystem
             this.panel_menu.Name = "panel_menu";
             this.panel_menu.Size = new System.Drawing.Size(320, 1175);
             this.panel_menu.TabIndex = 3;
+            // 
+            // panel_childForm
+            // 
+            this.panel_childForm.AutoScroll = true;
+            this.panel_childForm.BackColor = System.Drawing.Color.Transparent;
+            this.panel_childForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_childForm.Font = new System.Drawing.Font("Verdana", 10.2F);
+            this.panel_childForm.Location = new System.Drawing.Point(320, 92);
+            this.panel_childForm.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_childForm.Name = "panel_childForm";
+            this.panel_childForm.Size = new System.Drawing.Size(1601, 1081);
+            this.panel_childForm.TabIndex = 5;
             // 
             // roundedButton_thoat
             // 

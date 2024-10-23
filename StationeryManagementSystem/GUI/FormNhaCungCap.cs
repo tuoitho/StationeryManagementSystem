@@ -25,9 +25,9 @@ namespace StationeryManagementSystem.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string tenNhaCungCap = txtHoTen.Text; 
-            string diaChi = txtDiaChi.Text; 
-            string soDienThoai = txtSDT.Text; 
+            string tenNhaCungCap = txtHoTen.Text;
+            string diaChi = txtDiaChi.Text;
+            string soDienThoai = txtSDT.Text;
 
             try
             {
@@ -69,10 +69,10 @@ namespace StationeryManagementSystem.GUI
                 return;
             }
 
-            int maNCC = int.Parse(selectedRow.Cells["maNCC"].Value.ToString()); 
-            string tenNhaCungCap = txtHoTen.Text; 
-            string diaChi = txtDiaChi.Text; 
-            string soDienThoai = txtSDT.Text; 
+            int maNCC = int.Parse(selectedRow.Cells["maNCC"].Value.ToString());
+            string tenNhaCungCap = txtHoTen.Text;
+            string diaChi = txtDiaChi.Text;
+            string soDienThoai = txtSDT.Text;
 
             try
             {
@@ -103,7 +103,7 @@ namespace StationeryManagementSystem.GUI
                 int maNhaCungCap = int.Parse(txtMaNCC.Text);
                 try
                 {
-                    NhaCungCapDAO.delete(maNhaCungCap); 
+                    NhaCungCapDAO.delete(maNhaCungCap);
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)

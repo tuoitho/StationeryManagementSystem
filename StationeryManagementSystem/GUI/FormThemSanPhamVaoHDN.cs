@@ -21,7 +21,7 @@ namespace StationeryManagementSystem.GUI
         {
             this.maHD = maHD;
         }
-        public FormThemSanPhamVaoHDN(int maHD, bool isSua, int maSP) : this()
+        public FormThemSanPhamVaoHDN(int maHD, bool isSua, int maSP, int maNCC) : this()
         {
             this.maHD = maHD;
             this.isSua = true;
@@ -48,9 +48,6 @@ namespace StationeryManagementSystem.GUI
             }
         }
 
-      
-
-       
 
         private void txtSearh_TextChanged(object sender, EventArgs e)
         {
@@ -191,6 +188,6 @@ namespace StationeryManagementSystem.GUI
             }
         }
 
-  
+
     }
 }

@@ -30,7 +30,7 @@ namespace StationeryManagementSystem
             cbMaLoai.ValueMember = "TenLoaiSanPham";
             cbMaLoai.SelectedIndex = -1;
             txtTenLoai.Enabled = false;
-           
+
         }
 
         private void pbSearch_MouseEnter(object sender, EventArgs e)
@@ -187,7 +187,7 @@ namespace StationeryManagementSystem
             gvSP.DataSource = SanPhamDAO.findAll();
             txtMaSP.Text = "";
             txtTenSP.Text = "";
-            cbMaLoai.SelectedIndex = -1;
+
             cbMaLoai.Text = "";
             txtTenLoai.Text = "";
             txtSoLuong.Text = "0";
@@ -196,5 +196,5 @@ namespace StationeryManagementSystem
             txtMaNCC.Text = "";
             txtTenNCC.Text = "";
         }
-    }     
+    }
 }

@@ -50,7 +50,7 @@
             this.maSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            //this.maNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -336,7 +336,7 @@
             this.maSanPham,
             this.maLoai,
             this.tenLoai,
-            this.maNCC,
+            //this.maNCC,
             this.tenNCC,
             this.giaNhap,
             this.giaBan,
@@ -397,12 +397,7 @@
             // 
             // maNCC
             // 
-            this.maNCC.DataPropertyName = "Mã NCC";
-            this.maNCC.HeaderText = "Mã NCC";
-            this.maNCC.MinimumWidth = 6;
-            this.maNCC.Name = "maNCC";
-            this.maNCC.ReadOnly = true;
-            this.maNCC.Width = 125;
+
             // 
             // tenNCC
             // 

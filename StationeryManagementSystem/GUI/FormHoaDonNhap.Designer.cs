@@ -386,6 +386,7 @@
             this.btnXoaSP.Size = new System.Drawing.Size(97, 41);
             this.btnXoaSP.TabIndex = 58;
             this.btnXoaSP.Text = "    Xóa";
+            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
             // 
             // gvSP
             // 
@@ -427,7 +428,6 @@
             this.gvSP.Size = new System.Drawing.Size(411, 170);
             this.gvSP.TabIndex = 57;
             this.gvSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSP_CellClick);
-            this.gvSP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSP_CellContentClick);
             // 
             // maSP
             // 
@@ -651,7 +651,6 @@
             this.gvHD.Size = new System.Drawing.Size(730, 413);
             this.gvHD.TabIndex = 68;
             this.gvHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvHD_CellClick);
-            this.gvHD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvHD_CellContentClick);
             // 
             // maHD
             // 
@@ -919,7 +918,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTenNCC;
         private Guna.UI2.WinForms.Guna2ComboBox cbTrangThaiThanhToan;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTrangThai;
-       
+
         private Guna.UI2.WinForms.Guna2ComboBox cbMaNCC;
         private Guna.UI2.WinForms.Guna2Panel pnHoaDon;
         private Guna.UI2.WinForms.Guna2TextBox txtTenNV;

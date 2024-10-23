@@ -32,12 +32,6 @@ namespace StationeryManagementSystem.GUI
         bool isSua = false;
         bool isLoaded = false;
 
-       
-
-       
-
-       
-      
 
         private void txtSearh_TextChanged(object sender, EventArgs e)
         {
@@ -192,6 +186,6 @@ namespace StationeryManagementSystem.GUI
             }
         }
 
-        
+
     }
 }

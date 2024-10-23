@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhanVien));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhanVien));
             this.gbThongTin = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtLuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLuong = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -54,11 +54,11 @@
             this.lblMaNV = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbListNV = new Guna.UI2.WinForms.Guna2GroupBox();
             this.gbTacVu = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.gvNhanVien = new System.Windows.Forms.DataGridView();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.btnReLoad = new Guna.UI2.WinForms.Guna2Button();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
+            this.gvNhanVien = new System.Windows.Forms.DataGridView();
             this.maNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +68,8 @@
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.luongTheoGio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-        
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblLoc = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbThongTin.SuspendLayout();
             this.gbChucVu.SuspendLayout();
             this.gbGioiTinh.SuspendLayout();
@@ -445,8 +446,9 @@
             // 
             this.gbListNV.BorderRadius = 10;
             this.gbListNV.BorderThickness = 2;
+            this.gbListNV.Controls.Add(this.txtSearch);
+            this.gbListNV.Controls.Add(this.lblLoc);
             this.gbListNV.Controls.Add(this.gbTacVu);
-          
             this.gbListNV.Controls.Add(this.gvNhanVien);
             this.gbListNV.CustomBorderColor = System.Drawing.Color.Teal;
             this.gbListNV.FillColor = System.Drawing.SystemColors.Control;
@@ -475,50 +477,6 @@
             this.gbTacVu.Size = new System.Drawing.Size(610, 115);
             this.gbTacVu.TabIndex = 13;
             this.gbTacVu.Text = "Tác vụ";
-            // 
-            // gvNhanVien
-            // 
-            this.gvNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gvNhanVien.BackgroundColor = System.Drawing.Color.White;
-            this.gvNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maNV,
-            this.tenNV,
-            this.ngaySinh,
-            this.gioiTinh,
-            this.chuVu,
-            this.diaChi,
-            this.sdt,
-            this.email,
-            this.luongTheoGio});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvNhanVien.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gvNhanVien.GridColor = System.Drawing.Color.White;
-            this.gvNhanVien.Location = new System.Drawing.Point(16, 117);
-            this.gvNhanVien.Name = "gvNhanVien";
-            this.gvNhanVien.ReadOnly = true;
-            this.gvNhanVien.RowHeadersWidth = 51;
-            this.gvNhanVien.RowTemplate.Height = 24;
-            this.gvNhanVien.Size = new System.Drawing.Size(1040, 122);
-            this.gvNhanVien.TabIndex = 2;
-            this.gvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvNhanVien_CellClick);
             // 
             // btnXoa
             // 
@@ -608,6 +566,50 @@
             this.btnThem.Text = "  Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // gvNhanVien
+            // 
+            this.gvNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gvNhanVien.BackgroundColor = System.Drawing.Color.White;
+            this.gvNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maNV,
+            this.tenNV,
+            this.ngaySinh,
+            this.gioiTinh,
+            this.chuVu,
+            this.diaChi,
+            this.sdt,
+            this.email,
+            this.luongTheoGio});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvNhanVien.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gvNhanVien.GridColor = System.Drawing.Color.White;
+            this.gvNhanVien.Location = new System.Drawing.Point(16, 117);
+            this.gvNhanVien.Name = "gvNhanVien";
+            this.gvNhanVien.ReadOnly = true;
+            this.gvNhanVien.RowHeadersWidth = 51;
+            this.gvNhanVien.RowTemplate.Height = 24;
+            this.gvNhanVien.Size = new System.Drawing.Size(1040, 122);
+            this.gvNhanVien.TabIndex = 2;
+            this.gvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvNhanVien_CellClick);
+            // 
             // maNV
             // 
             this.maNV.DataPropertyName = "manhanvien";
@@ -689,9 +691,41 @@
             this.luongTheoGio.ReadOnly = true;
             this.luongTheoGio.Width = 170;
             // 
-            // UCTimKiemNhanVien
+            // txtSearch
             // 
-           
+            this.txtSearch.BorderRadius = 20;
+            this.txtSearch.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FillColor = System.Drawing.Color.LightYellow;
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.Teal;
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Location = new System.Drawing.Point(298, 63);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(0);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(475, 36);
+            this.txtSearch.TabIndex = 26;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // lblLoc
+            // 
+            this.lblLoc.BackColor = System.Drawing.Color.Transparent;
+            this.lblLoc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoc.ForeColor = System.Drawing.Color.Teal;
+            this.lblLoc.Location = new System.Drawing.Point(200, 73);
+            this.lblLoc.Name = "lblLoc";
+            this.lblLoc.Size = new System.Drawing.Size(80, 26);
+            this.lblLoc.TabIndex = 27;
+            this.lblLoc.Text = "Tìm kiếm";
             // 
             // FormNhanVien
             // 
@@ -711,6 +745,7 @@
             this.gbGioiTinh.ResumeLayout(false);
             this.gbGioiTinh.PerformLayout();
             this.gbListNV.ResumeLayout(false);
+            this.gbListNV.PerformLayout();
             this.gbTacVu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvNhanVien)).EndInit();
             this.ResumeLayout(false);
@@ -745,7 +780,7 @@
         private Guna.UI2.WinForms.Guna2Button btnXoa;
         private Guna.UI2.WinForms.Guna2Button btnSua;
         private Guna.UI2.WinForms.Guna2Button btnReLoad;
- 
+
         private Guna.UI2.WinForms.Guna2TextBox txtLuong;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblLuong;
 
@@ -758,5 +793,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn luongTheoGio;
+        public Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        public Guna.UI2.WinForms.Guna2HtmlLabel lblLoc;
     }
 }

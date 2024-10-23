@@ -100,6 +100,7 @@
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\LoaiSanPhamDAO.cs" />
     <Compile Include="DAO\NhaCungCapDAO.cs" />
+    <Compile Include="DAO\PhanCaDAO.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
     <Compile Include="GUI\FormChiTietDoanhThu.cs">
       <SubType>Form</SubType>
@@ -217,6 +218,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormChiTietDoanhThu.resx">
       <DependentUpon>FormChiTietDoanhThu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormChiTietLuong.resx">
       <DependentUpon>FormChiTietLuong.cs</DependentUpon>
@@ -232,9 +234,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormHoaDonBan.resx">
       <DependentUpon>FormHoaDonBan.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormHoaDonNhap.resx">
       <DependentUpon>FormHoaDonNhap.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

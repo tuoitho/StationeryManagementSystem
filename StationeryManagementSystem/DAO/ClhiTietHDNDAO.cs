@@ -23,6 +23,20 @@ namespace StationeryManagementSystem.DAO
             return dt;
 
         }
+
+        public static DataTable findAllByMaNCC(int maNCC)
+        {
+            MyDB.OpenConnection();
+            string sql = "exec sp_XemDanhSachSanPhamCuaNCC @maNCC";
+            SqlCommand cmd = new SqlCommand(sql, MyDB.GetConnection);
+            cmd.Parameters.AddWithValue("@maNCC", SqlDbType.Int).Value = maNCC;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            MyDB.CloseConnection();
+            return dt;
+
+        }
         public static void insert(int maHD, int maSP, int soLuong, float donGia)
         {
             using (SqlCommand cmd = new SqlCommand("exec sp_ThemChiTietHoaDonNhap @maHD,@maSP,@soLuong,@donGia", MyDB.GetConnection))

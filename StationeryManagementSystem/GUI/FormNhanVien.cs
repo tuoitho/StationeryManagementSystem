@@ -34,7 +34,7 @@ namespace StationeryManagementSystem
             if (gvNhanVien.SelectedRows.Count <= 0)
             {
                 MessageBox.Show("Vui lòng chọn một dòng dữ liệu nhân viên để sửa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; 
+                return;
             }
 
             var selectedRow = gvNhanVien.SelectedRows[0];
@@ -42,21 +42,21 @@ namespace StationeryManagementSystem
             if (selectedRow.IsNewRow || string.IsNullOrWhiteSpace(selectedRow.Cells["maNV"].Value?.ToString()))
             {
                 MessageBox.Show("Dòng được chọn không hợp lệ. Vui lòng chọn một dòng dữ liệu hợp lệ để sửa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; 
+                return;
             }
 
-            int maNV = int.Parse(selectedRow.Cells["maNV"].Value.ToString()); 
+            int maNV = int.Parse(selectedRow.Cells["maNV"].Value.ToString());
             string hoTen = txtHoTen.Text;
             DateTime ngaySinh = dpNgaySinh.Value;
-            string gioiTinh = rdNam.Checked ? "Nam" : "Nữ"; 
+            string gioiTinh = rdNam.Checked ? "Nam" : "Nữ";
             string diaChi = txtDiaChi.Text;
             string sdt = txtSDT.Text;
             string email = txtEmail.Text;
-            int chucVu = rdBanHang.Checked ? 1 : (rdKiemKho.Checked ? 2 : 0); 
+            int chucVu = rdBanHang.Checked ? 1 : (rdKiemKho.Checked ? 2 : 0);
             if (chucVu == 0)
             {
                 MessageBox.Show("Vui lòng chọn chức vụ cho nhân viên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; 
+                return;
             }
 
             try
@@ -75,11 +75,11 @@ namespace StationeryManagementSystem
             String hoTen = txtHoTen.Text;
             DateTime ngaySinh = dpNgaySinh.Value;
             String gioiTinh = "";
-            if(rdNam.Checked)
+            if (rdNam.Checked)
             {
                 gioiTinh = "Nam";
             }
-            if(rdNu.Checked)
+            if (rdNu.Checked)
             {
                 gioiTinh = "Nữ";
             }
@@ -96,7 +96,7 @@ namespace StationeryManagementSystem
             {
                 chucVu = 2;
             }
-           
+
 
             try
             {
@@ -192,6 +192,35 @@ namespace StationeryManagementSystem
             rdKiemKho.Checked = false;
             txtLuong.Clear();
 
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "")
+            {
+                gvNhanVien.DataSource = NhanVienDAO.findAll();
+                return;
+            }
+            string input = txtSearch.Text;
+            int maNV;
+            DataTable dt = (DataTable)gvNhanVien.DataSource;
+            bool isNumber = int.TryParse(input, out maNV);  // Chuyển đổi chuỗi thành số (nếu có thể)
+
+            if (isNumber)
+            {
+                // Nếu input là số, sử dụng bộ lọc cho Mã SP là số và các cột khác là chuỗi
+                dt.DefaultView.RowFilter = "[manhanvien] = " + maNV +
+                                           " OR [hoten] LIKE '%" + input + "%' " +
+                                           " OR [TenChucVu] LIKE '%" + input + "%' ";
+            }
+            else
+            {
+                // Nếu input không phải là số, chỉ áp dụng bộ lọc cho các cột chuỗi
+                dt.DefaultView.RowFilter = "[hoten] LIKE '%" + input + "%' " +
+                                           " OR [TenChucVu] LIKE '%" + input + "%' ";
+            }
+
+            gvNhanVien.DataSource = dt;
         }
     }
 }
