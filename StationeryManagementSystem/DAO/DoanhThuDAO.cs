@@ -11,7 +11,7 @@ namespace StationeryManagementSystem.DAO
     {
         public static decimal TongDoanhThu(int thang, int nam)
         {
-            decimal dt = 0;
+            decimal dt= 0;
             using (SqlCommand command = new SqlCommand("SELECT dbo.fn_TongDoanhThuTheoThang(@Thang, @Nam)", MyDB.GetConnection))
             {
                 command.Parameters.Add(new SqlParameter("@Thang", thang));
