@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StationeryManagementSystem.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace StationeryManagementSystem.GUI
 {
     public partial class FormChiTietDoanhThu : Form
     {
-        public FormChiTietDoanhThu()
+        private int thang;
+        private int nam;
+        public FormChiTietDoanhThu(int month, int year)
         {
             InitializeComponent();
+            this.thang = month;
+            this.nam = year;
+        }
+
+        private void FormChiTietDoanhThu_Load(object sender, EventArgs e)
+        {
+            gvDoanhThu.DataSource = HoaDonBanDAO.DoanhThuTrongThang(thang, nam);
         }
     }
 }

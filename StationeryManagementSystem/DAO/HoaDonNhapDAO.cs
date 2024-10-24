@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace StationeryManagementSystem.DAO
@@ -23,6 +24,21 @@ namespace StationeryManagementSystem.DAO
                     MyDB.CloseConnection();
                     return dt;
                 }
+            }
+        }
+
+        public static DataTable PhiNhapHangTrongThang(int thang, int nam)
+        {
+            using (SqlCommand cmd = new SqlCommand("select * from fn_ChiPhiNhapHangTheoThang(@thang, @nam)", MyDB.GetConnection))
+            {
+                MyDB.OpenConnection();
+                cmd.Parameters.AddWithValue("@thang", thang);
+                cmd.Parameters.AddWithValue("@nam", nam);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                MyDB.CloseConnection();
+                return dt;
             }
         }
 

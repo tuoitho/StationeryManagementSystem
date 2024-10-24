@@ -32,8 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbDoanhThu = new Guna.UI2.WinForms.Guna2GroupBox();
             this.gvDoanhThu = new System.Windows.Forms.DataGridView();
+            this.maSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbDoanhThu.SuspendLayout();
@@ -61,7 +61,7 @@
             this.gvDoanhThu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
@@ -69,14 +69,14 @@
             this.gvDoanhThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvDoanhThu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maSP,
             this.tenSanPham,
-            this.giaBan,
             this.soLuong,
             this.tongTien});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightYellow;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -90,24 +90,27 @@
             this.gvDoanhThu.Size = new System.Drawing.Size(620, 230);
             this.gvDoanhThu.TabIndex = 57;
             // 
+            // maSP
+            // 
+            this.maSP.DataPropertyName = "Mã Sản Phẩm";
+            this.maSP.HeaderText = "Mã sản phẩm";
+            this.maSP.MinimumWidth = 6;
+            this.maSP.Name = "maSP";
+            this.maSP.ReadOnly = true;
+            this.maSP.Width = 170;
+            // 
             // tenSanPham
             // 
+            this.tenSanPham.DataPropertyName = "Tên Sản Phẩm";
             this.tenSanPham.HeaderText = "Tên sản phẩm";
             this.tenSanPham.MinimumWidth = 6;
             this.tenSanPham.Name = "tenSanPham";
             this.tenSanPham.ReadOnly = true;
             this.tenSanPham.Width = 200;
             // 
-            // giaBan
-            // 
-            this.giaBan.HeaderText = "Giá bán";
-            this.giaBan.MinimumWidth = 6;
-            this.giaBan.Name = "giaBan";
-            this.giaBan.ReadOnly = true;
-            this.giaBan.Width = 150;
-            // 
             // soLuong
             // 
+            this.soLuong.DataPropertyName = "Số Lượng Bán";
             this.soLuong.HeaderText = "Số lượng bán";
             this.soLuong.MinimumWidth = 6;
             this.soLuong.Name = "soLuong";
@@ -116,6 +119,7 @@
             // 
             // tongTien
             // 
+            this.tongTien.DataPropertyName = "Tổng Doanh Thu";
             this.tongTien.HeaderText = "Tổng tiền";
             this.tongTien.MinimumWidth = 6;
             this.tongTien.Name = "tongTien";
@@ -130,6 +134,7 @@
             this.Name = "FormChiTietDoanhThu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết doanh thu";
+            this.Load += new System.EventHandler(this.FormChiTietDoanhThu_Load);
             this.gbDoanhThu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvDoanhThu)).EndInit();
             this.ResumeLayout(false);
@@ -140,8 +145,8 @@
 
         private Guna.UI2.WinForms.Guna2GroupBox gbDoanhThu;
         private System.Windows.Forms.DataGridView gvDoanhThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenSanPham;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn tongTien;
     }
