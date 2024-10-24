@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhanVien));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbThongTin = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtLuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLuong = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -641,7 +642,10 @@
             this.gvNhanVien.Name = "gvNhanVien";
             this.gvNhanVien.ReadOnly = true;
             this.gvNhanVien.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Green;
+            this.gvNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.gvNhanVien.RowTemplate.Height = 24;
+            this.gvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvNhanVien.Size = new System.Drawing.Size(964, 204);
             this.gvNhanVien.TabIndex = 2;
             this.gvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvNhanVien_CellClick);

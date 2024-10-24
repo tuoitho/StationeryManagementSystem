@@ -32,8 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbNhapHang = new Guna.UI2.WinForms.Guna2GroupBox();
             this.gvNhapHang = new System.Windows.Forms.DataGridView();
+            this.maSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbNhapHang.SuspendLayout();
@@ -69,8 +69,8 @@
             this.gvNhapHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvNhapHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvNhapHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maSP,
             this.tenSanPham,
-            this.giaNhap,
             this.soLuong,
             this.thanhToan});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -90,24 +90,27 @@
             this.gvNhapHang.Size = new System.Drawing.Size(620, 230);
             this.gvNhapHang.TabIndex = 57;
             // 
+            // maSP
+            // 
+            this.maSP.DataPropertyName = "Mã Sản Phẩm";
+            this.maSP.HeaderText = "Mã sản phẩm";
+            this.maSP.MinimumWidth = 6;
+            this.maSP.Name = "maSP";
+            this.maSP.ReadOnly = true;
+            this.maSP.Width = 170;
+            // 
             // tenSanPham
             // 
+            this.tenSanPham.DataPropertyName = "Tên Sản Phẩm";
             this.tenSanPham.HeaderText = "Tên sản phẩm";
             this.tenSanPham.MinimumWidth = 6;
             this.tenSanPham.Name = "tenSanPham";
             this.tenSanPham.ReadOnly = true;
             this.tenSanPham.Width = 200;
             // 
-            // giaNhap
-            // 
-            this.giaNhap.HeaderText = "Giá nhập";
-            this.giaNhap.MinimumWidth = 6;
-            this.giaNhap.Name = "giaNhap";
-            this.giaNhap.ReadOnly = true;
-            this.giaNhap.Width = 150;
-            // 
             // soLuong
             // 
+            this.soLuong.DataPropertyName = "Số Lượng Nhập";
             this.soLuong.HeaderText = "Số lượng";
             this.soLuong.MinimumWidth = 6;
             this.soLuong.Name = "soLuong";
@@ -116,6 +119,7 @@
             // 
             // thanhToan
             // 
+            this.thanhToan.DataPropertyName = "Tổng Tiền Nhập";
             this.thanhToan.HeaderText = "Tổng thanh toán";
             this.thanhToan.MinimumWidth = 6;
             this.thanhToan.Name = "thanhToan";
@@ -130,6 +134,7 @@
             this.Name = "FormChiTietNhapHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết nhập hàng";
+            this.Load += new System.EventHandler(this.FormChiTietNhapHang_Load);
             this.gbNhapHang.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvNhapHang)).EndInit();
             this.ResumeLayout(false);
@@ -140,8 +145,8 @@
 
         private Guna.UI2.WinForms.Guna2GroupBox gbNhapHang;
         private System.Windows.Forms.DataGridView gvNhapHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenSanPham;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giaNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn thanhToan;
     }

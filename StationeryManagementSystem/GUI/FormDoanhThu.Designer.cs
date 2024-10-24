@@ -38,6 +38,7 @@
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 60D);
             this.pnChiPhi = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtChiTieu = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnTieuDeCP = new Guna.UI2.WinForms.Guna2Panel();
             this.pbChTieu = new System.Windows.Forms.PictureBox();
@@ -46,15 +47,16 @@
             this.lblThang = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dpLoc = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.pnLoiNhuan = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtLoiNhuan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtDoanhThu = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.pbLoiNhuan = new System.Windows.Forms.PictureBox();
             this.lblDoanhThu = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnBieuDoChiPhi = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblVND1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblChiTietLuong = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblChiTietNhapHang = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblVND2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblVND1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTraLuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTraLuong = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtNhapHang = new Guna.UI2.WinForms.Guna2TextBox();
@@ -62,11 +64,11 @@
             this.pnBieuDoLoiNhuan = new Guna.UI2.WinForms.Guna2Panel();
             this.lblChiTietDoanhThu = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblVND3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTienLai = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.chartDoanhThu = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lnlLoiNhuan = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtLoiNhua = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtLoiNhuan = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblVND4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnChiPhi.SuspendLayout();
             this.pnTieuDeCP.SuspendLayout();
@@ -85,6 +87,7 @@
             this.pnChiPhi.BorderColor = System.Drawing.Color.Teal;
             this.pnChiPhi.BorderRadius = 10;
             this.pnChiPhi.BorderThickness = 2;
+            this.pnChiPhi.Controls.Add(this.guna2HtmlLabel1);
             this.pnChiPhi.Controls.Add(this.txtChiTieu);
             this.pnChiPhi.Controls.Add(this.pnTieuDeCP);
             this.pnChiPhi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -93,6 +96,17 @@
             this.pnChiPhi.Name = "pnChiPhi";
             this.pnChiPhi.Size = new System.Drawing.Size(264, 106);
             this.pnChiPhi.TabIndex = 35;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Teal;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(210, 61);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(41, 26);
+            this.guna2HtmlLabel1.TabIndex = 47;
+            this.guna2HtmlLabel1.Text = "VND";
             // 
             // txtChiTieu
             // 
@@ -115,7 +129,7 @@
             this.txtChiTieu.PlaceholderText = "";
             this.txtChiTieu.ReadOnly = true;
             this.txtChiTieu.SelectedText = "";
-            this.txtChiTieu.Size = new System.Drawing.Size(226, 36);
+            this.txtChiTieu.Size = new System.Drawing.Size(191, 36);
             this.txtChiTieu.TabIndex = 37;
             // 
             // pnTieuDeCP
@@ -207,14 +221,16 @@
             this.dpLoc.Name = "dpLoc";
             this.dpLoc.Size = new System.Drawing.Size(161, 36);
             this.dpLoc.TabIndex = 32;
-            this.dpLoc.Value = new System.DateTime(2024, 10, 12, 12, 6, 59, 0);
+            this.dpLoc.Value = new System.DateTime(2024, 10, 24, 0, 0, 0, 0);
+            this.dpLoc.ValueChanged += new System.EventHandler(this.dpLoc_ValueChanged);
             // 
             // pnLoiNhuan
             // 
             this.pnLoiNhuan.BorderColor = System.Drawing.Color.Teal;
             this.pnLoiNhuan.BorderRadius = 10;
             this.pnLoiNhuan.BorderThickness = 2;
-            this.pnLoiNhuan.Controls.Add(this.txtLoiNhuan);
+            this.pnLoiNhuan.Controls.Add(this.guna2HtmlLabel2);
+            this.pnLoiNhuan.Controls.Add(this.txtDoanhThu);
             this.pnLoiNhuan.Controls.Add(this.guna2Panel2);
             this.pnLoiNhuan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnLoiNhuan.ForeColor = System.Drawing.Color.Teal;
@@ -223,29 +239,40 @@
             this.pnLoiNhuan.Size = new System.Drawing.Size(264, 106);
             this.pnLoiNhuan.TabIndex = 38;
             // 
-            // txtLoiNhuan
+            // guna2HtmlLabel2
             // 
-            this.txtLoiNhuan.BorderColor = System.Drawing.Color.Teal;
-            this.txtLoiNhuan.BorderRadius = 10;
-            this.txtLoiNhuan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLoiNhuan.DefaultText = "";
-            this.txtLoiNhuan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtLoiNhuan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtLoiNhuan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLoiNhuan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLoiNhuan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLoiNhuan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoiNhuan.ForeColor = System.Drawing.Color.Teal;
-            this.txtLoiNhuan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLoiNhuan.Location = new System.Drawing.Point(13, 51);
-            this.txtLoiNhuan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtLoiNhuan.Name = "txtLoiNhuan";
-            this.txtLoiNhuan.PasswordChar = '\0';
-            this.txtLoiNhuan.PlaceholderText = "";
-            this.txtLoiNhuan.ReadOnly = true;
-            this.txtLoiNhuan.SelectedText = "";
-            this.txtLoiNhuan.Size = new System.Drawing.Size(226, 36);
-            this.txtLoiNhuan.TabIndex = 37;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Teal;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(209, 61);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(41, 26);
+            this.guna2HtmlLabel2.TabIndex = 48;
+            this.guna2HtmlLabel2.Text = "VND";
+            // 
+            // txtDoanhThu
+            // 
+            this.txtDoanhThu.BorderColor = System.Drawing.Color.Teal;
+            this.txtDoanhThu.BorderRadius = 10;
+            this.txtDoanhThu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDoanhThu.DefaultText = "";
+            this.txtDoanhThu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDoanhThu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDoanhThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDoanhThu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDoanhThu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDoanhThu.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDoanhThu.ForeColor = System.Drawing.Color.Teal;
+            this.txtDoanhThu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDoanhThu.Location = new System.Drawing.Point(13, 51);
+            this.txtDoanhThu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDoanhThu.Name = "txtDoanhThu";
+            this.txtDoanhThu.PasswordChar = '\0';
+            this.txtDoanhThu.PlaceholderText = "";
+            this.txtDoanhThu.ReadOnly = true;
+            this.txtDoanhThu.SelectedText = "";
+            this.txtDoanhThu.Size = new System.Drawing.Size(190, 36);
+            this.txtDoanhThu.TabIndex = 37;
             // 
             // guna2Panel2
             // 
@@ -283,10 +310,10 @@
             this.pnBieuDoChiPhi.BorderColor = System.Drawing.Color.Teal;
             this.pnBieuDoChiPhi.BorderRadius = 10;
             this.pnBieuDoChiPhi.BorderThickness = 2;
+            this.pnBieuDoChiPhi.Controls.Add(this.lblVND1);
             this.pnBieuDoChiPhi.Controls.Add(this.lblChiTietLuong);
             this.pnBieuDoChiPhi.Controls.Add(this.lblChiTietNhapHang);
             this.pnBieuDoChiPhi.Controls.Add(this.lblVND2);
-            this.pnBieuDoChiPhi.Controls.Add(this.lblVND1);
             this.pnBieuDoChiPhi.Controls.Add(this.txtTraLuong);
             this.pnBieuDoChiPhi.Controls.Add(this.lblTraLuong);
             this.pnBieuDoChiPhi.Controls.Add(this.txtNhapHang);
@@ -298,6 +325,17 @@
             this.pnBieuDoChiPhi.Name = "pnBieuDoChiPhi";
             this.pnBieuDoChiPhi.Size = new System.Drawing.Size(524, 457);
             this.pnBieuDoChiPhi.TabIndex = 38;
+            // 
+            // lblVND1
+            // 
+            this.lblVND1.BackColor = System.Drawing.Color.Transparent;
+            this.lblVND1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVND1.ForeColor = System.Drawing.Color.Teal;
+            this.lblVND1.Location = new System.Drawing.Point(337, 331);
+            this.lblVND1.Name = "lblVND1";
+            this.lblVND1.Size = new System.Drawing.Size(41, 26);
+            this.lblVND1.TabIndex = 46;
+            this.lblVND1.Text = "VND";
             // 
             // lblChiTietLuong
             // 
@@ -333,17 +371,6 @@
             this.lblVND2.Size = new System.Drawing.Size(41, 26);
             this.lblVND2.TabIndex = 42;
             this.lblVND2.Text = "VND";
-            // 
-            // lblVND1
-            // 
-            this.lblVND1.BackColor = System.Drawing.Color.Transparent;
-            this.lblVND1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVND1.ForeColor = System.Drawing.Color.Teal;
-            this.lblVND1.Location = new System.Drawing.Point(337, 331);
-            this.lblVND1.Name = "lblVND1";
-            this.lblVND1.Size = new System.Drawing.Size(41, 26);
-            this.lblVND1.TabIndex = 41;
-            this.lblVND1.Text = "VND";
             // 
             // txtTraLuong
             // 
@@ -422,7 +449,7 @@
             this.pnBieuDoLoiNhuan.BorderThickness = 2;
             this.pnBieuDoLoiNhuan.Controls.Add(this.lblChiTietDoanhThu);
             this.pnBieuDoLoiNhuan.Controls.Add(this.lblVND3);
-            this.pnBieuDoLoiNhuan.Controls.Add(this.guna2TextBox2);
+            this.pnBieuDoLoiNhuan.Controls.Add(this.txtDT);
             this.pnBieuDoLoiNhuan.Controls.Add(this.lblTienLai);
             this.pnBieuDoLoiNhuan.Controls.Add(this.chartDoanhThu);
             this.pnBieuDoLoiNhuan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -455,29 +482,29 @@
             this.lblVND3.TabIndex = 41;
             this.lblVND3.Text = "VND";
             // 
-            // guna2TextBox2
+            // txtDT
             // 
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.Teal;
-            this.guna2TextBox2.BorderRadius = 10;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Teal;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(27, 321);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.ReadOnly = true;
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(304, 36);
-            this.guna2TextBox2.TabIndex = 38;
+            this.txtDT.BorderColor = System.Drawing.Color.Teal;
+            this.txtDT.BorderRadius = 10;
+            this.txtDT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDT.DefaultText = "";
+            this.txtDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDT.ForeColor = System.Drawing.Color.Teal;
+            this.txtDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDT.Location = new System.Drawing.Point(27, 321);
+            this.txtDT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDT.Name = "txtDT";
+            this.txtDT.PasswordChar = '\0';
+            this.txtDT.PlaceholderText = "";
+            this.txtDT.ReadOnly = true;
+            this.txtDT.SelectedText = "";
+            this.txtDT.Size = new System.Drawing.Size(304, 36);
+            this.txtDT.TabIndex = 38;
             // 
             // lblTienLai
             // 
@@ -527,29 +554,29 @@
             this.lnlLoiNhuan.TabIndex = 42;
             this.lnlLoiNhuan.Text = "Lợi nhuận";
             // 
-            // txtLoiNhua
+            // txtLoiNhuan
             // 
-            this.txtLoiNhua.BorderColor = System.Drawing.Color.Teal;
-            this.txtLoiNhua.BorderRadius = 10;
-            this.txtLoiNhua.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLoiNhua.DefaultText = "";
-            this.txtLoiNhua.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtLoiNhua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtLoiNhua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLoiNhua.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLoiNhua.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLoiNhua.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoiNhua.ForeColor = System.Drawing.Color.Teal;
-            this.txtLoiNhua.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLoiNhua.Location = new System.Drawing.Point(203, 681);
-            this.txtLoiNhua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtLoiNhua.Name = "txtLoiNhua";
-            this.txtLoiNhua.PasswordChar = '\0';
-            this.txtLoiNhua.PlaceholderText = "";
-            this.txtLoiNhua.ReadOnly = true;
-            this.txtLoiNhua.SelectedText = "";
-            this.txtLoiNhua.Size = new System.Drawing.Size(304, 36);
-            this.txtLoiNhua.TabIndex = 42;
+            this.txtLoiNhuan.BorderColor = System.Drawing.Color.Teal;
+            this.txtLoiNhuan.BorderRadius = 10;
+            this.txtLoiNhuan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLoiNhuan.DefaultText = "";
+            this.txtLoiNhuan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLoiNhuan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLoiNhuan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLoiNhuan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLoiNhuan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLoiNhuan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoiNhuan.ForeColor = System.Drawing.Color.Teal;
+            this.txtLoiNhuan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLoiNhuan.Location = new System.Drawing.Point(203, 681);
+            this.txtLoiNhuan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtLoiNhuan.Name = "txtLoiNhuan";
+            this.txtLoiNhuan.PasswordChar = '\0';
+            this.txtLoiNhuan.PlaceholderText = "";
+            this.txtLoiNhuan.ReadOnly = true;
+            this.txtLoiNhuan.SelectedText = "";
+            this.txtLoiNhuan.Size = new System.Drawing.Size(304, 36);
+            this.txtLoiNhuan.TabIndex = 42;
             // 
             // lblVND4
             // 
@@ -567,7 +594,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1294, 760);
             this.Controls.Add(this.lblVND4);
-            this.Controls.Add(this.txtLoiNhua);
+            this.Controls.Add(this.txtLoiNhuan);
             this.Controls.Add(this.lnlLoiNhuan);
             this.Controls.Add(this.pnBieuDoLoiNhuan);
             this.Controls.Add(this.pnBieuDoChiPhi);
@@ -579,11 +606,13 @@
             this.Text = "FormDoanhThu";
             this.Load += new System.EventHandler(this.FormDoanhThu_Load);
             this.pnChiPhi.ResumeLayout(false);
+            this.pnChiPhi.PerformLayout();
             this.pnTieuDeCP.ResumeLayout(false);
             this.pnTieuDeCP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbChTieu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartChiPhi)).EndInit();
             this.pnLoiNhuan.ResumeLayout(false);
+            this.pnLoiNhuan.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoiNhuan)).EndInit();
@@ -608,27 +637,29 @@
         private System.Windows.Forms.PictureBox pbChTieu;
         private Guna.UI2.WinForms.Guna2TextBox txtChiTieu;
         private Guna.UI2.WinForms.Guna2Panel pnLoiNhuan;
-        private Guna.UI2.WinForms.Guna2TextBox txtLoiNhuan;
+        private Guna.UI2.WinForms.Guna2TextBox txtDoanhThu;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.PictureBox pbLoiNhuan;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDoanhThu;
         private Guna.UI2.WinForms.Guna2Panel pnBieuDoChiPhi;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblVND2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblVND1;
         private Guna.UI2.WinForms.Guna2TextBox txtTraLuong;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTraLuong;
         private Guna.UI2.WinForms.Guna2TextBox txtNhapHang;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblNhapHang;
         private Guna.UI2.WinForms.Guna2Panel pnBieuDoLoiNhuan;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblVND3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtDT;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTienLai;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartDoanhThu;
         private Guna.UI2.WinForms.Guna2HtmlLabel lnlLoiNhuan;
-        private Guna.UI2.WinForms.Guna2TextBox txtLoiNhua;
+        private Guna.UI2.WinForms.Guna2TextBox txtLoiNhuan;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblVND4;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblChiTietLuong;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblChiTietNhapHang;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblChiTietDoanhThu;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblVND1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
     }
 }

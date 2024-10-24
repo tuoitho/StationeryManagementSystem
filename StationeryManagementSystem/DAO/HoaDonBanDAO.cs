@@ -22,6 +22,22 @@ namespace StationeryManagementSystem.DAO
                 return dt;
             }
         }
+
+        public static DataTable DoanhThuTrongThang(int thang, int nam)
+        {
+            using (SqlCommand cmd = new SqlCommand("select * from fn_DoanhThuBanHangTheoThang(@Thang, @Nam)", MyDB.GetConnection))
+            {
+                MyDB.OpenConnection();
+                cmd.Parameters.AddWithValue("@Thang", thang);
+                cmd.Parameters.AddWithValue("@nam", nam);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                MyDB.CloseConnection();
+                return dt;
+            }
+        }
+
         public static DataTable insert(int maNV, int maKH)
         {
             using (SqlCommand cmd = new SqlCommand("exec sp_ThemHoaDonBan @maNV,@maKH", MyDB.GetConnection))

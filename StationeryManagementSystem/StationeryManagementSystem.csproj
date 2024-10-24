@@ -93,12 +93,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\ChiPhiDAO.cs" />
     <Compile Include="DAO\ChiTietHDBDAO.cs" />
     <Compile Include="DAO\ClhiTietHDNDAO.cs" />
+    <Compile Include="DAO\DoanhThuDAO.cs" />
     <Compile Include="DAO\HoaDonBanDAO.cs" />
     <Compile Include="DAO\HoaDonNhapDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\LoaiSanPhamDAO.cs" />
+    <Compile Include="DAO\LuongDAO.cs" />
     <Compile Include="DAO\NhaCungCapDAO.cs" />
     <Compile Include="DAO\PhanCaDAO.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
