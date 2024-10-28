@@ -137,10 +137,10 @@ namespace StationeryManagementSystem
             DateTime dps = dpStart.Value;
             DateTime dpe = dpEnd.Value;
 
-            DataTable dt = (DataTable)gvHD.DataSource;
+            //DataTable dt = (DataTable)gvHD.DataSource;
 
-            dt.DefaultView.RowFilter = "[Ngày Lập] >= #" + dps.ToString("MM/dd/yyyy") + "# AND [Ngày Lập] <= #" + dpe.ToString("MM/dd/yyyy") + "#";
-            gvSP.DataSource = dt;
+            //dt.DefaultView.RowFilter = "[Ngày Lập] >= #" + dps.ToString("MM/dd/yyyy") + "# AND [Ngày Lập] <= #" + dpe.ToString("MM/dd/yyyy") + "#";
+            gvHD.DataSource = CommonDAO.searchHoaDon(dps, dpe, false);
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -155,12 +155,8 @@ namespace StationeryManagementSystem
                 try
                 {
                     int maHD = int.Parse(txtMaHD.Text);
-                    HoaDonBanDAO.delete(maHD);
+                    CommonDAO.deleteRecord("HoaDonBan", "MaHoaDonBan", maHD);
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (FormatException)
-                {
-                    MessageBox.Show("Chọn hóa đơn để xóa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (Exception ex)
                 {
@@ -246,13 +242,13 @@ namespace StationeryManagementSystem
                 return;
             }
             int maHD = int.Parse(txtMaHD.Text);
-            string trangThaiThanhToan = gvHD.CurrentRow.Cells["trangThaiThanhToan"].Value.ToString();
+            //string trangThaiThanhToan = gvHD.CurrentRow.Cells["trangThaiThanhToan"].Value.ToString();
 
-            if (trangThaiThanhToan == "Đã thanh toán")
-            {
-                MessageBox.Show("Không thể xóa sản phẩm khỏi hóa đơn đã thanh toán.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            //if (trangThaiThanhToan == "Đã thanh toán")
+            //{
+            //    MessageBox.Show("Không thể xóa sản phẩm khỏi hóa đơn đã thanh toán.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
 
             try
             {

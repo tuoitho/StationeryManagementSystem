@@ -96,6 +96,7 @@
     <Compile Include="DAO\ChiPhiDAO.cs" />
     <Compile Include="DAO\ChiTietHDBDAO.cs" />
     <Compile Include="DAO\ClhiTietHDNDAO.cs" />
+    <Compile Include="DAO\CommonDAO.cs" />
     <Compile Include="DAO\DoanhThuDAO.cs" />
     <Compile Include="DAO\HoaDonBanDAO.cs" />
     <Compile Include="DAO\HoaDonNhapDAO.cs" />

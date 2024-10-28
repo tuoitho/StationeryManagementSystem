@@ -23,16 +23,16 @@ namespace StationeryManagementSystem.DAO
             }
         }
 
-        internal static void delete(int maSP)
-        {
-            using (SqlCommand cmd = new SqlCommand("exec sp_XoaSanPham @maSP", MyDB.GetConnection))
-            {
-                cmd.Parameters.AddWithValue("@maSP", SqlDbType.Int).Value = maSP;
-                MyDB.OpenConnection();
-                cmd.ExecuteNonQuery();
-                MyDB.CloseConnection();
-            }
-        }
+        //internal static void delete(int maSP)
+        //{
+        //    using (SqlCommand cmd = new SqlCommand("exec sp_XoaSanPham @maSP", MyDB.GetConnection))
+        //    {
+        //        cmd.Parameters.AddWithValue("@maSP", SqlDbType.Int).Value = maSP;
+        //        MyDB.OpenConnection();
+        //        cmd.ExecuteNonQuery();
+        //        MyDB.CloseConnection();
+        //    }
+        //}
 
         internal static DataTable getXemSoLuongSanPhamDaBanTrongNgay(DateTime dateTime)
         {

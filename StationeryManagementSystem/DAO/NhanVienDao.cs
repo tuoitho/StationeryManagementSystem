@@ -60,16 +60,17 @@ namespace StationeryManagementSystem.DAO
             }
             MyDB.CloseConnection();
         }
-        public static void delete(int maNV)
-        {
-            MyDB.OpenConnection();
-            using (SqlCommand cmd = new SqlCommand("exec sp_XoaNhanVien @MaNV", MyDB.GetConnection))
-            {
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@MaNV", SqlDbType.Int).Value = maNV;
-                cmd.ExecuteNonQuery();
-            }
-            MyDB.CloseConnection();
-        }
+        //public static void delete(int maNV)
+        //{
+        //    MyDB.OpenConnection();
+        //    using (SqlCommand cmd = new SqlCommand("exec sp_XoaNhanVien @MaNV", MyDB.GetConnection))
+        //    {
+        //        cmd.CommandType = CommandType.Text;
+        //        cmd.Parameters.AddWithValue("@MaNV", SqlDbType.Int).Value = maNV;
+        //        cmd.ExecuteNonQuery();
+        //    }
+        //    MyDB.CloseConnection();
+        //}
+        
     }
 }

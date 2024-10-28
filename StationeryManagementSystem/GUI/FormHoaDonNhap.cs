@@ -107,10 +107,11 @@ namespace StationeryManagementSystem.GUI
             DateTime dps = dpStart.Value;
             DateTime dpe = dpEnd.Value;
 
-            DataTable dt = (DataTable)gvHD.DataSource;
+            //DataTable dt = (DataTable)gvHD.DataSource;
 
-            dt.DefaultView.RowFilter = "[Ngày Lập] >= #" + dps.ToString("MM/dd/yyyy") + "# AND [Ngày Lập] <= #" + dpe.ToString("MM/dd/yyyy") + "#";
-            gvSP.DataSource = dt;
+            //dt.DefaultView.RowFilter = "[Ngày Lập] >= #" + dps.ToString("MM/dd/yyyy") + "# AND [Ngày Lập] <= #" + dpe.ToString("MM/dd/yyyy") + "#";
+            //gvSP.DataSource = dt;
+            gvHD.DataSource = CommonDAO.searchHoaDon(dps, dpe, true);
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -125,7 +126,7 @@ namespace StationeryManagementSystem.GUI
                 try
                 {
                     int maHD = int.Parse(txtMaHD.Text);
-                    HoaDonNhapDAO.delete(maHD);
+                    CommonDAO.deleteRecord("HoaDonNhap", "MaHoaDonNhap", maHD);
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (FormatException)
