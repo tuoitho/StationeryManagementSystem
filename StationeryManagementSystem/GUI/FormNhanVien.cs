@@ -127,7 +127,6 @@ namespace StationeryManagementSystem
                 int maNV = int.Parse(txtMaNV.Text);
                 try
                 {
-                    //NhanVienDAO.delete(maNV);
                     CommonDAO.deleteRecord("NhanVien", "MaNhanVien", maNV);
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

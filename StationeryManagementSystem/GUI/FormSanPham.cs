@@ -169,7 +169,7 @@ namespace StationeryManagementSystem
             try
             {
                 int maSP = int.Parse(txtMaSP.Text);
-                SanPhamDAO.delete(maSP);
+                CommonDAO.deleteRecord("SanPham", "MaSanPham", maSP);
                 gvSP.DataSource = SanPhamDAO.findAll();
                 MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

@@ -103,7 +103,7 @@ namespace StationeryManagementSystem.GUI
                 int maNhaCungCap = int.Parse(txtMaNCC.Text);
                 try
                 {
-                    NhaCungCapDAO.delete(maNhaCungCap);
+                    CommonDAO.deleteRecord("NhaCungCap", "MaNhaCungCap", maNhaCungCap);
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)

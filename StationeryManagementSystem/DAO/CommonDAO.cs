@@ -79,5 +79,22 @@ namespace StationeryManagementSystem.DAO
                 MyDB.CloseConnection();
             }
         }
+//        ---RESTORE
+//CREATE PROCEDURE sp_KhoiPhuc
+//    @tableName NVARCHAR(128),
+//    @recordID INT
+//AS
+        public static void restore(String tableName, int recordID)
+        {
+            using (SqlCommand cmd = new SqlCommand("exec sp_KhoiPhuc @tableName, @recordID", MyDB.GetConnection))
+            {
+                cmd.Parameters.AddWithValue("@tableName", SqlDbType.NVarChar).Value = tableName;
+                cmd.Parameters.AddWithValue("@recordID", SqlDbType.Int).Value = recordID;
+                MyDB.OpenConnection();
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteNonQuery();
+                MyDB.CloseConnection();
+            }
+        }
     }
 }

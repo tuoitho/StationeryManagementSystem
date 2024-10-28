@@ -47,16 +47,16 @@ namespace StationeryManagementSystem.DAO
             }
             MyDB.CloseConnection();
         }
-        public static void delete(int maKH)
-        {
-            MyDB.OpenConnection();
-            using (SqlCommand cmd = new SqlCommand("exec sp_XoaKhachHang @MaKH", MyDB.GetConnection))
-            {
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@MaKH", SqlDbType.Int).Value = maKH;
-                cmd.ExecuteNonQuery();
-            }
-            MyDB.CloseConnection();
-        }
+        //public static void delete(int maKH)
+        //{
+        //    MyDB.OpenConnection();
+        //    using (SqlCommand cmd = new SqlCommand("exec sp_XoaKhachHang @MaKH", MyDB.GetConnection))
+        //    {
+        //        cmd.CommandType = CommandType.Text;
+        //        cmd.Parameters.AddWithValue("@MaKH", SqlDbType.Int).Value = maKH;
+        //        cmd.ExecuteNonQuery();
+        //    }
+        //    MyDB.CloseConnection();
+        //}
     }
 }
