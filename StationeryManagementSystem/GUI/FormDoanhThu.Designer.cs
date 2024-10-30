@@ -92,7 +92,7 @@
             this.pnChiPhi.Controls.Add(this.pnTieuDeCP);
             this.pnChiPhi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnChiPhi.ForeColor = System.Drawing.Color.Teal;
-            this.pnChiPhi.Location = new System.Drawing.Point(251, 72);
+            this.pnChiPhi.Location = new System.Drawing.Point(148, 66);
             this.pnChiPhi.Name = "pnChiPhi";
             this.pnChiPhi.Size = new System.Drawing.Size(264, 106);
             this.pnChiPhi.TabIndex = 35;
@@ -171,7 +171,7 @@
             this.chartChiPhi.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartChiPhi.Legends.Add(legend1);
-            this.chartChiPhi.Location = new System.Drawing.Point(27, 14);
+            this.chartChiPhi.Location = new System.Drawing.Point(27, 13);
             this.chartChiPhi.Name = "chartChiPhi";
             series1.BorderColor = System.Drawing.SystemColors.Control;
             series1.ChartArea = "ChartArea1";
@@ -197,7 +197,7 @@
             this.lblThang.BackColor = System.Drawing.Color.Transparent;
             this.lblThang.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThang.ForeColor = System.Drawing.Color.Teal;
-            this.lblThang.Location = new System.Drawing.Point(547, 38);
+            this.lblThang.Location = new System.Drawing.Point(438, 32);
             this.lblThang.Name = "lblThang";
             this.lblThang.Size = new System.Drawing.Size(54, 26);
             this.lblThang.TabIndex = 33;
@@ -215,7 +215,7 @@
             this.dpLoc.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dpLoc.ForeColor = System.Drawing.Color.Teal;
             this.dpLoc.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dpLoc.Location = new System.Drawing.Point(607, 28);
+            this.dpLoc.Location = new System.Drawing.Point(498, 22);
             this.dpLoc.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dpLoc.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dpLoc.Name = "dpLoc";
@@ -234,7 +234,7 @@
             this.pnLoiNhuan.Controls.Add(this.guna2Panel2);
             this.pnLoiNhuan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnLoiNhuan.ForeColor = System.Drawing.Color.Teal;
-            this.pnLoiNhuan.Location = new System.Drawing.Point(821, 72);
+            this.pnLoiNhuan.Location = new System.Drawing.Point(709, 66);
             this.pnLoiNhuan.Name = "pnLoiNhuan";
             this.pnLoiNhuan.Size = new System.Drawing.Size(264, 106);
             this.pnLoiNhuan.TabIndex = 38;
@@ -321,9 +321,9 @@
             this.pnBieuDoChiPhi.Controls.Add(this.chartChiPhi);
             this.pnBieuDoChiPhi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnBieuDoChiPhi.ForeColor = System.Drawing.Color.Teal;
-            this.pnBieuDoChiPhi.Location = new System.Drawing.Point(108, 202);
+            this.pnBieuDoChiPhi.Location = new System.Drawing.Point(25, 196);
             this.pnBieuDoChiPhi.Name = "pnBieuDoChiPhi";
-            this.pnBieuDoChiPhi.Size = new System.Drawing.Size(524, 457);
+            this.pnBieuDoChiPhi.Size = new System.Drawing.Size(483, 457);
             this.pnBieuDoChiPhi.TabIndex = 38;
             // 
             // lblVND1
@@ -331,7 +331,7 @@
             this.lblVND1.BackColor = System.Drawing.Color.Transparent;
             this.lblVND1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVND1.ForeColor = System.Drawing.Color.Teal;
-            this.lblVND1.Location = new System.Drawing.Point(337, 331);
+            this.lblVND1.Location = new System.Drawing.Point(298, 331);
             this.lblVND1.Name = "lblVND1";
             this.lblVND1.Size = new System.Drawing.Size(41, 26);
             this.lblVND1.TabIndex = 46;
@@ -342,7 +342,7 @@
             this.lblChiTietLuong.BackColor = System.Drawing.Color.Transparent;
             this.lblChiTietLuong.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChiTietLuong.ForeColor = System.Drawing.Color.Teal;
-            this.lblChiTietLuong.Location = new System.Drawing.Point(392, 407);
+            this.lblChiTietLuong.Location = new System.Drawing.Point(353, 407);
             this.lblChiTietLuong.Name = "lblChiTietLuong";
             this.lblChiTietLuong.Size = new System.Drawing.Size(101, 26);
             this.lblChiTietLuong.TabIndex = 45;
@@ -354,7 +354,7 @@
             this.lblChiTietNhapHang.BackColor = System.Drawing.Color.Transparent;
             this.lblChiTietNhapHang.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChiTietNhapHang.ForeColor = System.Drawing.Color.Teal;
-            this.lblChiTietNhapHang.Location = new System.Drawing.Point(392, 331);
+            this.lblChiTietNhapHang.Location = new System.Drawing.Point(353, 331);
             this.lblChiTietNhapHang.Name = "lblChiTietNhapHang";
             this.lblChiTietNhapHang.Size = new System.Drawing.Size(101, 26);
             this.lblChiTietNhapHang.TabIndex = 44;
@@ -366,7 +366,7 @@
             this.lblVND2.BackColor = System.Drawing.Color.Transparent;
             this.lblVND2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVND2.ForeColor = System.Drawing.Color.Teal;
-            this.lblVND2.Location = new System.Drawing.Point(337, 407);
+            this.lblVND2.Location = new System.Drawing.Point(298, 407);
             this.lblVND2.Name = "lblVND2";
             this.lblVND2.Size = new System.Drawing.Size(41, 26);
             this.lblVND2.TabIndex = 42;
@@ -393,7 +393,7 @@
             this.txtTraLuong.PlaceholderText = "";
             this.txtTraLuong.ReadOnly = true;
             this.txtTraLuong.SelectedText = "";
-            this.txtTraLuong.Size = new System.Drawing.Size(304, 36);
+            this.txtTraLuong.Size = new System.Drawing.Size(262, 36);
             this.txtTraLuong.TabIndex = 40;
             // 
             // lblTraLuong
@@ -428,7 +428,7 @@
             this.txtNhapHang.PlaceholderText = "";
             this.txtNhapHang.ReadOnly = true;
             this.txtNhapHang.SelectedText = "";
-            this.txtNhapHang.Size = new System.Drawing.Size(304, 36);
+            this.txtNhapHang.Size = new System.Drawing.Size(262, 36);
             this.txtNhapHang.TabIndex = 38;
             // 
             // lblNhapHang
@@ -454,9 +454,9 @@
             this.pnBieuDoLoiNhuan.Controls.Add(this.chartDoanhThu);
             this.pnBieuDoLoiNhuan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnBieuDoLoiNhuan.ForeColor = System.Drawing.Color.Teal;
-            this.pnBieuDoLoiNhuan.Location = new System.Drawing.Point(681, 202);
+            this.pnBieuDoLoiNhuan.Location = new System.Drawing.Point(563, 196);
             this.pnBieuDoLoiNhuan.Name = "pnBieuDoLoiNhuan";
-            this.pnBieuDoLoiNhuan.Size = new System.Drawing.Size(524, 457);
+            this.pnBieuDoLoiNhuan.Size = new System.Drawing.Size(492, 457);
             this.pnBieuDoLoiNhuan.TabIndex = 43;
             // 
             // lblChiTietDoanhThu
@@ -464,7 +464,7 @@
             this.lblChiTietDoanhThu.BackColor = System.Drawing.Color.Transparent;
             this.lblChiTietDoanhThu.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChiTietDoanhThu.ForeColor = System.Drawing.Color.Teal;
-            this.lblChiTietDoanhThu.Location = new System.Drawing.Point(395, 331);
+            this.lblChiTietDoanhThu.Location = new System.Drawing.Point(365, 331);
             this.lblChiTietDoanhThu.Name = "lblChiTietDoanhThu";
             this.lblChiTietDoanhThu.Size = new System.Drawing.Size(101, 26);
             this.lblChiTietDoanhThu.TabIndex = 46;
@@ -476,7 +476,7 @@
             this.lblVND3.BackColor = System.Drawing.Color.Transparent;
             this.lblVND3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVND3.ForeColor = System.Drawing.Color.Teal;
-            this.lblVND3.Location = new System.Drawing.Point(337, 331);
+            this.lblVND3.Location = new System.Drawing.Point(306, 331);
             this.lblVND3.Name = "lblVND3";
             this.lblVND3.Size = new System.Drawing.Size(41, 26);
             this.lblVND3.TabIndex = 41;
@@ -496,14 +496,14 @@
             this.txtDT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDT.ForeColor = System.Drawing.Color.Teal;
             this.txtDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDT.Location = new System.Drawing.Point(27, 321);
+            this.txtDT.Location = new System.Drawing.Point(28, 321);
             this.txtDT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDT.Name = "txtDT";
             this.txtDT.PasswordChar = '\0';
             this.txtDT.PlaceholderText = "";
             this.txtDT.ReadOnly = true;
             this.txtDT.SelectedText = "";
-            this.txtDT.Size = new System.Drawing.Size(304, 36);
+            this.txtDT.Size = new System.Drawing.Size(272, 36);
             this.txtDT.TabIndex = 38;
             // 
             // lblTienLai
@@ -548,7 +548,7 @@
             this.lnlLoiNhuan.BackColor = System.Drawing.Color.Transparent;
             this.lnlLoiNhuan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnlLoiNhuan.ForeColor = System.Drawing.Color.Teal;
-            this.lnlLoiNhuan.Location = new System.Drawing.Point(108, 691);
+            this.lnlLoiNhuan.Location = new System.Drawing.Point(25, 685);
             this.lnlLoiNhuan.Name = "lnlLoiNhuan";
             this.lnlLoiNhuan.Size = new System.Drawing.Size(88, 26);
             this.lnlLoiNhuan.TabIndex = 42;
@@ -568,7 +568,7 @@
             this.txtLoiNhuan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLoiNhuan.ForeColor = System.Drawing.Color.Teal;
             this.txtLoiNhuan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLoiNhuan.Location = new System.Drawing.Point(203, 681);
+            this.txtLoiNhuan.Location = new System.Drawing.Point(120, 675);
             this.txtLoiNhuan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLoiNhuan.Name = "txtLoiNhuan";
             this.txtLoiNhuan.PasswordChar = '\0';
@@ -583,7 +583,7 @@
             this.lblVND4.BackColor = System.Drawing.Color.Transparent;
             this.lblVND4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVND4.ForeColor = System.Drawing.Color.Teal;
-            this.lblVND4.Location = new System.Drawing.Point(513, 691);
+            this.lblVND4.Location = new System.Drawing.Point(430, 685);
             this.lblVND4.Name = "lblVND4";
             this.lblVND4.Size = new System.Drawing.Size(41, 26);
             this.lblVND4.TabIndex = 42;
@@ -592,7 +592,7 @@
             // FormDoanhThu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1294, 760);
+            this.ClientSize = new System.Drawing.Size(1082, 733);
             this.Controls.Add(this.lblVND4);
             this.Controls.Add(this.txtLoiNhuan);
             this.Controls.Add(this.lnlLoiNhuan);

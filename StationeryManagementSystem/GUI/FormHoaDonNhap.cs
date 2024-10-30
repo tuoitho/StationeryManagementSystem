@@ -107,10 +107,6 @@ namespace StationeryManagementSystem.GUI
             DateTime dps = dpStart.Value;
             DateTime dpe = dpEnd.Value;
 
-            //DataTable dt = (DataTable)gvHD.DataSource;
-
-            //dt.DefaultView.RowFilter = "[Ngày Lập] >= #" + dps.ToString("MM/dd/yyyy") + "# AND [Ngày Lập] <= #" + dpe.ToString("MM/dd/yyyy") + "#";
-            //gvSP.DataSource = dt;
             gvHD.DataSource = CommonDAO.searchHoaDon(dps, dpe, true);
         }
 
@@ -126,7 +122,7 @@ namespace StationeryManagementSystem.GUI
                 try
                 {
                     int maHD = int.Parse(txtMaHD.Text);
-                    CommonDAO.deleteRecord("HoaDonNhap", "MaHoaDonNhap", maHD);
+                    CommonDAO.deleteRecord("HoaDonNhap", "MaHoaDonNhap", maHD); 
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (FormatException)
@@ -193,13 +189,13 @@ namespace StationeryManagementSystem.GUI
         private void cbMaNV_SelectedIndexChanged(object sender, EventArgs e)
         {
             gvSP.DataSource = null;
-            // txtTenNV.Text = 
+            
         }
 
         private void cbMaNCC_SelectedIndexChanged(object sender, EventArgs e)
         {
             gvSP.DataSource = null;
-            // txtTenKH.Text = 
+          
         }
 
         private void btnReloadSP_Click(object sender, EventArgs e)
@@ -215,8 +211,8 @@ namespace StationeryManagementSystem.GUI
                 MessageBox.Show("Chọn hóa đơn cần thêm sp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            FormThemSanPhamVaoHDN formThemSanPhamVaoHDB = new FormThemSanPhamVaoHDN(int.Parse(txtMaHD.Text));
-            formThemSanPhamVaoHDB.ShowDialog();
+            FormThemSanPhamVaoHDN formThemSanPhamVaoHDN = new FormThemSanPhamVaoHDN(int.Parse(txtMaHD.Text), int.Parse(cbMaNCC.Text));
+            formThemSanPhamVaoHDN.ShowDialog();
         }
 
         private void btnSuaSP_Click(object sender, EventArgs e)
@@ -230,8 +226,8 @@ namespace StationeryManagementSystem.GUI
             int maHD = int.Parse(txtMaHD.Text);
             int maNCC = int.Parse(cbMaNCC.Text);
             int maSP = int.Parse(gvSP.CurrentRow.Cells[0].Value.ToString());
-            FormThemSanPhamVaoHDN formThemSanPhamVaoHDB = new FormThemSanPhamVaoHDN(int.Parse(txtMaHD.Text), true, maSP, maNCC);
-            formThemSanPhamVaoHDB.ShowDialog();
+            FormThemSanPhamVaoHDN formThemSanPhamVaoHDN = new FormThemSanPhamVaoHDN(int.Parse(txtMaHD.Text), true, maSP, maNCC);
+            formThemSanPhamVaoHDN.ShowDialog();
         }
 
         private void gvSP_CellClick(object sender, DataGridViewCellEventArgs e)

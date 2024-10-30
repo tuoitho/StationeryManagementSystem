@@ -28,6 +28,7 @@ namespace StationeryManagementSystem.GUI
             this.isSua = true;
             this.maSP = maSP;
         }
+
         int maHD, maSP;
         bool isSua = false;
         bool isLoaded = false;
@@ -35,51 +36,7 @@ namespace StationeryManagementSystem.GUI
 
         private void txtSearh_TextChanged(object sender, EventArgs e)
         {
-            if (txtSearh.Text == "")
-            {
-                gvSP.DataSource = SanPhamDAO.findAll();
-                return;
-            }
-            String input = txtSearh.Text;
-            int maSP;
-            DataTable dt = (DataTable)gvSP.DataSource;
-            bool isNumber = int.TryParse(input, out maSP);  // Chuyển đổi chuỗi thành số (nếu có thể)
-            if (isNumber)
-            {
-                dt.DefaultView.RowFilter = string.Format("Mã SP = {0}", maSP);
-                gvSP.DataSource = dt;
-
-                //DataRow[] rows = dt.Select("Mã SP = " + maSP);
-                //if (rows.Length == 0)
-                //{
-                //    gvSP.DataSource = null;
-                //    return;
-                //}
-                //DataTable newDt = dt.Clone();
-                //foreach (DataRow row in rows)
-                //{
-                //    newDt.ImportRow(row);
-                //}
-                //gvSP.DataSource = newDt;
-            }
-            else
-            {
-                dt.DefaultView.RowFilter = string.Format("[Tên SP] like '%{0}%'", input);
-                gvSP.DataSource = dt;
-
-                //DataRow[] rows = dt.Select("[Tên SP] like '%" + input + "%'");
-                //if (rows.Length == 0 || dt is null)
-                //{
-                //    gvSP.DataSource = null;
-                //    return;
-                //}
-                //DataTable newDt = dt.Clone();
-                //foreach (DataRow row in rows)
-                //{
-                //    newDt.ImportRow(row);
-                //}
-                //gvSP.DataSource = newDt;
-            }
+            gvSP.DataSource = CommonDAO.search("SanPham", txtSearh.Text);
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)

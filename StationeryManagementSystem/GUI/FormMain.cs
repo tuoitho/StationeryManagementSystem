@@ -26,12 +26,10 @@ namespace StationeryManagementSystem
             ActivateButton(btnSender);
             activeForm = childForm;
             childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Size = new Size(800, 600);
-            childForm.Dock = DockStyle.Fill;
+            childForm.FormBorderStyle = FormBorderStyle.None; 
             this.panel_childForm.Controls.Add(childForm);
             this.panel_childForm.Tag = childForm;
-            this.panel_childForm.AutoScroll = true;
+            this.panel_childForm.AutoScroll = true; 
             childForm.BringToFront();
             childForm.Show();
             lblTiltle.Text = childForm.Text;
@@ -184,19 +182,23 @@ namespace StationeryManagementSystem
             if (!isCollapsed)
             {
                 panel_menu.Size = panel_menu.MinimumSize;
+
                 foreach (Control bt in panel_menu.Controls)
                 {
                     if (bt is RoundedButton)
                     {
-                        bt.Text = "";
+                        bt.Text = ""; 
                     }
                 }
+
+                panel_childForm.Location = new Point(panel_menu.Width, panel_childForm.Location.Y);
+
                 isCollapsed = true;
             }
             else
             {
                 panel_menu.Size = panel_menu.MaximumSize;
-                isCollapsed = false;
+
                 roundedButton_qltk.Text = "   Quản lý tài khoản";
                 roundedButton_qlnv.Text = "   Quản lý nhân viên";
                 roundedButton_lv.Text = "   Quản lý lịch làm việc";
@@ -207,6 +209,10 @@ namespace StationeryManagementSystem
                 roundedButton_qlkh.Text = "   Khách hàng";
                 roundedButton_qldt.Text = "   Thống kê";
                 roundedButton_thoat.Text = "   Thoát";
+
+                panel_childForm.Location = new Point(panel_menu.Width, panel_childForm.Location.Y);
+
+                isCollapsed = false;
             }
         }
     }

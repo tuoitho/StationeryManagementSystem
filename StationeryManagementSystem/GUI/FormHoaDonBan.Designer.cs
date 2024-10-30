@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnHoaDon = new Guna.UI2.WinForms.Guna2Panel();
             this.cbMaNV = new Guna.UI2.WinForms.Guna2ComboBox();
             this.gbSP = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -114,9 +114,9 @@
             this.pnHoaDon.Controls.Add(this.txtMaHD);
             this.pnHoaDon.Controls.Add(this.lblMaHD);
             this.pnHoaDon.ForeColor = System.Drawing.Color.Teal;
-            this.pnHoaDon.Location = new System.Drawing.Point(792, 21);
+            this.pnHoaDon.Location = new System.Drawing.Point(591, 12);
             this.pnHoaDon.Name = "pnHoaDon";
-            this.pnHoaDon.Size = new System.Drawing.Size(464, 770);
+            this.pnHoaDon.Size = new System.Drawing.Size(464, 704);
             this.pnHoaDon.TabIndex = 0;
             // 
             // cbMaNV
@@ -150,9 +150,9 @@
             this.gbSP.FillColor = System.Drawing.SystemColors.Control;
             this.gbSP.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbSP.ForeColor = System.Drawing.Color.White;
-            this.gbSP.Location = new System.Drawing.Point(27, 254);
+            this.gbSP.Location = new System.Drawing.Point(20, 236);
             this.gbSP.Name = "gbSP";
-            this.gbSP.Size = new System.Drawing.Size(427, 315);
+            this.gbSP.Size = new System.Drawing.Size(427, 288);
             this.gbSP.TabIndex = 58;
             this.gbSP.Text = "Sản phẩm";
             // 
@@ -170,7 +170,7 @@
             this.btnReloadSP.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnReloadSP.Image = global::StationeryManagementSystem.Properties.Resources.loading;
             this.btnReloadSP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnReloadSP.Location = new System.Drawing.Point(117, 256);
+            this.btnReloadSP.Location = new System.Drawing.Point(117, 234);
             this.btnReloadSP.Name = "btnReloadSP";
             this.btnReloadSP.Size = new System.Drawing.Size(97, 41);
             this.btnReloadSP.TabIndex = 60;
@@ -191,7 +191,7 @@
             this.btnSuaSP.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnSuaSP.Image = global::StationeryManagementSystem.Properties.Resources.edit;
             this.btnSuaSP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSuaSP.Location = new System.Drawing.Point(220, 256);
+            this.btnSuaSP.Location = new System.Drawing.Point(220, 234);
             this.btnSuaSP.Name = "btnSuaSP";
             this.btnSuaSP.Size = new System.Drawing.Size(97, 41);
             this.btnSuaSP.TabIndex = 59;
@@ -212,7 +212,7 @@
             this.btnXoaSP.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnXoaSP.Image = global::StationeryManagementSystem.Properties.Resources.cross;
             this.btnXoaSP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnXoaSP.Location = new System.Drawing.Point(321, 256);
+            this.btnXoaSP.Location = new System.Drawing.Point(321, 234);
             this.btnXoaSP.Name = "btnXoaSP";
             this.btnXoaSP.Size = new System.Drawing.Size(97, 41);
             this.btnXoaSP.TabIndex = 58;
@@ -233,7 +233,7 @@
             this.btnThemSP.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnThemSP.Image = global::StationeryManagementSystem.Properties.Resources.plus;
             this.btnThemSP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThemSP.Location = new System.Drawing.Point(10, 256);
+            this.btnThemSP.Location = new System.Drawing.Point(10, 234);
             this.btnThemSP.Name = "btnThemSP";
             this.btnThemSP.Size = new System.Drawing.Size(97, 41);
             this.btnThemSP.TabIndex = 1;
@@ -245,14 +245,14 @@
             this.gvSP.AllowUserToAddRows = false;
             this.gvSP.BackgroundColor = System.Drawing.Color.White;
             this.gvSP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.gvSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvSP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maSP,
@@ -260,14 +260,14 @@
             this.soLuong,
             this.donGia,
             this.tonhTien});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvSP.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvSP.DefaultCellStyle = dataGridViewCellStyle10;
             this.gvSP.GridColor = System.Drawing.Color.White;
             this.gvSP.Location = new System.Drawing.Point(7, 65);
             this.gvSP.Name = "gvSP";
@@ -276,7 +276,7 @@
             this.gvSP.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.gvSP.RowTemplate.Height = 24;
             this.gvSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvSP.Size = new System.Drawing.Size(411, 170);
+            this.gvSP.Size = new System.Drawing.Size(411, 163);
             this.gvSP.TabIndex = 57;
             this.gvSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSP_CellClick);
             // 
@@ -337,7 +337,7 @@
             this.cbTrangThaiThanhToan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTrangThaiThanhToan.ForeColor = System.Drawing.Color.Teal;
             this.cbTrangThaiThanhToan.ItemHeight = 30;
-            this.cbTrangThaiThanhToan.Location = new System.Drawing.Point(27, 708);
+            this.cbTrangThaiThanhToan.Location = new System.Drawing.Point(27, 651);
             this.cbTrangThaiThanhToan.Name = "cbTrangThaiThanhToan";
             this.cbTrangThaiThanhToan.Size = new System.Drawing.Size(210, 36);
             this.cbTrangThaiThanhToan.TabIndex = 59;
@@ -356,7 +356,7 @@
             this.btnTaoLap.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnTaoLap.Image = global::StationeryManagementSystem.Properties.Resources.plus;
             this.btnTaoLap.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTaoLap.Location = new System.Drawing.Point(312, 195);
+            this.btnTaoLap.Location = new System.Drawing.Point(312, 189);
             this.btnTaoLap.Name = "btnTaoLap";
             this.btnTaoLap.Size = new System.Drawing.Size(111, 40);
             this.btnTaoLap.TabIndex = 46;
@@ -368,7 +368,7 @@
             this.lblTrangThai.BackColor = System.Drawing.SystemColors.Control;
             this.lblTrangThai.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrangThai.ForeColor = System.Drawing.Color.Teal;
-            this.lblTrangThai.Location = new System.Drawing.Point(22, 669);
+            this.lblTrangThai.Location = new System.Drawing.Point(22, 612);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.Size = new System.Drawing.Size(187, 26);
             this.lblTrangThai.TabIndex = 50;
@@ -388,7 +388,7 @@
             this.txtTongTien.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongTien.ForeColor = System.Drawing.Color.Teal;
             this.txtTongTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTongTien.Location = new System.Drawing.Point(267, 708);
+            this.txtTongTien.Location = new System.Drawing.Point(267, 651);
             this.txtTongTien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.PasswordChar = '\0';
@@ -403,7 +403,7 @@
             this.lblTongTien.BackColor = System.Drawing.SystemColors.Control;
             this.lblTongTien.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTongTien.ForeColor = System.Drawing.Color.Teal;
-            this.lblTongTien.Location = new System.Drawing.Point(267, 669);
+            this.lblTongTien.Location = new System.Drawing.Point(267, 612);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(82, 26);
             this.lblTongTien.TabIndex = 47;
@@ -421,7 +421,7 @@
             this.dpNgayThanhToan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dpNgayThanhToan.ForeColor = System.Drawing.Color.Teal;
             this.dpNgayThanhToan.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dpNgayThanhToan.Location = new System.Drawing.Point(22, 620);
+            this.dpNgayThanhToan.Location = new System.Drawing.Point(22, 563);
             this.dpNgayThanhToan.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dpNgayThanhToan.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dpNgayThanhToan.Name = "dpNgayThanhToan";
@@ -434,7 +434,7 @@
             this.lblNgayThanhToan.BackColor = System.Drawing.SystemColors.Control;
             this.lblNgayThanhToan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNgayThanhToan.ForeColor = System.Drawing.Color.Teal;
-            this.lblNgayThanhToan.Location = new System.Drawing.Point(22, 587);
+            this.lblNgayThanhToan.Location = new System.Drawing.Point(22, 530);
             this.lblNgayThanhToan.Name = "lblNgayThanhToan";
             this.lblNgayThanhToan.Size = new System.Drawing.Size(143, 26);
             this.lblNgayThanhToan.TabIndex = 22;
@@ -445,7 +445,7 @@
             this.lblTenKH.BackColor = System.Drawing.SystemColors.Control;
             this.lblTenKH.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenKH.ForeColor = System.Drawing.Color.Teal;
-            this.lblTenKH.Location = new System.Drawing.Point(22, 167);
+            this.lblTenKH.Location = new System.Drawing.Point(22, 161);
             this.lblTenKH.Name = "lblTenKH";
             this.lblTenKH.Size = new System.Drawing.Size(135, 26);
             this.lblTenKH.TabIndex = 21;
@@ -465,7 +465,7 @@
             this.txtTenKH.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKH.ForeColor = System.Drawing.Color.Teal;
             this.txtTenKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenKH.Location = new System.Drawing.Point(22, 199);
+            this.txtTenKH.Location = new System.Drawing.Point(22, 193);
             this.txtTenKH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.PasswordChar = '\0';
@@ -506,7 +506,7 @@
             this.txtTenNV.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNV.ForeColor = System.Drawing.Color.Teal;
             this.txtTenNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenNV.Location = new System.Drawing.Point(22, 124);
+            this.txtTenNV.Location = new System.Drawing.Point(22, 118);
             this.txtTenNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.PasswordChar = '\0';
@@ -520,7 +520,7 @@
             this.lblTenNV.BackColor = System.Drawing.SystemColors.Control;
             this.lblTenNV.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenNV.ForeColor = System.Drawing.Color.Teal;
-            this.lblTenNV.Location = new System.Drawing.Point(22, 92);
+            this.lblTenNV.Location = new System.Drawing.Point(22, 86);
             this.lblTenNV.Name = "lblTenNV";
             this.lblTenNV.Size = new System.Drawing.Size(122, 26);
             this.lblTenNV.TabIndex = 16;
@@ -598,9 +598,9 @@
             this.gbListHDN.FillColor = System.Drawing.SystemColors.Control;
             this.gbListHDN.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbListHDN.ForeColor = System.Drawing.Color.White;
-            this.gbListHDN.Location = new System.Drawing.Point(12, 21);
+            this.gbListHDN.Location = new System.Drawing.Point(27, 12);
             this.gbListHDN.Name = "gbListHDN";
-            this.gbListHDN.Size = new System.Drawing.Size(765, 770);
+            this.gbListHDN.Size = new System.Drawing.Size(530, 704);
             this.gbListHDN.TabIndex = 56;
             this.gbListHDN.Text = "Danh sách hóa đơn";
             // 
@@ -608,14 +608,14 @@
             // 
             this.gvHD.BackgroundColor = System.Drawing.Color.White;
             this.gvHD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.gvHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maHD,
@@ -627,23 +627,23 @@
             this.giaTri,
             this.trangThaiThanhToan,
             this.ngayThanhToan});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvHD.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvHD.DefaultCellStyle = dataGridViewCellStyle12;
             this.gvHD.GridColor = System.Drawing.Color.White;
-            this.gvHD.Location = new System.Drawing.Point(18, 157);
+            this.gvHD.Location = new System.Drawing.Point(18, 181);
             this.gvHD.Name = "gvHD";
             this.gvHD.ReadOnly = true;
             this.gvHD.RowHeadersWidth = 51;
             this.gvHD.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.gvHD.RowTemplate.Height = 24;
             this.gvHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvHD.Size = new System.Drawing.Size(730, 413);
+            this.gvHD.Size = new System.Drawing.Size(470, 283);
             this.gvHD.TabIndex = 68;
             this.gvHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvHD_CellClick);
             // 
@@ -732,7 +732,7 @@
             // 
             this.pbSearch.BackgroundImage = global::StationeryManagementSystem.Properties.Resources.Search;
             this.pbSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbSearch.Location = new System.Drawing.Point(696, 68);
+            this.pbSearch.Location = new System.Drawing.Point(394, 108);
             this.pbSearch.Name = "pbSearch";
             this.pbSearch.Size = new System.Drawing.Size(50, 36);
             this.pbSearch.TabIndex = 67;
@@ -750,7 +750,7 @@
             this.dpEnd.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dpEnd.ForeColor = System.Drawing.Color.Teal;
             this.dpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dpEnd.Location = new System.Drawing.Point(433, 68);
+            this.dpEnd.Location = new System.Drawing.Point(131, 108);
             this.dpEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dpEnd.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dpEnd.Name = "dpEnd";
@@ -763,7 +763,7 @@
             this.lblDen.BackColor = System.Drawing.SystemColors.Control;
             this.lblDen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDen.ForeColor = System.Drawing.Color.Teal;
-            this.lblDen.Location = new System.Drawing.Point(392, 78);
+            this.lblDen.Location = new System.Drawing.Point(90, 118);
             this.lblDen.Name = "lblDen";
             this.lblDen.Size = new System.Drawing.Size(35, 26);
             this.lblDen.TabIndex = 65;
@@ -780,7 +780,7 @@
             this.dpStart.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dpStart.ForeColor = System.Drawing.Color.Teal;
             this.dpStart.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dpStart.Location = new System.Drawing.Point(129, 68);
+            this.dpStart.Location = new System.Drawing.Point(131, 62);
             this.dpStart.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dpStart.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dpStart.Name = "dpStart";
@@ -793,7 +793,7 @@
             this.lblTimKiem.BackColor = System.Drawing.SystemColors.Control;
             this.lblTimKiem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimKiem.ForeColor = System.Drawing.Color.Teal;
-            this.lblTimKiem.Location = new System.Drawing.Point(18, 78);
+            this.lblTimKiem.Location = new System.Drawing.Point(20, 72);
             this.lblTimKiem.Name = "lblTimKiem";
             this.lblTimKiem.Size = new System.Drawing.Size(105, 26);
             this.lblTimKiem.TabIndex = 64;
@@ -810,9 +810,9 @@
             this.gbTacVu.FillColor = System.Drawing.SystemColors.Control;
             this.gbTacVu.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTacVu.ForeColor = System.Drawing.Color.White;
-            this.gbTacVu.Location = new System.Drawing.Point(91, 587);
+            this.gbTacVu.Location = new System.Drawing.Point(18, 498);
             this.gbTacVu.Name = "gbTacVu";
-            this.gbTacVu.Size = new System.Drawing.Size(571, 150);
+            this.gbTacVu.Size = new System.Drawing.Size(470, 158);
             this.gbTacVu.TabIndex = 56;
             this.gbTacVu.Text = "Tác vụ";
             // 
@@ -831,7 +831,7 @@
             this.btnXoa.Image = global::StationeryManagementSystem.Properties.Resources.cross;
             this.btnXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnXoa.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnXoa.Location = new System.Drawing.Point(389, 64);
+            this.btnXoa.Location = new System.Drawing.Point(314, 65);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(135, 50);
             this.btnXoa.TabIndex = 49;
@@ -853,7 +853,7 @@
             this.btnReload.Image = global::StationeryManagementSystem.Properties.Resources.loading;
             this.btnReload.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnReload.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnReload.Location = new System.Drawing.Point(57, 64);
+            this.btnReload.Location = new System.Drawing.Point(12, 65);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(135, 50);
             this.btnReload.TabIndex = 48;
@@ -875,7 +875,7 @@
             this.btnSua.Image = global::StationeryManagementSystem.Properties.Resources.edit;
             this.btnSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSua.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSua.Location = new System.Drawing.Point(218, 64);
+            this.btnSua.Location = new System.Drawing.Point(164, 65);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(135, 50);
             this.btnSua.TabIndex = 47;
@@ -885,7 +885,7 @@
             // FormHoaDonBan
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1297, 852);
+            this.ClientSize = new System.Drawing.Size(1082, 733);
             this.Controls.Add(this.gbListHDN);
             this.Controls.Add(this.pnHoaDon);
             this.Name = "FormHoaDonBan";

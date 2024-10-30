@@ -120,30 +120,30 @@ namespace StationeryManagementSystem.GUI
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            //if (txtSearch.Text == "")
-            //{
-            //    gvKH.DataSource = KhachHangDAO.findAll();
-            //    return;
-            //}
-            //string input = txtSearch.Text;
-            //int maKH;
-            //DataTable dt = (DataTable)gvKH.DataSource;
-            //bool isNumber = int.TryParse(input, out maKH);  // Chuyển đổi chuỗi thành số (nếu có thể)
+            /*if (txtSearch.Text == "")
+            {
+                gvKH.DataSource = KhachHangDAO.findAll();
+                return;
+            }
+            string input = txtSearch.Text;
+            int maKH;
+            DataTable dt = (DataTable)gvKH.DataSource;
+            bool isNumber = int.TryParse(input, out maKH);  // Chuyển đổi chuỗi thành số (nếu có thể)
 
-            //if (isNumber)
-            //{
-            //    // Nếu input là số, sử dụng bộ lọc cho Mã SP là số và các cột khác là chuỗi
-            //    dt.DefaultView.RowFilter = "[Mã KH] = " + maKH +
-            //                               " OR [Họ Tên] LIKE '%" + input + "%' ";
-            //}
-            //else
-            //{
-            //    // Nếu input không phải là số, chỉ áp dụng bộ lọc cho các cột chuỗi
-            //    dt.DefaultView.RowFilter = "[Họ Tên] LIKE '%" + input + "%' ";
-            //}
+            if (isNumber)
+            {
+                // Nếu input là số, sử dụng bộ lọc cho Mã SP là số và các cột khác là chuỗi
+                dt.DefaultView.RowFilter = "[Mã KH] = " + maKH +
+                                           " OR [Họ Tên] LIKE '%" + input + "%' ";
+            }
+            else
+            {
+                // Nếu input không phải là số, chỉ áp dụng bộ lọc cho các cột chuỗi
+                dt.DefaultView.RowFilter = "[Họ Tên] LIKE '%" + input + "%' ";
+            }
 
-            //gvKH.DataSource = dt;
-            gvKH.DataSource=CommonDAO.search("KhachHang", txtSearch.Text);
+            gvKH.DataSource = dt;*/
+            gvKH.DataSource = CommonDAO.search("KhachHang", txtSearch.Text);
         }
 
         private void gvKH_Click(object sender, EventArgs e)

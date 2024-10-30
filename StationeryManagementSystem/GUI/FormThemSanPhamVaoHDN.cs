@@ -13,23 +13,29 @@ namespace StationeryManagementSystem.GUI
 {
     public partial class FormThemSanPhamVaoHDN : Form
     {
+        int NCC;
+        int maHD, maSP;
+        bool isSua = false;
+        bool isLoaded = false;
         public FormThemSanPhamVaoHDN()
         {
             InitializeComponent();
         }
-        public FormThemSanPhamVaoHDN(int maHD) : this()
+        public FormThemSanPhamVaoHDN(int maHD, int NCC) : this()
         {
             this.maHD = maHD;
+            this.NCC = NCC;
         }
-        public FormThemSanPhamVaoHDN(int maHD, bool isSua, int maSP, int maNCC) : this()
+
+        public FormThemSanPhamVaoHDN(int maHD, bool isSua, int maSP, int NCC) : this()
         {
             this.maHD = maHD;
             this.isSua = true;
             this.maSP = maSP;
+            this.NCC = NCC;
         }
-        int maHD, maSP;
-        bool isSua = false;
-        bool isLoaded = false;
+
+        
 
         private void cbMaSP_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -51,51 +57,7 @@ namespace StationeryManagementSystem.GUI
 
         private void txtSearh_TextChanged(object sender, EventArgs e)
         {
-            if (txtSearh.Text == "")
-            {
-                gvSP.DataSource = SanPhamDAO.findAll();
-                return;
-            }
-            String input = txtSearh.Text;
-            int maSP;
-            DataTable dt = (DataTable)gvSP.DataSource;
-            bool isNumber = int.TryParse(input, out maSP);  // Chuyển đổi chuỗi thành số (nếu có thể)
-            if (isNumber)
-            {
-                dt.DefaultView.RowFilter = string.Format("Mã SP = {0}", maSP);
-                gvSP.DataSource = dt;
-
-                //DataRow[] rows = dt.Select("Mã SP = " + maSP);
-                //if (rows.Length == 0)
-                //{
-                //    gvSP.DataSource = null;
-                //    return;
-                //}
-                //DataTable newDt = dt.Clone();
-                //foreach (DataRow row in rows)
-                //{
-                //    newDt.ImportRow(row);
-                //}
-                //gvSP.DataSource = newDt;
-            }
-            else
-            {
-                dt.DefaultView.RowFilter = string.Format("[Tên SP] like '%{0}%'", input);
-                gvSP.DataSource = dt;
-
-                //DataRow[] rows = dt.Select("[Tên SP] like '%" + input + "%'");
-                //if (rows.Length == 0)
-                //{
-                //    gvSP.DataSource = null;
-                //    return;
-                //}
-                //DataTable newDt = dt.Clone();
-                //foreach (DataRow row in rows)
-                //{
-                //    newDt.ImportRow(row);
-                //}
-                //gvSP.DataSource = newDt;
-            }
+            gvSP.DataSource = CommonDAO.search("SanPham", txtSearh.Text);
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -105,7 +67,7 @@ namespace StationeryManagementSystem.GUI
 
         private void FormThemSanPhamVaoHDN_Load(object sender, EventArgs e)
         {
-            gvSP.DataSource = SanPhamDAO.findAll();
+            gvSP.DataSource = SanPhamDAO.xemDanhSachSanPhamTheoNCC(NCC);
 
             cbTenSP.DataSource = DAO.SanPhamDAO.findAll();
             cbTenSP.DisplayMember = "Tên SP";

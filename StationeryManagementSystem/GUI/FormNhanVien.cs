@@ -127,7 +127,7 @@ namespace StationeryManagementSystem
                 int maNV = int.Parse(txtMaNV.Text);
                 try
                 {
-                    CommonDAO.deleteRecord("NhanVien", "MaNhanVien", maNV);
+                    CommonDAO.deleteRecord("NhanVien", "MaNhanVien", maNV); ;
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
@@ -196,31 +196,31 @@ namespace StationeryManagementSystem
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            //if (txtSearch.Text == "")
-            //{
-            //    gvNhanVien.DataSource = NhanVienDAO.findAll();
-            //    return;
-            //}
-            //string input = txtSearch.Text;
-            //int maNV;
-            //DataTable dt = (DataTable)gvNhanVien.DataSource;
-            //bool isNumber = int.TryParse(input, out maNV);  // Chuyển đổi chuỗi thành số (nếu có thể)
+            /*if (txtSearch.Text == "")
+            {
+                gvNhanVien.DataSource = NhanVienDAO.findAll();
+                return;
+            }
+            string input = txtSearch.Text;
+            int maNV;
+            DataTable dt = (DataTable)gvNhanVien.DataSource;
+            bool isNumber = int.TryParse(input, out maNV);  // Chuyển đổi chuỗi thành số (nếu có thể)
 
-            //if (isNumber)
-            //{
-            //    // Nếu input là số, sử dụng bộ lọc cho Mã SP là số và các cột khác là chuỗi
-            //    dt.DefaultView.RowFilter = "[manhanvien] = " + maNV +
-            //                               " OR [hoten] LIKE '%" + input + "%' " +
-            //                               " OR [TenChucVu] LIKE '%" + input + "%' ";
-            //}
-            //else
-            //{
-            //    // Nếu input không phải là số, chỉ áp dụng bộ lọc cho các cột chuỗi
-            //    dt.DefaultView.RowFilter = "[hoten] LIKE '%" + input + "%' " +
-            //                               " OR [TenChucVu] LIKE '%" + input + "%' ";
-            //}
+            if (isNumber)
+            {
+                // Nếu input là số, sử dụng bộ lọc cho Mã SP là số và các cột khác là chuỗi
+                dt.DefaultView.RowFilter = "[manhanvien] = " + maNV +
+                                           " OR [hoten] LIKE '%" + input + "%' " +
+                                           " OR [TenChucVu] LIKE '%" + input + "%' ";
+            }
+            else
+            {
+                // Nếu input không phải là số, chỉ áp dụng bộ lọc cho các cột chuỗi
+                dt.DefaultView.RowFilter = "[hoten] LIKE '%" + input + "%' " +
+                                           " OR [TenChucVu] LIKE '%" + input + "%' ";
+            }
 
-            //gvNhanVien.DataSource = dt;
+            gvNhanVien.DataSource = dt;*/
             gvNhanVien.DataSource = CommonDAO.search("NhanVien", txtSearch.Text);
         }
     }

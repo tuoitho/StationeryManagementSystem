@@ -106,7 +106,7 @@
             this.txtTongTien.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongTien.ForeColor = System.Drawing.Color.Teal;
             this.txtTongTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTongTien.Location = new System.Drawing.Point(267, 708);
+            this.txtTongTien.Location = new System.Drawing.Point(265, 635);
             this.txtTongTien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.PasswordChar = '\0';
@@ -121,7 +121,7 @@
             this.lblTongTien.BackColor = System.Drawing.SystemColors.Control;
             this.lblTongTien.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTongTien.ForeColor = System.Drawing.Color.Teal;
-            this.lblTongTien.Location = new System.Drawing.Point(267, 669);
+            this.lblTongTien.Location = new System.Drawing.Point(265, 596);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(82, 26);
             this.lblTongTien.TabIndex = 47;
@@ -139,7 +139,7 @@
             this.dpNgayThanhToan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dpNgayThanhToan.ForeColor = System.Drawing.Color.Teal;
             this.dpNgayThanhToan.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dpNgayThanhToan.Location = new System.Drawing.Point(22, 620);
+            this.dpNgayThanhToan.Location = new System.Drawing.Point(20, 547);
             this.dpNgayThanhToan.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dpNgayThanhToan.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dpNgayThanhToan.Name = "dpNgayThanhToan";
@@ -152,7 +152,7 @@
             this.lblNgayThanhToan.BackColor = System.Drawing.SystemColors.Control;
             this.lblNgayThanhToan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNgayThanhToan.ForeColor = System.Drawing.Color.Teal;
-            this.lblNgayThanhToan.Location = new System.Drawing.Point(22, 587);
+            this.lblNgayThanhToan.Location = new System.Drawing.Point(20, 514);
             this.lblNgayThanhToan.Name = "lblNgayThanhToan";
             this.lblNgayThanhToan.Size = new System.Drawing.Size(143, 26);
             this.lblNgayThanhToan.TabIndex = 22;
@@ -163,7 +163,7 @@
             this.lblTenNCC.BackColor = System.Drawing.SystemColors.Control;
             this.lblTenNCC.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenNCC.ForeColor = System.Drawing.Color.Teal;
-            this.lblTenNCC.Location = new System.Drawing.Point(22, 167);
+            this.lblTenNCC.Location = new System.Drawing.Point(22, 158);
             this.lblTenNCC.Name = "lblTenNCC";
             this.lblTenNCC.Size = new System.Drawing.Size(149, 26);
             this.lblTenNCC.TabIndex = 21;
@@ -183,7 +183,7 @@
             this.txtTenNCC.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNCC.ForeColor = System.Drawing.Color.Teal;
             this.txtTenNCC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenNCC.Location = new System.Drawing.Point(22, 199);
+            this.txtTenNCC.Location = new System.Drawing.Point(22, 190);
             this.txtTenNCC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenNCC.Name = "txtTenNCC";
             this.txtTenNCC.PasswordChar = '\0';
@@ -204,7 +204,7 @@
             this.cbTrangThaiThanhToan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTrangThaiThanhToan.ForeColor = System.Drawing.Color.Teal;
             this.cbTrangThaiThanhToan.ItemHeight = 30;
-            this.cbTrangThaiThanhToan.Location = new System.Drawing.Point(27, 708);
+            this.cbTrangThaiThanhToan.Location = new System.Drawing.Point(25, 635);
             this.cbTrangThaiThanhToan.Name = "cbTrangThaiThanhToan";
             this.cbTrangThaiThanhToan.Size = new System.Drawing.Size(210, 36);
             this.cbTrangThaiThanhToan.TabIndex = 51;
@@ -214,7 +214,7 @@
             this.lblTrangThai.BackColor = System.Drawing.SystemColors.Control;
             this.lblTrangThai.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrangThai.ForeColor = System.Drawing.Color.Teal;
-            this.lblTrangThai.Location = new System.Drawing.Point(22, 669);
+            this.lblTrangThai.Location = new System.Drawing.Point(20, 596);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.Size = new System.Drawing.Size(187, 26);
             this.lblTrangThai.TabIndex = 50;
@@ -262,9 +262,9 @@
             this.pnHoaDon.Controls.Add(this.txtMaHD);
             this.pnHoaDon.Controls.Add(this.lblMaHD);
             this.pnHoaDon.ForeColor = System.Drawing.Color.Teal;
-            this.pnHoaDon.Location = new System.Drawing.Point(787, 22);
+            this.pnHoaDon.Location = new System.Drawing.Point(585, 12);
             this.pnHoaDon.Name = "pnHoaDon";
-            this.pnHoaDon.Size = new System.Drawing.Size(470, 770);
+            this.pnHoaDon.Size = new System.Drawing.Size(470, 695);
             this.pnHoaDon.TabIndex = 57;
             // 
             // cbMaNV
@@ -299,7 +299,7 @@
             this.btnTaoLap.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnTaoLap.Image = global::StationeryManagementSystem.Properties.Resources.plus;
             this.btnTaoLap.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTaoLap.Location = new System.Drawing.Point(329, 195);
+            this.btnTaoLap.Location = new System.Drawing.Point(312, 186);
             this.btnTaoLap.Name = "btnTaoLap";
             this.btnTaoLap.Size = new System.Drawing.Size(111, 40);
             this.btnTaoLap.TabIndex = 60;
@@ -319,9 +319,9 @@
             this.gbSP.FillColor = System.Drawing.SystemColors.Control;
             this.gbSP.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbSP.ForeColor = System.Drawing.Color.White;
-            this.gbSP.Location = new System.Drawing.Point(22, 255);
+            this.gbSP.Location = new System.Drawing.Point(20, 233);
             this.gbSP.Name = "gbSP";
-            this.gbSP.Size = new System.Drawing.Size(427, 315);
+            this.gbSP.Size = new System.Drawing.Size(427, 275);
             this.gbSP.TabIndex = 59;
             this.gbSP.Text = "Sản phẩm";
             // 
@@ -339,7 +339,7 @@
             this.btnReloadSP.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnReloadSP.Image = global::StationeryManagementSystem.Properties.Resources.loading;
             this.btnReloadSP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnReloadSP.Location = new System.Drawing.Point(117, 256);
+            this.btnReloadSP.Location = new System.Drawing.Point(118, 211);
             this.btnReloadSP.Name = "btnReloadSP";
             this.btnReloadSP.Size = new System.Drawing.Size(97, 41);
             this.btnReloadSP.TabIndex = 60;
@@ -360,7 +360,7 @@
             this.btnSuaSP.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnSuaSP.Image = global::StationeryManagementSystem.Properties.Resources.edit;
             this.btnSuaSP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSuaSP.Location = new System.Drawing.Point(220, 256);
+            this.btnSuaSP.Location = new System.Drawing.Point(221, 211);
             this.btnSuaSP.Name = "btnSuaSP";
             this.btnSuaSP.Size = new System.Drawing.Size(97, 41);
             this.btnSuaSP.TabIndex = 59;
@@ -381,7 +381,7 @@
             this.btnXoaSP.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnXoaSP.Image = global::StationeryManagementSystem.Properties.Resources.cross;
             this.btnXoaSP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnXoaSP.Location = new System.Drawing.Point(321, 256);
+            this.btnXoaSP.Location = new System.Drawing.Point(322, 211);
             this.btnXoaSP.Name = "btnXoaSP";
             this.btnXoaSP.Size = new System.Drawing.Size(97, 41);
             this.btnXoaSP.TabIndex = 58;
@@ -425,7 +425,7 @@
             this.gvSP.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.gvSP.RowTemplate.Height = 24;
             this.gvSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvSP.Size = new System.Drawing.Size(411, 170);
+            this.gvSP.Size = new System.Drawing.Size(411, 140);
             this.gvSP.TabIndex = 57;
             this.gvSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSP_CellClick);
             // 
@@ -488,7 +488,7 @@
             this.btnThemSP.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnThemSP.Image = global::StationeryManagementSystem.Properties.Resources.plus;
             this.btnThemSP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThemSP.Location = new System.Drawing.Point(10, 256);
+            this.btnThemSP.Location = new System.Drawing.Point(11, 211);
             this.btnThemSP.Name = "btnThemSP";
             this.btnThemSP.Size = new System.Drawing.Size(97, 41);
             this.btnThemSP.TabIndex = 1;
@@ -509,7 +509,7 @@
             this.txtTenNV.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNV.ForeColor = System.Drawing.Color.Teal;
             this.txtTenNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenNV.Location = new System.Drawing.Point(22, 124);
+            this.txtTenNV.Location = new System.Drawing.Point(22, 115);
             this.txtTenNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.PasswordChar = '\0';
@@ -523,7 +523,7 @@
             this.lblTenNV.BackColor = System.Drawing.SystemColors.Control;
             this.lblTenNV.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenNV.ForeColor = System.Drawing.Color.Teal;
-            this.lblTenNV.Location = new System.Drawing.Point(22, 92);
+            this.lblTenNV.Location = new System.Drawing.Point(22, 83);
             this.lblTenNV.Name = "lblTenNV";
             this.lblTenNV.Size = new System.Drawing.Size(122, 26);
             this.lblTenNV.TabIndex = 16;
@@ -601,9 +601,9 @@
             this.gbListHDN.FillColor = System.Drawing.SystemColors.Control;
             this.gbListHDN.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbListHDN.ForeColor = System.Drawing.Color.White;
-            this.gbListHDN.Location = new System.Drawing.Point(12, 22);
+            this.gbListHDN.Location = new System.Drawing.Point(22, 12);
             this.gbListHDN.Name = "gbListHDN";
-            this.gbListHDN.Size = new System.Drawing.Size(765, 770);
+            this.gbListHDN.Size = new System.Drawing.Size(543, 695);
             this.gbListHDN.TabIndex = 73;
             this.gbListHDN.Text = "Danh sách hóa đơn";
             // 
@@ -640,7 +640,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvHD.DefaultCellStyle = dataGridViewCellStyle5;
             this.gvHD.GridColor = System.Drawing.Color.White;
-            this.gvHD.Location = new System.Drawing.Point(18, 157);
+            this.gvHD.Location = new System.Drawing.Point(18, 185);
             this.gvHD.Name = "gvHD";
             this.gvHD.ReadOnly = true;
             this.gvHD.RowHeadersWidth = 51;
@@ -648,7 +648,7 @@
             this.gvHD.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.gvHD.RowTemplate.Height = 24;
             this.gvHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvHD.Size = new System.Drawing.Size(730, 413);
+            this.gvHD.Size = new System.Drawing.Size(465, 289);
             this.gvHD.TabIndex = 68;
             this.gvHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvHD_CellClick);
             // 
@@ -737,7 +737,7 @@
             // 
             this.pbSeach.BackgroundImage = global::StationeryManagementSystem.Properties.Resources.Search;
             this.pbSeach.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbSeach.Location = new System.Drawing.Point(696, 68);
+            this.pbSeach.Location = new System.Drawing.Point(392, 124);
             this.pbSeach.Name = "pbSeach";
             this.pbSeach.Size = new System.Drawing.Size(50, 36);
             this.pbSeach.TabIndex = 67;
@@ -755,7 +755,7 @@
             this.dpEnd.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dpEnd.ForeColor = System.Drawing.Color.Teal;
             this.dpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dpEnd.Location = new System.Drawing.Point(433, 68);
+            this.dpEnd.Location = new System.Drawing.Point(129, 124);
             this.dpEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dpEnd.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dpEnd.Name = "dpEnd";
@@ -768,7 +768,7 @@
             this.lblDen.BackColor = System.Drawing.SystemColors.Control;
             this.lblDen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDen.ForeColor = System.Drawing.Color.Teal;
-            this.lblDen.Location = new System.Drawing.Point(392, 78);
+            this.lblDen.Location = new System.Drawing.Point(88, 134);
             this.lblDen.Name = "lblDen";
             this.lblDen.Size = new System.Drawing.Size(35, 26);
             this.lblDen.TabIndex = 65;
@@ -815,9 +815,9 @@
             this.gbTacVu.FillColor = System.Drawing.SystemColors.Control;
             this.gbTacVu.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTacVu.ForeColor = System.Drawing.Color.White;
-            this.gbTacVu.Location = new System.Drawing.Point(91, 587);
+            this.gbTacVu.Location = new System.Drawing.Point(18, 511);
             this.gbTacVu.Name = "gbTacVu";
-            this.gbTacVu.Size = new System.Drawing.Size(571, 150);
+            this.gbTacVu.Size = new System.Drawing.Size(465, 150);
             this.gbTacVu.TabIndex = 56;
             this.gbTacVu.Text = "Tác vụ";
             // 
@@ -836,7 +836,7 @@
             this.btnXoa.Image = global::StationeryManagementSystem.Properties.Resources.cross;
             this.btnXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnXoa.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnXoa.Location = new System.Drawing.Point(389, 64);
+            this.btnXoa.Location = new System.Drawing.Point(313, 64);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(135, 50);
             this.btnXoa.TabIndex = 49;
@@ -858,7 +858,7 @@
             this.btnReload.Image = global::StationeryManagementSystem.Properties.Resources.loading;
             this.btnReload.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnReload.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnReload.Location = new System.Drawing.Point(57, 64);
+            this.btnReload.Location = new System.Drawing.Point(20, 64);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(135, 50);
             this.btnReload.TabIndex = 48;
@@ -880,7 +880,7 @@
             this.btnSua.Image = global::StationeryManagementSystem.Properties.Resources.edit;
             this.btnSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSua.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSua.Location = new System.Drawing.Point(218, 64);
+            this.btnSua.Location = new System.Drawing.Point(161, 64);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(135, 50);
             this.btnSua.TabIndex = 47;
@@ -890,7 +890,8 @@
             // FormHoaDonNhap
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1280, 847);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1082, 733);
             this.Controls.Add(this.gbListHDN);
             this.Controls.Add(this.pnHoaDon);
             this.Name = "FormHoaDonNhap";

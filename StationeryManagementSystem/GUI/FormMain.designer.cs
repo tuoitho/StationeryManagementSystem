@@ -63,21 +63,21 @@ namespace StationeryManagementSystem
             this.panelTitleBar.Location = new System.Drawing.Point(320, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1601, 92);
+            this.panelTitleBar.Size = new System.Drawing.Size(1107, 92);
             this.panelTitleBar.TabIndex = 4;
             this.panelTitleBar.TabStop = true;
             // 
             // lblTiltle
             // 
-            this.lblTiltle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lblTiltle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTiltle.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTiltle.ForeColor = System.Drawing.Color.White;
             this.lblTiltle.Location = new System.Drawing.Point(81, 9);
             this.lblTiltle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTiltle.Name = "lblTiltle";
-            this.lblTiltle.Size = new System.Drawing.Size(1599, 60);
+            this.lblTiltle.Size = new System.Drawing.Size(1105, 60);
             this.lblTiltle.TabIndex = 0;
             this.lblTiltle.Text = "Home";
             this.lblTiltle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -113,19 +113,20 @@ namespace StationeryManagementSystem
             this.panel_menu.MaximumSize = new System.Drawing.Size(320, 2061);
             this.panel_menu.MinimumSize = new System.Drawing.Size(72, 811);
             this.panel_menu.Name = "panel_menu";
-            this.panel_menu.Size = new System.Drawing.Size(320, 1175);
+            this.panel_menu.Size = new System.Drawing.Size(320, 879);
             this.panel_menu.TabIndex = 3;
             // 
             // panel_childForm
             // 
             this.panel_childForm.AutoScroll = true;
+            this.panel_childForm.AutoSize = true;
             this.panel_childForm.BackColor = System.Drawing.Color.Transparent;
             this.panel_childForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_childForm.Font = new System.Drawing.Font("Verdana", 10.2F);
-            this.panel_childForm.Location = new System.Drawing.Point(320, 92);
+            this.panel_childForm.Location = new System.Drawing.Point(322, 92);
             this.panel_childForm.Margin = new System.Windows.Forms.Padding(2);
             this.panel_childForm.Name = "panel_childForm";
-            this.panel_childForm.Size = new System.Drawing.Size(1601, 1081);
+            this.panel_childForm.Size = new System.Drawing.Size(1100, 780);
             this.panel_childForm.TabIndex = 5;
             // 
             // roundedButton_thoat
@@ -373,18 +374,20 @@ namespace StationeryManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1921, 1175);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1427, 879);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panel_childForm);
             this.Controls.Add(this.panel_menu);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelTitleBar.ResumeLayout(false);
             this.panel_logo.ResumeLayout(false);
             this.panel_menu.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -410,7 +413,6 @@ namespace StationeryManagementSystem
         private RoundedButton roundedButton_ncc;
         private RoundedButton roundedButton_hdn;
         private RoundedButton roundedButton_hdb;
-        private Panel panel_childForm;
         private RoundedButton roundedButton6;
         private RoundedButton roundedButton_qlsp;
         private RoundedButton roundedButton_lv;
@@ -418,5 +420,6 @@ namespace StationeryManagementSystem
         private Panel panel_logo;
         private RoundedButton roundedButton_qltk;
         private Panel panel_menu;
+        private Panel panel_childForm;
     }
 }

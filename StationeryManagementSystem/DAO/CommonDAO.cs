@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -25,7 +26,7 @@ namespace StationeryManagementSystem.DAO
                 return dt;
             }
         }
-        //SearchHoaDon
+  
         public static DataTable searchHoaDon(DateTime start, DateTime end, Boolean isHoaDonNhap)
         {
             using (SqlCommand cmd = new SqlCommand("exec SearchHoaDon @start, @end, @isHoaDonNhap", MyDB.GetConnection))
@@ -42,13 +43,7 @@ namespace StationeryManagementSystem.DAO
                 return dt;
             }
         }
-        //        -- 3.2.2. Thủ tục xoá một bản ghi nhận tham số tên bảng, tên cột khoá chính và id của bảng ghi đó.
-        //CREATE OR ALTER PROCEDURE DeleteRecord
-        //    @TableName NVARCHAR(128),
-        //    @PrimaryKeyColumn NVARCHAR(128),
-        //    @PrimaryKeyValue INT
-        //AS
-        //
+        
         public static void deleteRecord(String tableName, String primaryKeyColumn, int primaryKeyValue)
         {
             using (SqlCommand cmd = new SqlCommand("exec DeleteRecord @TableName, @PrimaryKeyColumn, @PrimaryKeyValue", MyDB.GetConnection))
@@ -63,10 +58,7 @@ namespace StationeryManagementSystem.DAO
             }
         }
 
-        //        CREATE PROCEDURE sp_XoaVinhVien
-        //            @tableName NVARCHAR(128),
-        //    @recordID INT
-        //AS
+      
         public static void deleteForever(String tableName, int recordID)
         {
             using (SqlCommand cmd = new SqlCommand("exec sp_XoaVinhVien @tableName, @recordID", MyDB.GetConnection))
@@ -79,11 +71,7 @@ namespace StationeryManagementSystem.DAO
                 MyDB.CloseConnection();
             }
         }
-//        ---RESTORE
-//CREATE PROCEDURE sp_KhoiPhuc
-//    @tableName NVARCHAR(128),
-//    @recordID INT
-//AS
+    
         public static void restore(String tableName, int recordID)
         {
             using (SqlCommand cmd = new SqlCommand("exec sp_KhoiPhuc @tableName, @recordID", MyDB.GetConnection))

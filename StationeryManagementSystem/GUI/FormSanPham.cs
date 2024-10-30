@@ -100,33 +100,33 @@ namespace StationeryManagementSystem
 
         private void txtSearh_TextChanged(object sender, EventArgs e)
         {
-            //if (txtSearh.Text == "")
-            //{
-            //    gvSP.DataSource = SanPhamDAO.findAll();
-            //    return;
-            //}
-            //string input = txtSearh.Text;
-            //int maSP;
-            //DataTable dt = (DataTable)gvSP.DataSource;
-            //bool isNumber = int.TryParse(input, out maSP);  // Chuyển đổi chuỗi thành số (nếu có thể)
+            /*if (txtSearh.Text == "")
+            {
+                gvSP.DataSource = SanPhamDAO.findAll();
+                return;
+            }
+            string input = txtSearh.Text;
+            int maSP;
+            DataTable dt = (DataTable)gvSP.DataSource;
+            bool isNumber = int.TryParse(input, out maSP);  // Chuyển đổi chuỗi thành số (nếu có thể)
 
-            //if (isNumber)
-            //{
-            //    // Nếu input là số, sử dụng bộ lọc cho Mã SP là số và các cột khác là chuỗi
-            //    dt.DefaultView.RowFilter = "[Mã SP] = " + maSP +
-            //                               " OR [Tên SP] LIKE '%" + input + "%' " +
-            //                               " OR [Tên Loại SP] LIKE '%" + input + "%' " +
-            //                               " OR [Tên NCC] LIKE '%" + input + "%'";
-            //}
-            //else
-            //{
-            //    // Nếu input không phải là số, chỉ áp dụng bộ lọc cho các cột chuỗi
-            //    dt.DefaultView.RowFilter = "[Tên SP] LIKE '%" + input + "%' " +
-            //                               " OR [Tên Loại SP] LIKE '%" + input + "%' " +
-            //                               " OR [Tên NCC] LIKE '%" + input + "%'";
-            //}
+            if (isNumber)
+            {
+                // Nếu input là số, sử dụng bộ lọc cho Mã SP là số và các cột khác là chuỗi
+                dt.DefaultView.RowFilter = "[Mã SP] = " + maSP +
+                                           " OR [Tên SP] LIKE '%" + input + "%' " +
+                                           " OR [Tên Loại SP] LIKE '%" + input + "%' " +
+                                           " OR [Tên NCC] LIKE '%" + input + "%'";
+            }
+            else
+            {
+                // Nếu input không phải là số, chỉ áp dụng bộ lọc cho các cột chuỗi
+                dt.DefaultView.RowFilter = "[Tên SP] LIKE '%" + input + "%' " +
+                                           " OR [Tên Loại SP] LIKE '%" + input + "%' " +
+                                           " OR [Tên NCC] LIKE '%" + input + "%'";
+            }
 
-            //gvSP.DataSource = dt;
+            gvSP.DataSource = dt;*/
             gvSP.DataSource = CommonDAO.search("SanPham", txtSearh.Text);
         }
 
@@ -196,6 +196,11 @@ namespace StationeryManagementSystem
             txtGiaBan.Text = "0";
             txtMaNCC.Text = "";
             txtTenNCC.Text = "";
+        }
+
+        private void gvSP_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKhachHang));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbListKH = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLoc = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -72,9 +72,9 @@
             this.gbListKH.FillColor = System.Drawing.SystemColors.Control;
             this.gbListKH.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbListKH.ForeColor = System.Drawing.Color.White;
-            this.gbListKH.Location = new System.Drawing.Point(165, 271);
+            this.gbListKH.Location = new System.Drawing.Point(40, 272);
             this.gbListKH.Name = "gbListKH";
-            this.gbListKH.Size = new System.Drawing.Size(790, 435);
+            this.gbListKH.Size = new System.Drawing.Size(1007, 449);
             this.gbListKH.TabIndex = 14;
             this.gbListKH.Text = "Danh sách khách hàng";
             // 
@@ -126,7 +126,7 @@
             this.gbTacVu.FillColor = System.Drawing.SystemColors.Control;
             this.gbTacVu.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTacVu.ForeColor = System.Drawing.Color.White;
-            this.gbTacVu.Location = new System.Drawing.Point(80, 293);
+            this.gbTacVu.Location = new System.Drawing.Point(108, 295);
             this.gbTacVu.Name = "gbTacVu";
             this.gbTacVu.Size = new System.Drawing.Size(610, 115);
             this.gbTacVu.TabIndex = 13;
@@ -227,28 +227,28 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gvKH.BackgroundColor = System.Drawing.Color.White;
             this.gvKH.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gvKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvKH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maKH,
             this.tenKH,
             this.diaChi,
             this.soDienThoai});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvKH.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvKH.DefaultCellStyle = dataGridViewCellStyle4;
             this.gvKH.GridColor = System.Drawing.Color.White;
             this.gvKH.Location = new System.Drawing.Point(16, 104);
             this.gvKH.Name = "gvKH";
@@ -256,7 +256,7 @@
             this.gvKH.RowHeadersWidth = 51;
             this.gvKH.RowTemplate.Height = 24;
             this.gvKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvKH.Size = new System.Drawing.Size(718, 168);
+            this.gvKH.Size = new System.Drawing.Size(960, 159);
             this.gvKH.TabIndex = 2;
             this.gvKH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvKH_CellClick);
             this.gvKH.Click += new System.EventHandler(this.gvKH_Click);
@@ -314,9 +314,9 @@
             this.gbThongTin.FillColor = System.Drawing.SystemColors.Control;
             this.gbThongTin.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbThongTin.ForeColor = System.Drawing.Color.White;
-            this.gbThongTin.Location = new System.Drawing.Point(165, 25);
+            this.gbThongTin.Location = new System.Drawing.Point(40, 25);
             this.gbThongTin.Name = "gbThongTin";
-            this.gbThongTin.Size = new System.Drawing.Size(790, 227);
+            this.gbThongTin.Size = new System.Drawing.Size(547, 227);
             this.gbThongTin.TabIndex = 13;
             this.gbThongTin.Text = "Thông tin khách hàng";
             // 
@@ -472,7 +472,7 @@
             // FormKhachHang
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1217, 799);
+            this.ClientSize = new System.Drawing.Size(1082, 733);
             this.Controls.Add(this.gbListKH);
             this.Controls.Add(this.gbThongTin);
             this.Name = "FormKhachHang";

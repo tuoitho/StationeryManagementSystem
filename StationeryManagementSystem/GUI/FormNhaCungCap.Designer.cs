@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhaCungCap));
             this.gbListNCC = new Guna.UI2.WinForms.Guna2GroupBox();
             this.gvNhaCungCap = new System.Windows.Forms.DataGridView();
@@ -71,10 +71,10 @@
             this.gbListNCC.FillColor = System.Drawing.SystemColors.Control;
             this.gbListNCC.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbListNCC.ForeColor = System.Drawing.Color.White;
-            this.gbListNCC.Location = new System.Drawing.Point(627, 29);
+            this.gbListNCC.Location = new System.Drawing.Point(533, 29);
             this.gbListNCC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbListNCC.Name = "gbListNCC";
-            this.gbListNCC.Size = new System.Drawing.Size(569, 583);
+            this.gbListNCC.Size = new System.Drawing.Size(537, 629);
             this.gbListNCC.TabIndex = 18;
             this.gbListNCC.Text = "Danh sách nhà cung cấp ";
             // 
@@ -82,28 +82,28 @@
             // 
             this.gvNhaCungCap.BackgroundColor = System.Drawing.Color.White;
             this.gvNhaCungCap.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvNhaCungCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvNhaCungCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvNhaCungCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maNCC,
             this.tenNCC,
             this.diaChi,
             this.soDienThoai});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvNhaCungCap.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvNhaCungCap.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvNhaCungCap.GridColor = System.Drawing.Color.White;
             this.gvNhaCungCap.Location = new System.Drawing.Point(22, 141);
             this.gvNhaCungCap.Name = "gvNhaCungCap";
@@ -111,7 +111,7 @@
             this.gvNhaCungCap.RowHeadersWidth = 51;
             this.gvNhaCungCap.RowTemplate.Height = 24;
             this.gvNhaCungCap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvNhaCungCap.Size = new System.Drawing.Size(522, 396);
+            this.gvNhaCungCap.Size = new System.Drawing.Size(492, 464);
             this.gvNhaCungCap.TabIndex = 25;
             this.gvNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvNhaCungCap_CellClick_1);
             // 
@@ -199,10 +199,10 @@
             this.gbTacVu.FillColor = System.Drawing.SystemColors.Control;
             this.gbTacVu.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTacVu.ForeColor = System.Drawing.Color.White;
-            this.gbTacVu.Location = new System.Drawing.Point(14, 342);
+            this.gbTacVu.Location = new System.Drawing.Point(19, 369);
             this.gbTacVu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbTacVu.Name = "gbTacVu";
-            this.gbTacVu.Size = new System.Drawing.Size(388, 195);
+            this.gbTacVu.Size = new System.Drawing.Size(388, 216);
             this.gbTacVu.TabIndex = 13;
             this.gbTacVu.Text = "Tác vụ";
             // 
@@ -221,7 +221,7 @@
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnXoa.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnXoa.Location = new System.Drawing.Point(189, 118);
+            this.btnXoa.Location = new System.Drawing.Point(192, 133);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(141, 46);
@@ -244,7 +244,7 @@
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSua.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSua.Location = new System.Drawing.Point(11, 118);
+            this.btnSua.Location = new System.Drawing.Point(14, 133);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(143, 46);
@@ -267,7 +267,7 @@
             this.btnReLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnReLoad.Image")));
             this.btnReLoad.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnReLoad.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnReLoad.Location = new System.Drawing.Point(189, 54);
+            this.btnReLoad.Location = new System.Drawing.Point(192, 69);
             this.btnReLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReLoad.Name = "btnReLoad";
             this.btnReLoad.Size = new System.Drawing.Size(141, 46);
@@ -290,7 +290,7 @@
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThem.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnThem.Location = new System.Drawing.Point(11, 54);
+            this.btnThem.Location = new System.Drawing.Point(14, 69);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(143, 46);
@@ -471,17 +471,17 @@
             this.gbThongTin.FillColor = System.Drawing.SystemColors.Control;
             this.gbThongTin.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbThongTin.ForeColor = System.Drawing.Color.White;
-            this.gbThongTin.Location = new System.Drawing.Point(67, 29);
+            this.gbThongTin.Location = new System.Drawing.Point(12, 29);
             this.gbThongTin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbThongTin.Name = "gbThongTin";
-            this.gbThongTin.Size = new System.Drawing.Size(540, 583);
+            this.gbThongTin.Size = new System.Drawing.Size(498, 629);
             this.gbThongTin.TabIndex = 17;
             this.gbThongTin.Text = "Thông tin nhà cung cấp";
             // 
             // FormNhaCungCap
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1249, 687);
+            this.ClientSize = new System.Drawing.Size(1082, 733);
             this.Controls.Add(this.gbListNCC);
             this.Controls.Add(this.gbThongTin);
             this.Name = "FormNhaCungCap";

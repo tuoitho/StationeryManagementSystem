@@ -25,14 +25,14 @@ namespace StationeryManagementSystem.GUI
                 return dt;
             }
         }
-        public static DataTable findAll(DateTime date, bool daduyet)
+
+        public static DataTable findAll(DateTime date)
         {
-            using (SqlCommand cmd = new SqlCommand("select * from PhanCa where Ngay=@date and DaDuyet=@daduyet", MyDB.GetConnection))
+            using (SqlCommand cmd = new SqlCommand("select * from PhanCa where Ngay=@date", MyDB.GetConnection))
             {
                 MyDB.OpenConnection();
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@date", SqlDbType.Date).Value = date;
-                cmd.Parameters.AddWithValue("@daduyet", SqlDbType.Bit).Value = daduyet;
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sqlDataAdapter.Fill(dt);
@@ -41,6 +41,8 @@ namespace StationeryManagementSystem.GUI
             }
 
         }
+
+
         public static void phanCa(DateTime start, DateTime end)
         {
             using (SqlCommand cmd = new SqlCommand("exec sp_PhanCaChoNhanVien @start, @end", MyDB.GetConnection))
@@ -87,39 +89,12 @@ namespace StationeryManagementSystem.GUI
 
         internal static void dangKiCa3(int manv, DateTime ngayca3)
         {
-            using (SqlCommand cmd = new SqlCommand("exec sp_DangKiCa3 @manv, @ngayca3", MyDB.GetConnection))
+            using (SqlCommand cmd = new SqlCommand("exec sp_DangKiCaLamThem @manv, @ngayca3", MyDB.GetConnection))
             {
                 MyDB.OpenConnection();
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@manv", SqlDbType.Int).Value = manv;
                 cmd.Parameters.AddWithValue("@ngayca3", SqlDbType.Date).Value = ngayca3;
-                cmd.ExecuteNonQuery();
-                MyDB.CloseConnection();
-            }
-        }
-
-        internal static void duyetCa3(int manv, DateTime ngay)
-        {
-            //sp_DuyetDangKiCa3
-            using (SqlCommand cmd = new SqlCommand("exec sp_DuyetDangKiCa3 @manv, @ngay", MyDB.GetConnection))
-            {
-                MyDB.OpenConnection();
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@manv", SqlDbType.Int).Value = manv;
-                cmd.Parameters.AddWithValue("@ngay", SqlDbType.Date).Value = ngay;
-                cmd.ExecuteNonQuery();
-                MyDB.CloseConnection();
-            }
-        }
-
-        internal static void tuChoiCa3(int manv, DateTime ngay)
-        {
-            using (SqlCommand cmd = new SqlCommand("exec sp_HuyDangKiCa3 @manv, @ngay", MyDB.GetConnection))
-            {
-                MyDB.OpenConnection();
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@manv", SqlDbType.Int).Value = manv;
-                cmd.Parameters.AddWithValue("@ngay", SqlDbType.Date).Value = ngay;
                 cmd.ExecuteNonQuery();
                 MyDB.CloseConnection();
             }
