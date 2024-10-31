@@ -69,11 +69,11 @@ namespace StationeryManagementSystem.GUI
         {
             gvSP.DataSource = SanPhamDAO.xemDanhSachSanPhamTheoNCC(NCC);
 
-            cbTenSP.DataSource = DAO.SanPhamDAO.findAll();
+            cbTenSP.DataSource = DAO.SanPhamDAO.xemDanhSachSanPhamTheoNCC(NCC);
             cbTenSP.DisplayMember = "Tên SP";
             cbTenSP.ValueMember = "Mã SP";
             cbTenSP.SelectedIndex = -1;
-            cbMaSP.DataSource = DAO.SanPhamDAO.findAll();
+            cbMaSP.DataSource = DAO.SanPhamDAO.xemDanhSachSanPhamTheoNCC(NCC);
             cbMaSP.DisplayMember = "Mã SP";
             cbMaSP.ValueMember = "Mã SP";
             cbMaSP.SelectedIndex = -1;
