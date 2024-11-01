@@ -3,9 +3,3 @@
 
 The **Stationery Management System** is designed to efficiently manage office supply inventory, bills, and supplier data, utilizing a robust DBMS for backend operations and WinForms in C# for the display interface.
 
-## Features
-
-- Visualize and manage inventory, bills, and suppliers.
-- Easy-to-use WinForms interface for real-time data representation.
-- Secure and efficient DBMS integration for core functionality.
-
