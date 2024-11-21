@@ -1,4 +1,0 @@
-[submodule "SQL"]
-	path = SQL
-	url = https://github.com/Trong111a/QLVPP_sql
-	branch = main
