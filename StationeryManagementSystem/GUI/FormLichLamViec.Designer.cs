@@ -36,6 +36,7 @@
             this.gbPhanCa = new Guna.UI2.WinForms.Guna2GroupBox();
             this.lblNgay = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dp_moctime = new System.Windows.Forms.DateTimePicker();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnReload = new Guna.UI2.WinForms.Guna2Button();
             this.btnHienThi = new Guna.UI2.WinForms.Guna2Button();
             this.dpHienThi = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -80,6 +81,7 @@
             this.gbPhanCa.BorderThickness = 2;
             this.gbPhanCa.Controls.Add(this.lblNgay);
             this.gbPhanCa.Controls.Add(this.dp_moctime);
+            this.gbPhanCa.Controls.Add(this.guna2Button1);
             this.gbPhanCa.Controls.Add(this.btnReload);
             this.gbPhanCa.Controls.Add(this.btnHienThi);
             this.gbPhanCa.Controls.Add(this.dpHienThi);
@@ -116,10 +118,31 @@
             // 
             this.dp_moctime.CustomFormat = "HH:mm";
             this.dp_moctime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dp_moctime.Location = new System.Drawing.Point(45, 617);
+            this.dp_moctime.Location = new System.Drawing.Point(22, 618);
             this.dp_moctime.Name = "dp_moctime";
             this.dp_moctime.Size = new System.Drawing.Size(86, 40);
             this.dp_moctime.TabIndex = 74;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.BorderThickness = 2;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Linen;
+            this.guna2Button1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button1.Location = new System.Drawing.Point(241, 658);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(97, 41);
+            this.guna2Button1.TabIndex = 78;
+            this.guna2Button1.Text = "Báo nghỉ";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // btnReload
             // 
@@ -135,7 +158,7 @@
             this.btnReload.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnReload.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnReload.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnReload.Location = new System.Drawing.Point(390, 618);
+            this.btnReload.Location = new System.Drawing.Point(360, 611);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(97, 41);
             this.btnReload.TabIndex = 78;
@@ -197,7 +220,7 @@
             this.btnCheckIn.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnCheckIn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCheckIn.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCheckIn.Location = new System.Drawing.Point(147, 617);
+            this.btnCheckIn.Location = new System.Drawing.Point(123, 611);
             this.btnCheckIn.Name = "btnCheckIn";
             this.btnCheckIn.Size = new System.Drawing.Size(106, 41);
             this.btnCheckIn.TabIndex = 74;
@@ -218,7 +241,7 @@
             this.btnCheckOut.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnCheckOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCheckOut.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCheckOut.Location = new System.Drawing.Point(269, 617);
+            this.btnCheckOut.Location = new System.Drawing.Point(241, 611);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(103, 41);
             this.btnCheckOut.TabIndex = 73;
@@ -231,7 +254,7 @@
             this.gvPhanCa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
@@ -246,8 +269,8 @@
             this.checkOut});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightYellow;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -555,7 +578,7 @@
             this.gvLuong.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightYellow;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Teal;
@@ -568,8 +591,8 @@
             this.tongLuong});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkGreen;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightYellow;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -668,5 +691,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ngay;
         private System.Windows.Forms.DataGridViewTextBoxColumn checkIn;
         private System.Windows.Forms.DataGridViewTextBoxColumn checkOut;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
